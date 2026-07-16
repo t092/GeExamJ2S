@@ -1,0 +1,218 @@
+[
+  {
+    "id": "圖(一)",
+    "pages": [
+      2
+    ],
+    "primary_page": 2,
+    "type": "圖"
+  },
+  {
+    "id": "圖(七)",
+    "pages": [
+      5
+    ],
+    "primary_page": 5,
+    "type": "圖"
+  },
+  {
+    "id": "圖(三)",
+    "pages": [
+      3
+    ],
+    "primary_page": 3,
+    "type": "圖"
+  },
+  {
+    "id": "圖(九)",
+    "pages": [
+      6
+    ],
+    "primary_page": 6,
+    "type": "圖"
+  },
+  {
+    "id": "圖(二)",
+    "pages": [
+      3
+    ],
+    "primary_page": 3,
+    "type": "圖"
+  },
+  {
+    "id": "圖(二十)",
+    "pages": [
+      14
+    ],
+    "primary_page": 14,
+    "type": "圖"
+  },
+  {
+    "id": "圖(二十一)",
+    "pages": [
+      15
+    ],
+    "primary_page": 15,
+    "type": "圖"
+  },
+  {
+    "id": "圖(五)",
+    "pages": [
+      5
+    ],
+    "primary_page": 5,
+    "type": "圖"
+  },
+  {
+    "id": "圖(八)",
+    "pages": [
+      6
+    ],
+    "primary_page": 6,
+    "type": "圖"
+  },
+  {
+    "id": "圖(六)",
+    "pages": [
+      5
+    ],
+    "primary_page": 5,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十)",
+    "pages": [
+      6
+    ],
+    "primary_page": 6,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十一)",
+    "pages": [
+      6
+    ],
+    "primary_page": 6,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十七)",
+    "pages": [
+      10
+    ],
+    "primary_page": 10,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十三)",
+    "pages": [
+      8
+    ],
+    "primary_page": 8,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十九)",
+    "pages": [
+      12
+    ],
+    "primary_page": 12,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十二)",
+    "pages": [
+      7
+    ],
+    "primary_page": 7,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十五)",
+    "pages": [
+      9
+    ],
+    "primary_page": 9,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十八)",
+    "pages": [
+      11
+    ],
+    "primary_page": 11,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十六)",
+    "pages": [
+      9
+    ],
+    "primary_page": 9,
+    "type": "圖"
+  },
+  {
+    "id": "圖(十四)",
+    "pages": [
+      8
+    ],
+    "primary_page": 8,
+    "type": "圖"
+  },
+  {
+    "id": "圖(四)",
+    "pages": [
+      4
+    ],
+    "primary_page": 4,
+    "type": "圖"
+  },
+  {
+    "id": "表(一)",
+    "pages": [
+      3
+    ],
+    "primary_page": 3,
+    "type": "表"
+  },
+  {
+    "id": "表(三)",
+    "pages": [
+      7
+    ],
+    "primary_page": 7,
+    "type": "表"
+  },
+  {
+    "id": "表(二)",
+    "pages": [
+      4
+    ],
+    "primary_page": 4,
+    "type": "表"
+  },
+  {
+    "id": "表(五)",
+    "pages": [
+      11
+    ],
+    "primary_page": 11,
+    "type": "表"
+  },
+  {
+    "id": "表(六)",
+    "pages": [
+      12
+    ],
+    "primary_page": 12,
+    "type": "表"
+  },
+  {
+    "id": "表(四)",
+    "pages": [
+      9
+    ],
+    "primary_page": 9,
+    "type": "表"
+  }
+]

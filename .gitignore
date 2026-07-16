@@ -1,0 +1,14 @@
+node_modules/
+__pycache__/
+*.pyc
+scratch_*
+_debug_*
+diagnose_output*.txt
+pipeline/output/
+assets/**/pages/
+assets/**/figures/
+assets/**/crops/
+assets/**/crops_v2/
+*.bak
+*.bak2
+*.bak3

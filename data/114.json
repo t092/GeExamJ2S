@@ -1,0 +1,1952 @@
+[
+  {
+    "number": 1,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "一國若發生重大自然災害，可能會直接衝擊該國的經濟活動，而成為較脆弱的投資環境。臺灣因位於地震帶常發生地震，且易受颱風侵襲，於2015年被某金融機構列為最脆弱的十個國家之一。下列哪一國家最可能也因為常發生上述二種自然災害而列名其中？",
+    "options": {
+      "A": "日本",
+      "B": "伊朗",
+      "C": "北韓",
+      "D": "澳洲"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "本題答案為「同樣容易遭遇地震和颱風災害」，且衝擊該國經濟的國家，因此\n答案選(A)日本。\n(B)伊朗和(C)北韓較少遭遇熱帶風暴災害，(D)澳洲較少受地震災害衝擊。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Bd-Ⅳ-1(東北亞)自然環境背景。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 2,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "2019年底，臺灣的農場與牧場，正式迎來首批合法的農業移工，其中2名是酪農移工，其餘5名則是外展農業移工。外展農業移工意指由農會、漁會、農林漁牧有關之合作社，或非營利組織等「外展機構」所聘僱的外國人，並由外展機構指派其至服務的場所從事農務工作。上述政策的推行主要是為了因應下列何項問題？",
+    "options": {
+      "A": "農業勞動力老化",
+      "B": "農產品的安全性",
+      "C": "農村失業率偏高",
+      "D": "稻米的生產過剩"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "引進農業移工的目的，在於補充臺灣農村短缺的勞動力，該問題其中一個原因\n是臺灣農業人口老化 ，因此選(A)。\n(B)農場安全與管理技術較有關聯，(C)農村年輕人口外流較不會有農村失業率高的問\n題，(D)稻米生產過剩可選擇外銷而非引進移工。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Ae-Ⅳ-1 臺灣農業經營的特色。"
+    ],
+    "learning_focuses": [
+      "地 A：臺灣與在地環境"
+    ]
+  },
+  {
+    "number": 3,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "某部電影描述主角與母親及只會說華語的祖母，同住在美國舊金山華人聚集的街區，並出現拿筷子吃飯、與家人共度春節及清明節等原鄉文化情節，而主角雖然從小在美國長大，但在生活中仍經常使用華語。上述電影情節的文化意涵及傳播方式，與下列何者呈現的概念最相近？",
+    "options": {
+      "A": "利用國際婦女節倡導家務分工性別平權理念",
+      "B": "來自泰、緬的新住民與移工齊聚慶祝潑水節",
+      "C": "推行國語運動貶低母語所產生的不平等現象",
+      "D": "華人認為烏鴉象徵厄運，在日本則象徵吉祥"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "題幹主要在敘述移民社群的文化傳承方式，因此答案選(B)，新住民與移工在異\n鄉慶祝原鄉節慶。\n(A)選項重點是性別平權理念的推廣，(C)選項論述文化壓迫的狀況，(D)選項是說明文\n化的差異性。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Ad-Ⅳ-3 多元族群的文化特色。"
+    ],
+    "learning_focuses": [
+      "地 A：臺灣與在地環境"
+    ]
+  },
+  {
+    "number": 4,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(一)是某行政區內名為挖仔的聚落地圖。根據該聚落所處環境特色判斷，其地名代表的意義最可能為下列何者？",
+    "options": {
+      "A": "位於岬灣海岸的灣澳",
+      "B": "鄰近溪流河道的轉彎處",
+      "C": "位處高山之間的小谷地",
+      "D": "台地上的低窪地蓄水成湖"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(一)"
+    ],
+    "figure_pages": {
+      "圖(一)": 2
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "「挖仔」位於臺灣西部平原的舊河道旁，該段河道蜿蜒且經歷改道，因此地名\n意義最可能是(B)鄰近溪流河道的轉彎處。\n(A)當地沿海為洲潟海岸，(C)當地不在山區，(D)沒有顯示台地地形。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Ca-Ⅳ-3 聚落地名的命名與環境、族群文化的關係。"
+    ],
+    "learning_focuses": [
+      "地 C：全球環境與世界體系"
+    ]
+  },
+  {
+    "number": 5,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "某研究於2018年調查發現，臺灣不同地區民眾對於各種社會議題的關注傾向與程度有所差異，其中部分地區的民眾對於自身周遭環境的議題更加關切，例如離島地區。下列何者最可能為離島地區民眾較為關注的議題？",
+    "options": {
+      "A": "適當管制房價，降低民眾租屋或購屋的負擔",
+      "B": "落實區域間資源分配，讓民眾獲得同等醫療品質",
+      "C": "管制重工業廢水的排放，避免造成土壤重金屬汙染",
+      "D": "大規模土石流或崩塌，可能導致建築物毀損及人員傷亡"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "離島地區的交通較為不便，因此無論是醫療人員或醫藥資源都相對缺乏，故離\n島居民會較為關注醫療資源分配的議題。\n(A)離島地區人口較少故房價負擔較都市地區緩和，(C)離島地區少有發展重工業，(D)\n離島沒有高山且坡度起伏較小，因此土地邊坡災害相對輕微。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Af-Ⅳ-3 臺灣的區域發展及其空間差異。"
+    ],
+    "learning_focuses": [
+      "地 A：臺灣與在地環境"
+    ]
+  },
+  {
+    "number": 6,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(二)是臺灣歷史上某地區的地圖。根據內容判斷，此圖最有可能出自下列何者？",
+    "options": {
+      "A": "大航海時代的〈熱蘭遮城鎮鳥瞰圖〉",
+      "B": "清帝國統治時期的《淡水廳志》",
+      "C": "日本統治時期的〈臺北州大觀〉",
+      "D": "戰後臺灣的《最新版臺灣街道圖》"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(二)"
+    ],
+    "figure_pages": {
+      "圖(二)": 3
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "從圖(二)中「臺灣總督府」、「臺灣神社」等字眼可推知應為日治時期。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Eb-Ⅳ-2：都會文化的出現。"
+    ],
+    "learning_focuses": [
+      "歷 A：臺灣的歷史"
+    ]
+  },
+  {
+    "number": 7,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "中國史上某作家發表了一部著作，他在書中提倡六項女性應當恢復的自然權利，如表(一)所示。該著作所提倡的主張，最可能與下列何者有關？",
+    "options": {
+      "A": "隋唐時期，西域民族風俗傳入中國",
+      "B": "宋元時期，朱熹學術成就受到推崇",
+      "C": "明末清初，中國引入西方科學知識",
+      "D": "晚清時期，近代歐洲思潮傳入中國"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [
+      "表(一)"
+    ],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "從表(一)中，強調各種「權利」可知，應為清末民初時新文化運動的展開有關。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ic-Ⅳ-2：家族與婦女角色的轉變。"
+    ],
+    "learning_focuses": [
+      "歷 B：中國與東亞的歷史"
+    ]
+  },
+  {
+    "number": 8,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "「十一世紀時，旅居中國的穆斯林商人，在生活方面可以依照自身的習俗行事，例如他們在廣州的清真寺高塔上，懸掛旗幟、燈火來指引船隻出入港口。但在貿易方面，仍須受到官方機構的管轄，此機構負責收取關稅、接運貢品，並執行香料、珊瑚及象牙等進口商品的專賣，監督商家船隻的活動。」上述的「機構」最可能是下列何者？",
+    "options": {
+      "A": "洋行",
+      "B": "驛站",
+      "C": "市舶司",
+      "D": "總理各國事務衙門"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "十一世紀時中國處於宋代，其掌管對外貿易的機構為「市舶司」。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Hb-Ⅳ-1：宋、元時期的國際互動。"
+    ],
+    "learning_focuses": [
+      "歷 B：中國與東亞的歷史"
+    ]
+  },
+  {
+    "number": 9,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "「巴黎和會引起中國強烈的民族情緒，在部分知識分子的心中，西方角色從啟蒙者轉變為壓迫者，因此他們逐漸對維護帝國主義、資本主義的西方國家感到失望。在五四運動後，有些知識分子開始轉向世界革命理論，試圖從俄國革命家對於受壓迫民族的呼籲，以及俄國新政權宣布放棄沙皇時代在中國特權的聲明中，找到改變中國的出路。」上述內容最可能與下列何者有關？",
+    "options": {
+      "A": "中華民國的建立",
+      "B": "西安事變的發生",
+      "C": "中國共產黨的成立",
+      "D": "文化大革命的發動"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "民國八年五四運動，將新文化運動炒至最高峰，此時期民主思維、科學理性主\n義盛行，馬克思主義也在此時傳入。不久，民國十年中國共產黨也因此成立。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ka-Ⅳ-2：舊傳統與新思潮間的激盪。"
+    ],
+    "learning_focuses": [
+      "歷 B：中國與東亞的歷史"
+    ]
+  },
+  {
+    "number": 10,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(三)是一幅歷史上的木刻版畫。根據畫中內容判斷，作者的立場最可能是下列何者？",
+    "options": {
+      "A": "強調君士坦丁堡教會擁有基督教的領導權",
+      "B": "支持路德教派所提出因信得救的信仰主張",
+      "C": "主張只有希伯來民族能作為耶和華的選民",
+      "D": "認同羅耀拉等人所提倡天主教改革的理念"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(三)"
+    ],
+    "figure_pages": {
+      "圖(三)": 3
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "從圖(三)反對金錢購買贖罪的思維，可推知應為十六世紀宗教改革時期，新教\n支持者(路德教派)的主張。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Oa-Ⅳ-2：宗教改革。"
+    ],
+    "learning_focuses": [
+      "歷 C：世界的歷史"
+    ]
+  },
+  {
+    "number": 11,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "一間跨國咖啡公司打算在某國的傳統文化觀光區設立分店，但卻因為品牌形象與當地建築、傳統飲食習慣不同而引發居民抗議。該公司為此改變店面沿用的品牌風格，除了採用相容於該區環境的色系，還將原本的英文招牌改用當地文字呈現，並增加販售具當地料理特色的創意餐點，希望透過這些舉動降低當地的反彈聲浪。上述跨國公司的舉動，與下列何者最相符？",
+    "options": {
+      "A": "成立跨國企業，強化國際分工",
+      "B": "憑藉強勢文化，推動產業轉型",
+      "C": "尊重多元文化，促進文化融合",
+      "D": "凝聚社區認同，發展社區組織"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "題目描述的情境是跨國公司為了降低當地反彈，調整自己的品牌風格以配合當\n地文化（如改用當地文字、調整色系、加入當地料理），這是一種對不同文化的尊重\n與適應，屬於文化融合的行為，並非強勢文化壓制，也不是社區自主發展的案例。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Dc-Ⅳ-3. 面對文化差異時，為什麼要互相尊重與包容？"
+    ],
+    "learning_focuses": [
+      "公 D：全球連結與地球村"
+    ]
+  },
+  {
+    "number": 12,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "美國於2022年6月21日起，禁止進口來自中國新疆的商品，因為美國政府認為這些商品是強迫維吾爾人勞動的產物。如果企業想要繼續將在新疆生產的商品出口至美國，則必須提出充足的證據，證明商品的生產過程沒有涉及強迫勞動問題。美國執行上述管制措施的主要理由，最可能是下列何者？",
+    "options": {
+      "A": "擴大對外貿易的出超金額",
+      "B": "減少全球化下的貿易障礙",
+      "C": "保障旅外國民的工作權益",
+      "D": "避免侵害人權的商業行為"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "美國禁止進口新疆商品，是基於人權立場，認為這些商品涉及強迫勞動，即違\n反基本人權。因此，要求企業提供無強迫勞動的證據，是為了防止人權侵害的商品進\n入市場，以落實倫理貿易與企業責任。\n(B)這項措施是設限，而非減少貿易障礙。\n(A)(C)未涉及",
+    "subject": "公民",
+    "learning_contents": [
+      "公Ad-Ⅳ-2. 為什麼人權應超越國籍、種族、族群、區域、文化、性別、性 傾向與身心障礙等界限，受到普遍性的保障？"
+    ],
+    "learning_focuses": [
+      "公 A：社會互動與文化"
+    ]
+  },
+  {
+    "number": 13,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "某大學於學期末時，在校內美食街設立意見回饋箱，消費者有任何建議都可以寫在意見單上投入回饋箱中，學校會參考這些回饋的意見，藉以改善未來美食街的營運方式。根據上述內容判斷，下列何項回饋意見最能提升市場的競爭程度？",
+    "options": {
+      "A": "廠商應提供校內師生購買餐點九折優惠",
+      "B": "應要求廠商提供餐點食材的生產履歷證明",
+      "C": "希望廠商販售份量較少且價格較便宜的餐點",
+      "D": "學校應招募更多廠商進駐美食街提供多元餐點"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "市場的競爭程度，指的是市場上參與的業者數量與選擇的多樣性。當廠商數量\n增加、選擇變多，廠商之間會為了吸引顧客而提升品質、降低價格或創新產品，這就\n是提升市場競爭。\n(A) 屬於價格優惠，對消費者有利，但未增加廠商數量，不直接提升競爭程度。\n(B) 屬於食品安全資訊透明，與市場競爭無直接關聯。\n(C) 是希望有價格與份量選擇，但仍限於現有廠商，無新增競爭者。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Cf-Ⅳ-3. 為什麼新廠商越容易加入某一市場，則該市場的競爭程度越高？"
+    ],
+    "learning_focuses": [
+      "公 C：權力、社會與法律"
+    ]
+  },
+  {
+    "number": 14,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "一對姊妹先後結婚了，圖(四)是他們之間關係的示意圖。根據圖中內容判斷，甲、乙、丙、丁四人之間最不可能存在下列何種親屬關係？",
+    "options": {
+      "A": "配偶",
+      "B": "姻親",
+      "C": "直系血親",
+      "D": "旁系血親"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(四)"
+    ],
+    "figure_pages": {
+      "圖(四)": 4
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "(A)甲乙，丙丁兩兩為配偶\n(B)甲丁為姻親\n(D)乙丙為旁系血親",
+    "subject": "公民",
+    "learning_contents": [
+      "公Ba-Ⅳ-3. 家人間的親屬關係在法律上是如何形成的？親子之間為何互有 權利與義務？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟"
+    ]
+  },
+  {
+    "number": 15,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "表(二)是恬恬為了製作課堂報告所蒐集的資料，統計針對某候選人的新聞在各電視臺報導時間中所占比例。根據表中資料判斷，下列何者最可能是恬恬探究這份資料後，建議閱聽人應注意的事項？",
+    "options": {
+      "A": "覺察媒體的報導內容與事實不符",
+      "B": "解讀媒體報導中的性別刻板印象",
+      "C": "留意媒體業者是否持有特定的立場",
+      "D": "關注媒體是否善盡監督政府的責任"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [
+      "表(二)"
+    ],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "可以看出\n• 不同媒體對同一候選人的報導比例差異很大\n• 有的明顯偏正面（如水果臺），有的幾乎偏負面（如W 電視）\n→暗示了媒體有可能立場偏頗\n(A)表格沒有提供事實正誤資訊，所以無法直接推論報導是否失真。不夠直接\n(B)資料完全沒有涉及性別議題，所以不是重點。\n(D)表中內容和政府無直接關聯，不是首要建議。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Cb-Ⅳ-2. 媒體與社群網路在公共意見形成的過程中，扮演什麼角色？閱 聽人如何覺察其影響？"
+    ],
+    "learning_focuses": [
+      "公 C：權力、社會與法律"
+    ]
+  },
+  {
+    "number": 16,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(五)為中國於2019至2025年間規劃推動的「西部陸海新通道」，該通道利用鐵路、公路及海運等多種運輸方式以促進物流效率與經濟發展。根據圖中資訊判斷，上述通道的推動最可能具有下列何項效益？",
+    "options": {
+      "A": "連結經北極海通往歐洲的航線",
+      "B": "節省與美墨加協定成員的海運時間",
+      "C": "增進與東南亞國協成員的貿易往來",
+      "D": "避免來自西亞的石油運輸受制於他國"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(五)"
+    ],
+    "figure_pages": {
+      "圖(五)": 5
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "「西部陸海新通道」位於中國西南部，靠近中南半島與南海，因此答案選(C)增\n進與東南亞國協成員的貿易。\n(A)該通道主要位於熱帶及副熱帶，離北極海較遠。(B)此為東亞的建設，與北美洲無\n關。(D)此通道無連接西亞。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Bb-Ⅳ-3(中國)經濟發展與全球關連。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 17,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "小荃想造訪一處風景優美的祕境，但在抵達祕境的入口處，見有一告示牌寫著「上游水壩不定時洩洪，請勿進入溪谷以確保生命安全」，於是決定避開危險另覓他處。圖(六)為上述祕境附近的等高線地形圖，圖中甲、乙、丙、丁何者最可能為該祕境所在地點？",
+    "options": {
+      "A": "甲",
+      "B": "乙",
+      "C": "丙",
+      "D": "丁"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(六)"
+    ],
+    "figure_pages": {
+      "圖(六)": 5
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "文中的祕境應該位於山區溪谷的河道上，因此需選出圖6 中位於河谷且在水壩\n下游的地點，故答案為(A)。\n(B)上游沒有水壩，(C)、(D)位於水壩上游。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Ab-Ⅳ-4 問題探究：土地利用或地形災害與環境倫理。"
+    ],
+    "learning_focuses": [
+      "地 A：臺灣與在地環境"
+    ]
+  },
+  {
+    "number": 18,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "近年來由於新冠肺炎疫情造成嚴重的通貨膨脹，使得甲地的房價及物價高漲，影響其生活品質。此外，因為在鄰國的乙地1天的薪水，在甲地約1小時就賺得到，於是有一部分的甲地人搬至乙地居住，再利用遠距工作或每天通勤至甲地上班，藉以降低房租及生活消費。上述甲地與乙地依序最可能位於何國？",
+    "options": {
+      "A": "法國、英國",
+      "B": "美國、墨西哥",
+      "C": "土耳其、希臘",
+      "D": "馬來西亞、新加坡"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "本題須選擇「生活成本落差大且邊境往來方便的兩地」，因此最可能的國家\n「依序」為甲：美國，乙：墨西哥，答案選(B)。\n(A)英法之間沒有明顯的工資和物價落差。(C)土、希兩國因文化因素，國民的邊境流\n動不如美墨頻繁。(D)馬來西亞和新加坡的關係與題幹敘述相反，而新加坡薪資和物價\n都比較高，但沒有大量遷移到馬來西亞。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Bi-Ⅳ-3(美洲)經濟發展的區域差異。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 19,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(七)為2022年世界及甲區域的人口年齡及性別資料，根據人口組成判斷，甲區域最可能為下列何者？",
+    "options": {
+      "A": "歐洲",
+      "B": "北美洲",
+      "C": "東北亞",
+      "D": "漠南非洲"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(七)"
+    ],
+    "figure_pages": {
+      "圖(七)": 5
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "甲區域的人口金字塔顯示，1.平均壽命不高，2.幼年人口比例高，因此答案最\n可能是(D)漠南非洲。\n(A)歐洲、(B)北美洲、(C)東北亞都有高齡化現象，且歐洲和東北亞由於少子化問題導\n致幼年人口比例較低。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Bg-Ⅳ-3(漠南非洲)現代經濟的發展與挑戰。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 20,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(八)是博物館展覽對臺灣歷史上某陶製漏斗狀工具使用方式的介紹。此種工具在十八至十九世紀之間，最多被用於圖(九)中何處？",
+    "options": {
+      "A": "甲",
+      "B": "乙",
+      "C": "丙",
+      "D": "丁"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(九)",
+      "圖(八)"
+    ],
+    "figure_pages": {
+      "圖(九)": 6,
+      "圖(八)": 6
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "從圖(八)可知應與糖產業有關，而題文提及此時間點為「十八至十九世紀之\n間」，故可知為清領時代。清領時代，糖產業分布於臺灣西南部平原地帶，因此選丙。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ca-Ⅳ-2：農商業的發展。"
+    ],
+    "learning_focuses": [
+      "歷 A：臺灣的歷史"
+    ]
+  },
+  {
+    "number": 21,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "以下是學者對於中國史上某制度的論述：「此制度的基本涵義是指統治者透過任用非世襲的官員，建立中央集權的政府。這個制度初步發展於東周，在秦王朝統一天下後全面施行，隋唐等朝代都繼續沿用，也影響了周遭的日本、朝鮮，是中國重要的制度。」根據上述內容判斷，該制度最可能是下列何者？",
+    "options": {
+      "A": "郡縣制度",
+      "B": "封建制度",
+      "C": "科舉制度",
+      "D": "九品官人法"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "題文提及此制度源於「東周」，因此極有可能為郡縣制度。封建制度源於西周、\n科舉制度源於隋代、九品官人法源於曹魏，故皆不可選。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ha-Ⅳ-1：商周至隋唐時期國家與社會的重要變遷。"
+    ],
+    "learning_focuses": [
+      "歷 B：中國與東亞的歷史"
+    ]
+  },
+  {
+    "number": 22,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(十)是某報紙報導的部分內容，標題中的「？」最適合填入下列何者？",
+    "options": {
+      "A": "辛亥革命",
+      "B": "北伐統一",
+      "C": "八年抗戰",
+      "D": "抗美援朝"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十)"
+    ],
+    "figure_pages": {
+      "圖(十)": 6
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "從圖(十)報導「象徵同盟國的勝利」之敘述可推知，應為第二次世界大戰戰勝\n之初報紙的報導。而第二次世界大戰，若站在「中國」的立場，則將此一系列的戰役\n稱為八年抗戰。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Kb-Ⅳ-2：日本帝國的對外擴張與衝擊。"
+    ],
+    "learning_focuses": [
+      "歷 B：中國與東亞的歷史"
+    ]
+  },
+  {
+    "number": 23,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "「1989年8月19日，奧地利及匈牙利曾在邊界上相鄰的兩個小鎮間，舉辦一場野餐交流活動。活動中，兩鎮之間的木製國界圍籬會被打開三小時，象徵支持沒有隔閡的歐洲。然而，這場野餐會卻成為政治性的脫逃活動。當圍籬一打開，從其他國家特別前來此地的數百男女就迅速衝過邊界，逃離受到共產集團控制、實施計畫經濟的家鄉，抵達了『自由的歐洲』。」上述利用野餐脫逃的民眾，最可能來自圖(十一)中甲、乙、丙、丁何地？",
+    "options": {
+      "A": "甲",
+      "B": "乙",
+      "C": "丙",
+      "D": "丁"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十一)"
+    ],
+    "figure_pages": {
+      "圖(十一)": 6
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "從題文「逃離受到共產集團控制、實施計畫經濟的家鄉」的敘述可知，逃難者\n皆源自於受到共產統治者的地區，因此選擇東歐地區的(甲)。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Qc-Ⅳ-3：從兩極到多元的戰後世界。"
+    ],
+    "learning_focuses": [
+      "歷 C：世界的歷史"
+    ]
+  },
+  {
+    "number": 24,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "某國中學生自治組織選舉前，針對二種投票方式進行調查，其中願意投票的人數比例如表(三)所示。根據上述內容判斷，關於此一調查結果，下列敘述何者最適當？",
+    "options": {
+      "A": "實體投票比網路投票更能形成民意",
+      "B": "使用科技可能有洩漏個人資料的風險",
+      "C": "實體投票比網路投票更符合無記名原則",
+      "D": "使用科技能提升學生參與公共事務的程度"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [
+      "表(三)"
+    ],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "網路投票的意願遠高於實體投票。所有年級中，網路投票的支持度皆達 90% 以\n上，遠高於實體投票的 40–49%。這代表科技能有效降低參與門檻，提高學生參與意\n願與比例，進而促進學生參與公共事務。\n(A)民意更集中在網路投票上，這個說法與結果相反。\n(B)雖是事實風險，但題目中沒有提供這類資訊，無法從表中推論出來。\n(C)無根據推論。兩種投票方式都可以設計為匿名，題目中也未討論此原則。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Cc-Ⅳ-2. 民主社會中為什麼常用投票來做為重要的參與形式？"
+    ],
+    "learning_focuses": [
+      "公 C：權力、社會與法律"
+    ]
+  },
+  {
+    "number": 25,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "下列是某地方政府勞工局處理一件勞資糾紛的部分過程：勞工局：「根據貴公司的員工出勤紀錄，員工確實常加班工作，依法雇主應給付加班費。」雇主：「可是我又沒強迫員工留下來加班，有時候他們留在公司也不一定是為了工作，只是下班後不想那麼早離開而已。」勞工局：「依照《勞動事件法》規定，出勤紀錄內記載的勞工出勤時間，都預設勞工是經雇主同意而加班工作。若雇主認為員工並非因加班工作而留在公司，則須由雇主提出證明。」根據上述《勞動事件法》的規定判斷，下列何者最可能是當初立法時考量的理由？",
+    "options": {
+      "A": "消除職場上出現的性別歧視行為",
+      "B": "確保勞工可維持基本的生活水準",
+      "C": "禁止超時工作以保障童工的身心健康",
+      "D": "平衡勞資雙方之間權力不對等的關係"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "從對話內容來看\n勞工局引用《勞動事件法》，預設出勤紀錄即為加班證明，但也允許雇主提出反證。\n這種設計目的，是為了讓證明責任不完全壓在勞工身上，因為在實務上，勞工相對弱\n勢，難以蒐證。所以法律透過「推定雇主同意加班」的機制，來保護勞工權益，達到\n勞資權力平衡。\n(A) 題目無關性別議題 \n(B) 雖與加班費有關，但題目重點是舉證責任分配與權力不對等 \n(C) 童工與超時工作：題目未提及童工，與法條背景不符",
+    "subject": "公民",
+    "learning_contents": [
+      "公Cd-Ⅳ-3. 為什麼需要立法保障公平的市場勞動參與？"
+    ],
+    "learning_focuses": [
+      "公 C：權力、社會與法律"
+    ]
+  },
+  {
+    "number": 26,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(十二)是甲國在近三十年間，三種已婚女性的勞動力參與率。根據圖中資訊，可推論出該國社會存在下列何種現象？",
+    "options": {
+      "A": "家務勞動影響了女性參與市場勞動的機會",
+      "B": "外籍配偶增多影響了該國女性的工作機會",
+      "C": "家庭型態變遷使女性承擔較多的家務勞動",
+      "D": "女性投入家務勞動的總時數比市場勞動多"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十二)"
+    ],
+    "figure_pages": {
+      "圖(十二)": 7
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "圖（十二）顯示三類已婚女性的勞動力參與率變化：\n■ 尚無子女的女性，參與率最高且持續上升\n● 家中有未滿6 歲子女的女性，參與率介於兩者之間\n▲ 家中子女均在6 歲以上的女性，參與率最低\n可推論的現象：\n女性是否有子女（特別是幼兒）明顯影響其參與工作市場的比率。這顯示出女性因照\n顧責任（家務與育兒）而降低勞動參與率，尤其在育兒負擔最重的時期。顯然，「家\n務勞動」對女性參與市場勞動有直接影響。\n(B)題目與圖表無關外籍配偶，不成立。\n(C)圖中顯示的是子女狀況與參與率關聯，無關家庭型態是否改變。\n(D)題目無提供「時間分配」的數據，無從得知總時數比較。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Cd-Ⅳ-2. 家務勞動的分擔如何影響成員的個人發展與社會參與？其中可 能蘊含哪些性別不平等的現象？"
+    ],
+    "learning_focuses": [
+      "公 C：權力、社會與法律"
+    ]
+  },
+  {
+    "number": 27,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "土耳其扼黑海出入馬摩拉海的咽喉，因為原有天然航道的航運交通量日益增加，政府計畫興建圖(十三)中的新運河，該計畫除了引發國內正反意見的討論外，也引起黑海周邊國家的高度關注。上述運河完工後所帶來的影響最可能為下列何者？",
+    "options": {
+      "A": "土耳其將會喪失原有的「歐亞陸橋」稱號",
+      "B": "土耳其的經濟海域範圍將因此而大幅增加",
+      "C": "黑海的海洋生物進入馬摩拉海的機率下降",
+      "D": "船隻等候通過博斯普魯斯海峽的時間減少"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十三)"
+    ],
+    "figure_pages": {
+      "圖(十三)": 8
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "由於博斯普魯斯海峽的運量日增，興建運河最可能是要分擔通過海峽的船隻數\n量，縮短等待時間，因此答案選(D)。\n(A)「歐亞陸橋」是基於土耳其的位置而非因為博斯普魯斯海峽。(B)運河位於陸地上，\n與經濟海域無關。(C)水體交換機會反而增加，但對生物影響不大。\n註：伊斯坦堡運河計畫是為了緩解通過伊斯坦堡市區的海上運量，但由於俄羅斯近年\n軍事行動影響，此計畫遭受多方質疑。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Bf-Ⅳ-3(西亞與北非)國際衝突的焦點。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 28,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(十四)中的國家積極發展某一種綠色能源。根據圖中資訊判斷，下列何者最可能為該國所發展的綠色能源及選擇的理由？",
+    "options": {
+      "A": "水力；因雨量豐沛且山高水深，水力動能大",
+      "B": "太陽能；因位處太陽直射範圍，輻射強度大",
+      "C": "風力；因位於盛行西風帶，風力強勁且穩定",
+      "D": "海洋能；因北大西洋暖流流經，洋流動能大&海洋能：利用波浪、潮汐、洋流等海水運動過程產生的能源。"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十四)"
+    ],
+    "figure_pages": {
+      "圖(十四)": 8
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "圖(十四)的國家(新加坡)位於熱帶，地勢不高，因此最適合的答案為B 選項，\n發展太陽能。\n(A)新加坡沒有山高水深的水力發電優勢。(C)、(D)描述較符合歐洲的氣候條件。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Be-Ⅳ-1(東南亞和南亞)自然環境背景。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 29,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "小綸從網站上取得2021年中國各省級行政區年降水量資料，他以當年全國平均降水量691.6毫米作為標準，若省級行政區的年降水量低於此一數值，則在該區塗上深灰色。根據上述原則，小綸繪製出的地圖最可能為下列何者？",
+    "options": {
+      "A": "",
+      "B": "",
+      "C": "",
+      "D": ""
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": "11429i.jpg",
+    "image_options_full": true,
+    "answer": "B",
+    "explanation": "根據題幹描述的地圖，深色表示2021 年降水量少於691.6 毫米的省分，因此要\n選中國西北部地區畫深色的選項，答案為(B)。\n(A)華南地區降水量充沛，(C)沒有包含到蒙古、寧夏，(D)秦嶺淮河以南降水量超過\n750 毫米。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Ba-Ⅳ-1(中國)自然環境的地區差異。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 30,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "碳匯是指能夠吸收及儲存含碳化合物的天然或人工「倉庫」，如森林、草原、濕地、土壤、海洋等。為了達成2050年「碳中和」目標，各國除了減少二氧化碳的排放之外，也積極擴大國家的碳匯。根據上文所述，若要增加一國的碳匯，則下列何種方法最為適切？",
+    "options": {
+      "A": "以焚林的方式，快速取得種植經濟作物的土地",
+      "B": "於屋頂上方設置太陽能發電板，增加電力供給",
+      "C": "恢復曾經消失的農地，採友善環境的耕作方式",
+      "D": "選用當地食材以減少運輸距離，降低食物里程"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "依據題幹敘述，增加碳匯的方式最可能是擴大該國的植被覆蓋率， 因此最適合\n的答案是(C)恢復曾經消失的農地，採友善環境的耕作方式。\n(A)焚燒森林會釋放大量二氧化碳，(B)、(D)可能減少碳排而非增加碳匯。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Bc-Ⅳ-2 全球氣候變遷的衝擊。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 31,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "莎綺去北大武山登山的時候，看到山路上有一些歷史建築如圖(十五)所示。根據圖中碑文摘譯的內容判斷，若莎綺上網檢索這些歷史建築興建的時局背景，最可能會出現下列何者？",
+    "options": {
+      "A": "強化皇民化運動的推展",
+      "B": "宣傳日俄戰爭即將勝利",
+      "C": "實施開山撫番推動漢化",
+      "D": "發起原住民族正名運動"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十五)"
+    ],
+    "figure_pages": {
+      "圖(十五)": 9
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "從圖(十五)的碑文敘述中「政府號召高砂族青年組成義勇隊」的敘述可知，為\n日治時期皇民化運動之作為。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ea-Ⅳ-3：「理蕃」政策與原住民族社會的對應。"
+    ],
+    "learning_focuses": [
+      "歷 A：臺灣的歷史"
+    ]
+  },
+  {
+    "number": 32,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "理加頭目所屬部落與鄰近部落衝突頻繁，而荷蘭人未能妥善協助調停，心生不滿的他在日本人勸說下，帶族人前往日本尋求援助。理加返鄉後，立即遭到荷蘭人的監禁，進而引發日人挾持臺灣長官的衝突事件，更導致江戶幕府一度關閉荷蘭在日本的商館以作為制裁。上述事件最可能發生於下列何時何地？",
+    "options": {
+      "A": "十六世紀的澎湖",
+      "B": "十七世紀的大員",
+      "C": "十八世紀的淡水",
+      "D": "十九世紀的卑南"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "從題文「荷蘭人未能妥善協助調停、挾持臺灣長官的衝突事件」等之敘述，可\n知應為荷蘭殖民臺灣的時代。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Bb-Ⅳ-1：十六、十七世紀東亞海域的各方勢力。"
+    ],
+    "learning_focuses": [
+      "歷 A：臺灣的歷史"
+    ]
+  },
+  {
+    "number": 33,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "表(四)是某一時期臺灣鳳梨罐頭銷售至美國、日本、中國大陸及西德的官方統計數據。根據表中內容判斷，甲、乙、丙、丁何者最可能是中國大陸？",
+    "options": {
+      "A": "甲",
+      "B": "乙",
+      "C": "丙",
+      "D": "丁"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [
+      "表(四)"
+    ],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "從表(四)中可知其年代落於1946 年至1960 年，1946 年中華民國尚未從大陸地\n區撤退來臺，因此仍有貿易額。1949 年以後，中華民國撤退來臺，兩岸關係緊張呈現\n軍事對峙狀態，兩岸貿易歸零，故選丁。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Fb-Ⅳ-1：經濟發展與社會轉型。"
+    ],
+    "learning_focuses": [
+      "歷 A：臺灣的歷史"
+    ]
+  },
+  {
+    "number": 34,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖(十六)是某大學公布欄所張貼的海報，根據圖中所列的演講者經歷判斷，下列何者最可能是他曾經行使過的職權？",
+    "options": {
+      "A": "為審核各機關送交的決算挑燈夜戰",
+      "B": "提請總統任命行政院所屬部會首長",
+      "C": "對司法院院長被提名人行使同意權",
+      "D": "在掌握事證後彈劾違法失職的法官"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十六)"
+    ],
+    "figure_pages": {
+      "圖(十六)": 9
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "(A)「決算審核」通常由審計部辦理，立委雖可能參與，但不是最具代表性。\n(B)是行政院長的職權，與立委或法官無關\n(C)根據憲法，立法院具有對司法院院長被提名人行使同意權。王美美曾任立委，因此\n可能行使此職權。\n(D)是監察院的職權，法官或立委都無彈劾權。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Be-Ⅳ-3. 我國中央政府如何組成？我國的地方政府如何組成？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟"
+    ]
+  },
+  {
+    "number": 35,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "甲、乙二則資料呈現不同時代官方興建公共建設的相關情況：甲資料：統治者為了加強對國內各地的控制，便於運送物資及兵力，下令修鑿運河，強行徵召數百萬人民從事勞役。乙資料：某地方政府研擬興建社會住宅，當地議會要求依法召開公聽會聽取附近居民的意見，作為後續制定政策的參考。根據甲、乙二項資料判斷，關於不同時代官方興建公共建設作法的敘述，下列何者最適當？",
+    "options": {
+      "A": "甲資料顯示當時的市場勞動權利受法律保障",
+      "B": "乙資料顯示當時的政府權力受到約束與制衡",
+      "C": "二則資料皆顯示公共建設以促進公平正義為主要考量",
+      "D": "二則資料皆顯示公共意見是經由大眾反覆討論而形成"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "甲資料重點：\n• 統治者為了加強控制、運輸便利，強行徵召數百萬人民修築運河\n• 特徵：專制體制、沒有法律約束或民意參與\n• 顯示出政府單方面命令、人民缺乏權利保障\n乙資料重點：\n• 地方政府要興建社會住宅，但需依法召開公聽會\n• 當地議會要求聽取居民意見作為政策依據\n• 顯示出：法治社會、民主機制、政策受民意與議會監督\n→ 這反映了政府權力受到約束與制衡\n(A)甲資料是強制勞役，並無任何勞動保障，反而反映勞動被壓迫。\n(C)甲明顯是為了政權控制、非以公平為主。\n(D)甲完全沒有民意參與，只有乙資料符合這項特徵。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Bh-Ⅳ-1. 為什麼行政法與我們日常生活息息相關？為什麼政府應依法行 政？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟"
+    ]
+  },
+  {
+    "number": 36,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "老師安排同學至地方法院參觀，並讓甲、乙、丙、丁四位同學在模擬法庭中扮演不同的角色，如圖(十七)所示。根據我國法律規定及圖中情境判斷，下列關於他們四人的臺詞，何者最適當？",
+    "options": {
+      "A": "甲：我依據相關犯罪事證依法起訴乙",
+      "B": "乙：我承認錯誤，我會儘早償還借款",
+      "C": "丙：我希望甲審酌證據後判決乙無罪",
+      "D": "丁：我判決原告勝訴，撤銷行政處分"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十七)"
+    ],
+    "figure_pages": {
+      "圖(十七)": 10
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "示意圖由檢察官及辯護律師擔任兩造，顯示為刑事事件\n(A)甲是檢察官，「依法起訴乙」符合其職權 \n(B)示意圖為刑事庭，承認錯誤、償還借款屬民事糾紛\n(C)能審酌證據後判決乙無罪的是（丁）法官\n(D)示意圖為刑事庭，且地方法院不審理行政案件",
+    "subject": "公民",
+    "learning_contents": [
+      "公Bi-Ⅳ-3. 在犯罪的追訴及處罰過程中，警察、檢察官及法官有哪些功能 與權限？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟"
+    ]
+  },
+  {
+    "number": 37,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "「社會企業」是近年頗受關注的概念，其中公司型的社會企業透過商業活動營利，以改善社會或環境問題為目標，並非以讓出資者獲利為唯一考量，而企業獲得的利潤，也將繼續投入改善社會或環境問題的商業活動，希望讓社會企業得以永續經營。下列何種作法與上述提及的企業經營模式最相符？",
+    "options": {
+      "A": "運用低價策略創造企業優勢",
+      "B": "制定法律推行友善勞工政策",
+      "C": "提倡公平貿易幫助小農發展",
+      "D": "募集善心捐款扶助弱勢群體"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "題目中說明的「公司型社會企業」具備以下幾個特徵：\n1. 以商業活動營利（有收入、有產品或服務）\n2. 目標是解決社會或環境問題\n3. 利潤再投入公益目的，而非單純分配給股東\n4. 追求永續經營與社會影響力的平衡\n(A) 是傳統商業策略，目的在於獲利與市場佔有率，未強調解決社會或環境問題 \n(B)屬於政府立法行為，不是「企業經營模式」\n(C) 是一種以商業方式販售公平商品，提升小農收入與自主性，符合社會企業精神\n(D)屬於慈善或捐贈行為，不是透過商業模式解決問題",
+    "subject": "公民",
+    "learning_contents": [
+      "公Cf-Ⅳ-1. 廠商間的競爭對消費者有何影響？"
+    ],
+    "learning_focuses": [
+      "公 C：權力、社會與法律"
+    ]
+  },
+  {
+    "number": 38,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "某日新聞報導有位失智症患者將土地、房屋贈送給陌生人的糾紛，由於小明的爺爺是中度失智症患者，家人擔心爺爺也會做出類似行為而導致權益受損，便向律師諮詢。律師建議家屬可向法院提出聲請，對爺爺作出監護宣告。上述律師的建議內容應是希望達成下列何項法律效果？",
+    "options": {
+      "A": "讓爺爺成為無行為能力人，以保障其財產",
+      "B": "讓爺爺成為限制行為能力人，以保障其財產",
+      "C": "讓爺爺成為無行為能力人，以保障其契約自由",
+      "D": "讓爺爺成為限制行為能力人，以保障其契約自由"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "根據我國《民法》相關規定：\n• 無行為能力人：指不能為意思表示者（如重度或中度失智），其法律行為無效，需\n由法定代理人代為處理。\n\n• 限制行為能力人：例如未成年人或輕度精神障礙者，其法律行為需法定代理人同意，\n否則無效。\n爺爺是「中度失智症患者」，家屬擔心其「贈與財產」導致權益受損，律師建議聲請\n「監護宣告」。一旦法院核准，該人即屬「無行為能力人」，此舉的主要法律效果是\n使其不得單獨處分財產或簽契約，從而保護其財產權益。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Bj-Ⅳ-2. 為什麼一般人能自由訂立契約，而限制行為能力人訂立契約原 則上必須得法定代理人同意？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟"
+    ]
+  },
+  {
+    "number": 39,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "2020年之前，臺灣與日本都面臨勞力短缺的問題，但日本提供比臺灣更高的薪資吸引國際移工，因此許多菲律賓籍移工較願意前往日本工作。不過2022年底時，許多在日本工作的菲律賓籍移工發現，雖然每個月都拿出相同金額的日幣兌換成菲律賓披索匯回家鄉，但年底換到的菲律賓披索卻比年初減少了約10%，因此他們打算改往澳洲工作。上述國際移工變更工作地的考量，其原因之一最可能為下列何者？",
+    "options": {
+      "A": "菲律賓披索相對日幣升值",
+      "B": "菲律賓披索相對新臺幣貶值",
+      "C": "去臺灣工作的機會成本比去日本低",
+      "D": "去澳洲工作的機會成本比去日本高"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "菲律賓移工每月拿出「相同金額的日幣」匯回家鄉，但「年底換到的披索」比\n「年初(換到的)」少了約10%\n→ 代表 同樣的日幣能換到更少的披索\n這種情況的原因是：日幣貶值 / 披索升值，也就是 「披索相對日幣升值」。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Bp-Ⅳ-4. 買賣外幣通常透過銀行，哪些人會想要買外幣？哪些人會想要 賣外幣？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟"
+    ]
+  },
+  {
+    "number": 40,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "「俄烏戰爭以來，歐盟對俄羅斯採取大規模的制裁措施，其中立陶宛於2022年6月18日，對經其領土進出俄羅斯加里寧格勒的貨運火車實施限制，因而引發俄羅斯強烈不滿。此一事件也凸顯出加里寧格勒的重要性。」圖(十八)顯示加里寧格勒的位置，根據上文及圖中資訊判斷，其重要性可用下列何者來說明？",
+    "options": {
+      "A": "作為俄羅斯與東北亞國家間的貿易前哨站",
+      "B": "為俄羅斯貨物經波羅的海出太平洋的港口",
+      "C": "位處俄羅斯天然氣輸送至芬蘭的最短路徑上",
+      "D": "是俄羅斯對抗北大西洋公約組織的軍事基地"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十八)"
+    ],
+    "figure_pages": {
+      "圖(十八)": 11
+    },
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "「加里寧格勒」是俄羅斯的飛地，位於波羅的海沿岸，夾在立陶宛與波蘭之間，\n緊鄰多個北約國家，其重要性最可能是(D)俄羅斯對抗北大西洋公約組織的軍事基地，\n事實上當地駐紮俄羅斯的波羅的海艦隊。\n(A)加里寧格勒與東北亞距離很遠，(B)波羅的海是隸屬大西洋的緣海，(C)應該是波蘭\n而非北歐的芬蘭。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Bh-Ⅳ-3(歐洲)現代經濟的發展與區域結盟。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 41,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "表(五)為三個不同日期臺灣部分水庫的蓄水量百分比，這些水庫在2021年5月31日的蓄水量狀況，可能與下列何者關係最為密切？",
+    "options": {
+      "A": "2021年梅雨鋒面提早報到",
+      "B": "2021年夏末對流雨較不旺盛",
+      "C": "2020年冬季迎風面的地形雨偏少",
+      "D": "2020年缺乏颱風帶來的豐沛雨量&菲律賓披索：菲律賓貨幣名稱。"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [
+      "表(五)"
+    ],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "表(五)顯示南部的水庫水位在2020 年夏季就低於一半，並沒有獲得足夠的降水\n的補充，因此答案選(D)缺乏颱風帶來的豐沛雨量。\n(A)選項錯誤，2021 年5 月底梅雨季水庫趨近乾涸，最可能是缺乏梅雨降水。(B)是未\n來的事，(C)敘述位於北部而非中南部。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Ac-Ⅳ-2 臺灣的氣候特色。"
+    ],
+    "learning_focuses": [
+      "地 A：臺灣與在地環境"
+    ]
+  },
+  {
+    "number": 42,
+    "type": "單題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "某民意代表在服務處設立法律諮詢服務站，表(六)是2020年及2021年法律諮詢服務件數的統計資料，在2020年的刑事案件中，超過半數屬於告訴乃論，而2021年則有過半數的刑事案件屬於非告訴乃論。根據上述內容判斷，在2020年及2021年的諮詢服務中，可採調解方式處理的件數可能為下列何者？",
+    "options": {
+      "A": "2020年70件，2021年100件",
+      "B": "2020年100件，2021年70件",
+      "C": "2020年300件，2021年300件",
+      "D": "2020年330件，2021年330件"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [
+      "表(六)"
+    ],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "民事事件均可調解；刑事事件僅告訴乃論可調解。\n2020 可調解案件會是200(民事)＋90↑(半數以上刑事)>290\n2021 可調解案件會是230(民事)＋75↓(半數以上刑事)<305",
+    "subject": "公民",
+    "learning_contents": [
+      "公Bj-Ⅳ-5. 社會生活上人民如何解決民事紛爭？這些解決方法各有哪些優 缺點？",
+      "公Ca-Ⅳ-1. 日常生活和公共事務中的爭議，為什麼應該以非暴力的方式來 解決？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟",
+      "公 C：權力、社會與法律"
+    ]
+  },
+  {
+    "number": 43,
+    "type": "題組子題",
+    "group_range": [
+      43,
+      45
+    ],
+    "group_id": "43-45",
+    "stem": "下列何項展品，最可能屬於該博物館的主要館藏？",
+    "options": {
+      "A": "",
+      "B": "",
+      "C": "",
+      "D": ""
+    },
+    "passage": "位於墨西哥首都的國立人類學博物館，館藏以當地古文明的文物為主，大約\n有六十萬件。博物館的建築設計，呼應該地古文明信仰中的四種自然力量：風、\n火、水、土元素，充滿與大自然的共融感。\n一樓的展示廳為常設展，其中一塊區域專門展示當\n地古文明的農業。由於農業發展與宗教神話有密不可分\n的關係，因此展覽廳特別展示了保佑農業生產的神官雕\n像，如圖(十九)所示。神官雕像手中握著的物品，是原\n產於美洲的作物，也是當地古文明所倚重的主食。\n雖然博物館的收藏相當豐富，但在展品的說明上，\n受過去殖民歷史影響，大多僅採用今日當地的官方語\n文。若改善上述不足之處，勢必能造福更多到館參觀的\n外國旅客，增進對當地文化的了解。\n表(六)\n時間\n類型\n2020\n年\n2021\n年\n民事事件\n200\n230\n刑事案件\n180\n150\n法律諮詢\n服務總數\n380\n380\n單位：件\n圖(十九)\n\n12",
+    "passage_figures": [
+      "圖(十九)"
+    ],
+    "passage_figure_pages": {
+      "圖(十九)": 12
+    },
+    "passage_tables": [
+      "表(六)"
+    ],
+    "passage_table_pages": {
+      "表(六)": 12
+    },
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": "11443i.jpg",
+    "image_options_full": true,
+    "answer": "B",
+    "explanation": "巴比倫為西亞古文明、南島語族文化落於東南亞及臺灣與澳洲一帶。因紐特文\n化位於北極區附近一帶。阿茲提克文明為中、南美洲古文明。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ob-Ⅳ-1：歐洲的海外擴張與傳教。"
+    ],
+    "learning_focuses": [
+      "歷 C：世界的歷史"
+    ]
+  },
+  {
+    "number": 44,
+    "type": "題組子題",
+    "group_range": [
+      43,
+      45
+    ],
+    "group_id": "43-45",
+    "stem": "圖(十九)神官雕像手中所持的物品，最可能是下列何者？",
+    "options": {
+      "A": "玉米",
+      "B": "橄欖",
+      "C": "小麥",
+      "D": "稻米"
+    },
+    "passage": "位於墨西哥首都的國立人類學博物館，館藏以當地古文明的文物為主，大約\n有六十萬件。博物館的建築設計，呼應該地古文明信仰中的四種自然力量：風、\n火、水、土元素，充滿與大自然的共融感。\n一樓的展示廳為常設展，其中一塊區域專門展示當\n地古文明的農業。由於農業發展與宗教神話有密不可分\n的關係，因此展覽廳特別展示了保佑農業生產的神官雕\n像，如圖(十九)所示。神官雕像手中握著的物品，是原\n產於美洲的作物，也是當地古文明所倚重的主食。\n雖然博物館的收藏相當豐富，但在展品的說明上，\n受過去殖民歷史影響，大多僅採用今日當地的官方語\n文。若改善上述不足之處，勢必能造福更多到館參觀的\n外國旅客，增進對當地文化的了解。\n表(六)\n時間\n類型\n2020\n年\n2021\n年\n民事事件\n200\n230\n刑事案件\n180\n150\n法律諮詢\n服務總數\n380\n380\n單位：件\n圖(十九)\n\n12",
+    "passage_figures": [
+      "圖(十九)"
+    ],
+    "passage_figure_pages": {
+      "圖(十九)": 12
+    },
+    "passage_tables": [
+      "表(六)"
+    ],
+    "passage_table_pages": {
+      "表(六)": 12
+    },
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "原產於中、南美洲者為玉米。橄欖原產於環地中海地區、小麥原產於西亞、水\n稻原產於東亞。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ob-Ⅳ-1：歐洲的海外擴張與傳教。"
+    ],
+    "learning_focuses": [
+      "歷 C：世界的歷史"
+    ]
+  },
+  {
+    "number": 45,
+    "type": "題組子題",
+    "group_range": [
+      43,
+      45
+    ],
+    "group_id": "43-45",
+    "stem": "文中博物館的展品說明，最可能以何種語文為主？",
+    "options": {
+      "A": "英文",
+      "B": "法文",
+      "C": "葡萄牙文",
+      "D": "西班牙文"
+    },
+    "passage": "位於墨西哥首都的國立人類學博物館，館藏以當地古文明的文物為主，大約\n有六十萬件。博物館的建築設計，呼應該地古文明信仰中的四種自然力量：風、\n火、水、土元素，充滿與大自然的共融感。\n一樓的展示廳為常設展，其中一塊區域專門展示當\n地古文明的農業。由於農業發展與宗教神話有密不可分\n的關係，因此展覽廳特別展示了保佑農業生產的神官雕\n像，如圖(十九)所示。神官雕像手中握著的物品，是原\n產於美洲的作物，也是當地古文明所倚重的主食。\n雖然博物館的收藏相當豐富，但在展品的說明上，\n受過去殖民歷史影響，大多僅採用今日當地的官方語\n文。若改善上述不足之處，勢必能造福更多到館參觀的\n外國旅客，增進對當地文化的了解。\n表(六)\n時間\n類型\n2020\n年\n2021\n年\n民事事件\n200\n230\n刑事案件\n180\n150\n法律諮詢\n服務總數\n380\n380\n單位：件\n圖(十九)\n\n12",
+    "passage_figures": [
+      "圖(十九)"
+    ],
+    "passage_figure_pages": {
+      "圖(十九)": 12
+    },
+    "passage_tables": [
+      "表(六)"
+    ],
+    "passage_table_pages": {
+      "表(六)": 12
+    },
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "墨西哥曾為西班牙殖民地，故其官方語言為西班牙文。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ob-Ⅳ-1：歐洲的海外擴張與傳教。"
+    ],
+    "learning_focuses": [
+      "歷 C：世界的歷史"
+    ]
+  },
+  {
+    "number": 46,
+    "type": "題組子題",
+    "group_range": [
+      46,
+      48
+    ],
+    "group_id": "46-48",
+    "stem": "多數國家使用0～9這十個數字作為車牌編碼的組合，但我國僅使用其中九個數字。根據文中內容判斷，其原因最可能為下列何者？",
+    "options": {
+      "A": "倫理價值具有約束力",
+      "B": "民間習俗具有強制力",
+      "C": "法律規定受宗教信仰影響",
+      "D": "政府施政受社會規範影響"
+    },
+    "passage": "我國現行汽、機車車牌號碼的編碼規則，原則上每組號碼皆是由英文字母與\n阿拉伯數字組成，但在民意反應及諸多考量下，有些數字、英文字母或是特定組\n合，已不再使用於新發放的車牌。例如：數字的「4」，是因為其發音與「死」字\n相近，一般民眾認為觸霉頭而不願使用；英文字母的「I」、「O」不再被使用，\n是因為與數字「1」、「0」太相似；至於BAD、BUM、END等，則由於字母組合\n具有負面意涵，因此也加以排除。\n除此之外，政府也開放民眾可額外付費選擇號碼，有些民眾會想要擁有\n6666、8888、9999等特殊號碼的車牌，因此這些號碼的價格常遠高於其他車牌；也\n有另一些民眾只對與生日、特殊紀念日有關的號碼組合有興趣，因此選擇購買這\n些特定號碼。至於不在意車牌號碼的民眾，則可接受政府發放一般組合的車牌，\n無需額外支付選號費。但不論最後是選擇哪一個車牌號碼，汽、機車所有人都要\n將車牌懸掛在指定位置，違規者將被警察依《道路交通管理處罰條例》開罰。\n\n13",
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "文中明說「數字4 發音與『死』相近，民眾認為觸霉頭不願使用」，因此政府\n因應社會觀感將其排除。這是典型的政府因應社會風俗習慣、價值觀所做的政策調整，\n屬於「社會規範影響政府施政」，而不是法律、宗教、強制力或倫理價值的直接介入。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Bc-Ⅳ-2. 日常生活規範與文化有什麼關係？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟"
+    ]
+  },
+  {
+    "number": 47,
+    "type": "題組子題",
+    "group_range": [
+      46,
+      48
+    ],
+    "group_id": "46-48",
+    "stem": "文中關於民眾選擇車牌號碼的敘述，最適合用來說明下列哪一觀點？",
+    "options": {
+      "A": "廠商之間的價格競爭將使消費者受惠",
+      "B": "市場的競爭程度越高對消費者越有利",
+      "C": "負向誘因促使民眾的行為發生改變",
+      "D": "不同人對同一誘因的感受有所不同"
+    },
+    "passage": "我國現行汽、機車車牌號碼的編碼規則，原則上每組號碼皆是由英文字母與\n阿拉伯數字組成，但在民意反應及諸多考量下，有些數字、英文字母或是特定組\n合，已不再使用於新發放的車牌。例如：數字的「4」，是因為其發音與「死」字\n相近，一般民眾認為觸霉頭而不願使用；英文字母的「I」、「O」不再被使用，\n是因為與數字「1」、「0」太相似；至於BAD、BUM、END等，則由於字母組合\n具有負面意涵，因此也加以排除。\n除此之外，政府也開放民眾可額外付費選擇號碼，有些民眾會想要擁有\n6666、8888、9999等特殊號碼的車牌，因此這些號碼的價格常遠高於其他車牌；也\n有另一些民眾只對與生日、特殊紀念日有關的號碼組合有興趣，因此選擇購買這\n些特定號碼。至於不在意車牌號碼的民眾，則可接受政府發放一般組合的車牌，\n無需額外支付選號費。但不論最後是選擇哪一個車牌號碼，汽、機車所有人都要\n將車牌懸掛在指定位置，違規者將被警察依《道路交通管理處罰條例》開罰。\n\n13",
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "有些人偏好數字「8888」願意付高價，有些人則重視「生日號碼」，而有些人\n完全不在意車牌號碼。這代表：相同誘因（如選號機制、付費選號），對不同民眾產\n生的吸引力或價值判斷不同。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Bm-Ⅳ-2. 為什麼不同人對同一誘因的反應不同？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟"
+    ]
+  },
+  {
+    "number": 48,
+    "type": "題組子題",
+    "group_range": [
+      46,
+      48
+    ],
+    "group_id": "46-48",
+    "stem": "某民眾的車牌被別人惡意拔走，導致他違反文末所述的規定而受罰。若該民眾對此處罰不服，依法採行下列何種處理方式最適當？",
+    "options": {
+      "A": "向中央立法機關提出訴願",
+      "B": "向地方行政機關提出請願",
+      "C": "透過行政救濟途徑維護權益",
+      "D": "透過刑事訴訟途徑維護權益"
+    },
+    "passage": "我國現行汽、機車車牌號碼的編碼規則，原則上每組號碼皆是由英文字母與\n阿拉伯數字組成，但在民意反應及諸多考量下，有些數字、英文字母或是特定組\n合，已不再使用於新發放的車牌。例如：數字的「4」，是因為其發音與「死」字\n相近，一般民眾認為觸霉頭而不願使用；英文字母的「I」、「O」不再被使用，\n是因為與數字「1」、「0」太相似；至於BAD、BUM、END等，則由於字母組合\n具有負面意涵，因此也加以排除。\n除此之外，政府也開放民眾可額外付費選擇號碼，有些民眾會想要擁有\n6666、8888、9999等特殊號碼的車牌，因此這些號碼的價格常遠高於其他車牌；也\n有另一些民眾只對與生日、特殊紀念日有關的號碼組合有興趣，因此選擇購買這\n些特定號碼。至於不在意車牌號碼的民眾，則可接受政府發放一般組合的車牌，\n無需額外支付選號費。但不論最後是選擇哪一個車牌號碼，汽、機車所有人都要\n將車牌懸掛在指定位置，違規者將被警察依《道路交通管理處罰條例》開罰。\n\n13",
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "這是因違反《道路交通管理處罰條例》而受罰，屬於行政處分。若民眾認為受\n罰不合理，可依法提出訴願或行政訴訟，這整體過程稱為「行政救濟」。",
+    "subject": "公民",
+    "learning_contents": [
+      "公Bh-Ⅳ-2. 人民生活中有哪些常見的行政管制？當人民的權益受到侵害時， 可以尋求行政救濟的意義為何？"
+    ],
+    "learning_focuses": [
+      "公 B：市場與經濟"
+    ]
+  },
+  {
+    "number": 49,
+    "type": "題組子題",
+    "group_range": [
+      49,
+      51
+    ],
+    "group_id": "49-51",
+    "stem": "巴斯人的宗教信仰，最可能是下列何者？",
+    "options": {
+      "A": "祆教",
+      "B": "佛教",
+      "C": "猶太教",
+      "D": "基督教"
+    },
+    "passage": "巴斯人的祖先原本居住於伊朗高原一帶，七世紀上半葉，阿拉伯軍隊擊敗\n統治當地的薩珊王朝國王伊嗣俟，不願被穆斯林統治的人們遠離故鄉，遷徙至\n印度半島西部避難。此後數個世紀，伊斯蘭教勢力逐漸進入印度，但印度的穆\n斯林統治者對於不同的宗教和文化，表現出較為寬容的態度。這使巴斯人得以\n在印度從事貿易等行業，並世代信仰發源於伊朗高原的宗教。\n十七世紀後期，善於經商的巴斯人，開始與歐\n洲商人合作，既促進印度西部城市孟買等地的繁\n榮，也使得巴斯人隨著歐洲商人來到中國進行貿\n易。十八世紀後期至十九世紀中期，巴斯商人在歐\n洲殖民勢力對中國的貿易網絡之中，扮演重要角\n色，並與控制印度的殖民者一起在中國活動。當時\n巴斯商人留下許多會館與墓園，圖(二十)墓碑即為\n一例。\n十九世紀中期以後，因為美國內戰導致紡織業原料短缺，以及蘇伊士運河\n開通促進航運事業發展等影響，巴斯商人傾向加強投資印度和歐洲的產業，而\n對中國的商貿占比則逐漸下降。\n圖(二十)\n\n14",
+    "passage_figures": [
+      "圖(二十)"
+    ],
+    "passage_figure_pages": {
+      "圖(二十)": 14
+    },
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "A",
+    "explanation": "題文提及「巴斯人的祖先原本居住於伊朗高原一帶」，故其信奉之宗教極有可\n能為源於伊朗高原一帶的宗教(祆教)。佛教源於印度、猶太教及基督教源於迦薩走廊\n一帶。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Na-Ⅳ-1：非洲與西亞的早期文化。"
+    ],
+    "learning_focuses": [
+      "歷 C：世界的歷史"
+    ]
+  },
+  {
+    "number": 50,
+    "type": "題組子題",
+    "group_range": [
+      49,
+      51
+    ],
+    "group_id": "49-51",
+    "stem": "十九世紀上半葉，巴斯人與中國商人的主要貿易模式，最可能是下列何者？",
+    "options": {
+      "A": "巴斯人賣瓷器到中國以換取茶葉",
+      "B": "巴斯人賣鴉片到中國以取得白銀",
+      "C": "巴斯人賣鹿皮到中國以獲得棉花",
+      "D": "巴斯人賣茶葉到中國以交換工業品"
+    },
+    "passage": "巴斯人的祖先原本居住於伊朗高原一帶，七世紀上半葉，阿拉伯軍隊擊敗\n統治當地的薩珊王朝國王伊嗣俟，不願被穆斯林統治的人們遠離故鄉，遷徙至\n印度半島西部避難。此後數個世紀，伊斯蘭教勢力逐漸進入印度，但印度的穆\n斯林統治者對於不同的宗教和文化，表現出較為寬容的態度。這使巴斯人得以\n在印度從事貿易等行業，並世代信仰發源於伊朗高原的宗教。\n十七世紀後期，善於經商的巴斯人，開始與歐\n洲商人合作，既促進印度西部城市孟買等地的繁\n榮，也使得巴斯人隨著歐洲商人來到中國進行貿\n易。十八世紀後期至十九世紀中期，巴斯商人在歐\n洲殖民勢力對中國的貿易網絡之中，扮演重要角\n色，並與控制印度的殖民者一起在中國活動。當時\n巴斯商人留下許多會館與墓園，圖(二十)墓碑即為\n一例。\n十九世紀中期以後，因為美國內戰導致紡織業原料短缺，以及蘇伊士運河\n開通促進航運事業發展等影響，巴斯商人傾向加強投資印度和歐洲的產業，而\n對中國的商貿占比則逐漸下降。\n圖(二十)\n\n14",
+    "passage_figures": [
+      "圖(二十)"
+    ],
+    "passage_figure_pages": {
+      "圖(二十)": 14
+    },
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "瓷器、茶葉原產於中國，故不需要進口至中國。中國對鹿皮需求量不大，故敘\n述亦不正確。十九世紀上半葉(1840 年以前)，中國對鴉片需求量大，因此走私盛行，\n甚至導致白銀開始大量外流，進而爆發後續一連串的鴉片戰爭、英法聯軍之役等東西\n貿易軍事衝突。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ib-Ⅳ-1：晚清時期的東西方接觸與衝突。"
+    ],
+    "learning_focuses": [
+      "歷 B：中國與東亞的歷史"
+    ]
+  },
+  {
+    "number": 51,
+    "type": "題組子題",
+    "group_range": [
+      49,
+      51
+    ],
+    "group_id": "49-51",
+    "stem": "關於圖(二十)墓碑文字的解讀，下列何者最適當？",
+    "options": {
+      "A": "當時類似的巴斯墓葬，多集中於今日山東青島一帶",
+      "B": "根據時間可確認，此人於《南京條約》簽訂前來華",
+      "C": "此人為孟買出身，顯示其生前主要與日本商行合作",
+      "D": "碑刻的紀年方式，反映巴斯人珍視薩珊王朝的歷史"
+    },
+    "passage": "巴斯人的祖先原本居住於伊朗高原一帶，七世紀上半葉，阿拉伯軍隊擊敗\n統治當地的薩珊王朝國王伊嗣俟，不願被穆斯林統治的人們遠離故鄉，遷徙至\n印度半島西部避難。此後數個世紀，伊斯蘭教勢力逐漸進入印度，但印度的穆\n斯林統治者對於不同的宗教和文化，表現出較為寬容的態度。這使巴斯人得以\n在印度從事貿易等行業，並世代信仰發源於伊朗高原的宗教。\n十七世紀後期，善於經商的巴斯人，開始與歐\n洲商人合作，既促進印度西部城市孟買等地的繁\n榮，也使得巴斯人隨著歐洲商人來到中國進行貿\n易。十八世紀後期至十九世紀中期，巴斯商人在歐\n洲殖民勢力對中國的貿易網絡之中，扮演重要角\n色，並與控制印度的殖民者一起在中國活動。當時\n巴斯商人留下許多會館與墓園，圖(二十)墓碑即為\n一例。\n十九世紀中期以後，因為美國內戰導致紡織業原料短缺，以及蘇伊士運河\n開通促進航運事業發展等影響，巴斯商人傾向加強投資印度和歐洲的產業，而\n對中國的商貿占比則逐漸下降。\n圖(二十)\n\n14",
+    "passage_figures": [
+      "圖(二十)"
+    ],
+    "passage_figure_pages": {
+      "圖(二十)": 14
+    },
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "從圖(二十)墓碑文字中可知，此人應於鴉片戰爭前、後一帶時來到中國，因此，\n無法斷定為鴉片戰爭前就來華，故(B)未必正確。鴉片戰爭前、後時期的外商僅限活動\n於華南一帶，故(A)敘述有誤。此人欲與中國貿易，因此合作對象可能為中國漢商或在\n印度統治的英國人，因此(C) 敘述有誤。",
+    "subject": "歷史",
+    "learning_contents": [
+      "歷Ib-Ⅳ-1：晚清時期的東西方接觸與衝突。"
+    ],
+    "learning_focuses": [
+      "歷 B：中國與東亞的歷史"
+    ]
+  },
+  {
+    "number": 52,
+    "type": "題組子題",
+    "group_range": [
+      52,
+      54
+    ],
+    "group_id": "52-54",
+    "stem": "根據圖(二十一)中的資訊判斷，與英國產生領土紛爭的國家應為下列何者？",
+    "options": {
+      "A": "南非",
+      "B": "澳洲",
+      "C": "阿根廷",
+      "D": "紐西蘭"
+    },
+    "passage": "坐落在南大西洋的南喬治亞島，其\n位置如圖(二十一)所示。冰天雪地的環\n境下，島上仍孕育了為數眾多的海獅、\n象鼻海豹、國王企鵝和特有種鳥類。\n1775年庫克船長登島後，宣布其為\n英國領土並以當時的英王命名。二十\n世紀初該島設有數個捕鯨站，目前皆\n已廢棄。1927年，鄰近該島的甲國聲稱\n擁有該島主權，此領土紛爭成為日後\n與英國爆發戰爭的原因之一，1982年戰\n爭結束後，該島仍為英國所管轄。目\n前該島幾乎沒有常住人口，為觀光船\n行程的中繼站。\n2017年，一座面積約4,200平方公里的龐大冰山，脫離陸地後持續在海上漂\n流，圖(二十一)顯示該冰山於不同時間的位置。該冰山雖然持續崩裂、融化，但\n仍相當巨大，2020年科學家依據過去其他冰山漂流的軌跡，推測它極有可能撞\n上南喬治亞島，並研判可能產生的影響。\n圖(二十一)",
+    "passage_figures": [
+      "圖(二十一)"
+    ],
+    "passage_figure_pages": {
+      "圖(二十一)": 15
+    },
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "C",
+    "explanation": "「鄰近該島的甲國」是位於南美洲最南端的國家，可能是智利或阿根廷，其中\n面臨大西洋的是阿根廷，因此答案為(C)。\n(A)、(B)、(D)主要位於東半球。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Bi-Ⅳ-1(美洲)自然環境背景。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  },
+  {
+    "number": 53,
+    "type": "題組子題",
+    "group_range": [
+      52,
+      54
+    ],
+    "group_id": "52-54",
+    "stem": "依據上文及圖(二十一)中的資訊判斷，該冰山漂流的方向應為下列何者？",
+    "options": {
+      "A": "東北向西南",
+      "B": "西南向東北",
+      "C": "東南向西北",
+      "D": "西北向東南"
+    },
+    "passage": "坐落在南大西洋的南喬治亞島，其\n位置如圖(二十一)所示。冰天雪地的環\n境下，島上仍孕育了為數眾多的海獅、\n象鼻海豹、國王企鵝和特有種鳥類。\n1775年庫克船長登島後，宣布其為\n英國領土並以當時的英王命名。二十\n世紀初該島設有數個捕鯨站，目前皆\n已廢棄。1927年，鄰近該島的甲國聲稱\n擁有該島主權，此領土紛爭成為日後\n與英國爆發戰爭的原因之一，1982年戰\n爭結束後，該島仍為英國所管轄。目\n前該島幾乎沒有常住人口，為觀光船\n行程的中繼站。\n2017年，一座面積約4,200平方公里的龐大冰山，脫離陸地後持續在海上漂\n流，圖(二十一)顯示該冰山於不同時間的位置。該冰山雖然持續崩裂、融化，但\n仍相當巨大，2020年科學家依據過去其他冰山漂流的軌跡，推測它極有可能撞\n上南喬治亞島，並研判可能產生的影響。\n圖(二十一)",
+    "passage_figures": [
+      "圖(二十一)"
+    ],
+    "passage_figure_pages": {
+      "圖(二十一)": 15
+    },
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "B",
+    "explanation": "根據圖中經緯度顯示，冰山移動方向為由南往北、由西往東，因此答案為(B)西\n南向東北。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Aa-Ⅳ-1 全球經緯度座標系統。"
+    ],
+    "learning_focuses": [
+      "地 A：臺灣與在地環境"
+    ]
+  },
+  {
+    "number": 54,
+    "type": "題組子題",
+    "group_range": [
+      52,
+      54
+    ],
+    "group_id": "52-54",
+    "stem": "上述冰山若撞上南喬治亞島，其產生的影響最可能為下列何者？",
+    "options": {
+      "A": "巨浪侵襲島嶼陸地，阻礙工業發展",
+      "B": "附近海水鹽度上升，改變海洋生態",
+      "C": "威脅北美洲與非洲之間的船隻安全",
+      "D": "島嶼海岸遭受破壞，危及動物棲地"
+    },
+    "passage": "坐落在南大西洋的南喬治亞島，其\n位置如圖(二十一)所示。冰天雪地的環\n境下，島上仍孕育了為數眾多的海獅、\n象鼻海豹、國王企鵝和特有種鳥類。\n1775年庫克船長登島後，宣布其為\n英國領土並以當時的英王命名。二十\n世紀初該島設有數個捕鯨站，目前皆\n已廢棄。1927年，鄰近該島的甲國聲稱\n擁有該島主權，此領土紛爭成為日後\n與英國爆發戰爭的原因之一，1982年戰\n爭結束後，該島仍為英國所管轄。目\n前該島幾乎沒有常住人口，為觀光船\n行程的中繼站。\n2017年，一座面積約4,200平方公里的龐大冰山，脫離陸地後持續在海上漂\n流，圖(二十一)顯示該冰山於不同時間的位置。該冰山雖然持續崩裂、融化，但\n仍相當巨大，2020年科學家依據過去其他冰山漂流的軌跡，推測它極有可能撞\n上南喬治亞島，並研判可能產生的影響。\n圖(二十一)",
+    "passage_figures": [
+      "圖(二十一)"
+    ],
+    "passage_figure_pages": {
+      "圖(二十一)": 15
+    },
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "answer": "D",
+    "explanation": "南喬治亞島是重要動物棲息地，冰山撞擊南喬治亞島，可能破壞島嶼的海岸地\n形與生態，因此答案選(D)島嶼海岸遭受破壞，危及動物棲地。\n(A)南喬治亞島的目前沒有觀光業以外的經濟活動。(B)冰山融化會降低附近海水的鹽\n度。(C)南喬治亞島位於南大西洋，離北美洲很遠且需經過熱帶。",
+    "subject": "地理",
+    "learning_contents": [
+      "地Bc-Ⅳ-2 全球氣候變遷的衝擊。"
+    ],
+    "learning_focuses": [
+      "地 B：中國與東亞（含區域地理）"
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>國中教育會考社會科題庫 — 115年</title>
+<link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-left">
+    <h1>國中教育會考 社會科題庫</h1>
+    <span class="year-badge" id="year-badge">114年</span>
+  </div>
+  <div class="topbar-right">
+    <select id="year-select">
+      <option value="112">112年</option>
+      <option value="113">113年</option>
+      <option value="114">114年</option>
+      <option value="115" selected>115年</option>
+    </select>
+    <select id="filter-select">
+      <option value="all">全部題目</option>
+      <option value="single">單題</option>
+      <option value="group">題組</option>
+      <option value="history">歷史</option>
+      <option value="geography">地理</option>
+      <option value="citizenship">公民</option>
+    </select>
+  </div>
+</header>
+
+<nav class="qnav" id="qnav">
+  <!-- question number grid populated by JS -->
+</nav>
+
+<main class="quiz" id="quiz">
+  <!-- question display populated by JS -->
+</main>
+
+<footer class="controls">
+  <button id="prev-btn">← 上一題</button>
+  <span id="q-counter"></span>
+  <button id="next-btn">下一題 →</button>
+</footer>
+
+<div id="lightbox" class="lightbox" hidden>
+  <span class="lightbox-close" id="lightbox-close">×</span>
+  <img id="lightbox-img" alt="">
+</div>
+
+<!-- Custom modal for submitting answer feedback -->
+<div id="result-modal" class="modal-overlay" hidden>
+  <div class="modal-card">
+    <div class="modal-header" id="modal-header">
+      <span class="modal-status-icon" id="modal-status-icon">✓</span>
+      <h3 id="modal-title">恭喜答對！</h3>
+    </div>
+    <div class="modal-body">
+      <div class="modal-answer-info" id="modal-answer-info">正確答案是 A</div>
+      <div class="modal-section-title">題目解析</div>
+      <div class="modal-explanation" id="modal-explanation"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-close-btn" id="modal-close-btn">確定</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js?v=7"></script>
+</body>
+</html>
