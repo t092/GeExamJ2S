@@ -1,11 +1,276 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="refresh" content="0;url=web/index.html">
-<title>JHexam</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JHexam 國中教育會考社會科學習系統</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-grad: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --text-main: #f8fafc;
+      --text-sub: #94a3b8;
+      --accent-cyan: #06b6d4;
+      --accent-pink: #ec4899;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans TC', sans-serif;
+      background: var(--primary-grad);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient lights */
+    body::before, body::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: 0;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    body::before {
+      background: var(--accent-cyan);
+      top: 10%;
+      left: 10%;
+    }
+
+    body::after {
+      background: var(--accent-pink);
+      bottom: 10%;
+      right: 10%;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      z-index: 1;
+      text-align: center;
+    }
+
+    header {
+      margin-bottom: 3.5rem;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.8rem;
+      background: linear-gradient(to right, #ffffff, #93c5fd, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: var(--text-sub);
+      font-size: 1.15rem;
+      font-weight: 300;
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    @media (min-width: 768px) {
+      .portal-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .portal-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      text-decoration: none;
+      color: inherit;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portal-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .portal-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .portal-card:hover::before {
+      opacity: 1;
+    }
+
+    .portal-card.exam:hover {
+      box-shadow: 0 20px 40px rgba(6, 182, 212, 0.15), 0 0 1px 1px rgba(6, 182, 212, 0.3);
+    }
+
+    .portal-card.quiz:hover {
+      box-shadow: 0 20px 40px rgba(236, 72, 153, 0.15), 0 0 1px 1px rgba(236, 72, 153, 0.3);
+    }
+
+    .icon-wrapper {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      transition: transform 0.4s ease;
+    }
+
+    .portal-card:hover .icon-wrapper {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .exam .icon-wrapper {
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(6, 182, 212, 0.2);
+    }
+
+    .quiz .icon-wrapper {
+      background: rgba(236, 72, 153, 0.15);
+      color: var(--accent-pink);
+      border: 1px solid rgba(236, 72, 153, 0.2);
+    }
+
+    .portal-card h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .portal-card p {
+      color: var(--text-sub);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-sub);
+    }
+
+    .footer {
+      margin-top: 5rem;
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.85rem;
+      animation: fadeIn 1s ease-out 0.4s both;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-<a href="web/index.html">進入測驗系統</a>
+
+  <div class="container">
+    <header>
+      <h1>JHexam 社會科學習平台</h1>
+      <p>收錄 112~115 學年度國中教育會考社會科完整題本與詳解</p>
+    </header>
+
+    <div class="portal-grid">
+      <a href="web/index.html" class="portal-card exam">
+        <span class="badge">歷年完整</span>
+        <div class="icon-wrapper">📖</div>
+        <h2>歷年考題與解析</h2>
+        <p>提供 112 至 115 年會考社會科完整題本，支持按年份、題型、科目篩選，提供完整官方答案與名師詳解。</p>
+      </a>
+
+      <a href="quiz/index.html" class="portal-card quiz">
+        <span class="badge">互動練習</span>
+        <div class="icon-wrapper">🎯</div>
+        <h2>隨機測驗練習</h2>
+        <p>跨年度題庫隨機抽選 25 題，保證抽選題組，可自由篩選科目與主題，支援錯題檢討、評分與動態配分。</p>
+      </a>
+    </div>
+
+    <footer class="footer">
+      &copy; 2026 JHexam 國中教育會考社會科題庫與線上測驗系統
+    </footer>
+  </div>
+
 </body>
 </html>

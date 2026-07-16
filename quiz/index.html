@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會考社會科 — 隨機測驗練習系統</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+
+  <!-- ==================== STAGE 1: SETUP ==================== -->
+  <div id="setup-stage" class="stage active">
+    <div class="setup-container">
+      <div class="setup-card">
+        <div class="setup-header">
+          <div class="setup-icon">🎯</div>
+          <h2>隨機測驗練習設定</h2>
+          <p>系統將從 112~115 學年度會考題庫中隨機抽選 25 題進行測驗，並自動計算分數。</p>
+        </div>
+
+        <div class="setup-form">
+          <!-- Item Count (Fixed at 25) -->
+          <div class="form-group">
+            <label class="form-label">測驗題數</label>
+            <div class="fixed-badge">25 題 (固定)</div>
+          </div>
+
+          <!-- Subject Selection -->
+          <div class="form-group">
+            <label class="form-label">選擇科目</label>
+            <div class="subject-grid">
+              <label class="checkbox-card" for="sub-history">
+                <input type="checkbox" id="sub-history" checked>
+                <span class="checkbox-custom"></span>
+                <span class="label-text">歷史科</span>
+              </label>
+              <label class="checkbox-card" for="sub-geography">
+                <input type="checkbox" id="sub-geography" checked>
+                <span class="checkbox-custom"></span>
+                <span class="label-text">地理科</span>
+              </label>
+              <label class="checkbox-card" for="sub-citizens">
+                <input type="checkbox" id="sub-citizens" checked>
+                <span class="checkbox-custom"></span>
+                <span class="label-text">公民科</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Topic Selection (3 columns, no expander, side by side) -->
+          <div class="form-group">
+            <label class="form-label">細分主題</label>
+            <div id="topic-container" class="topic-container">
+               <!-- History Topics -->
+               <div class="subject-topics" data-subject="歷史">
+                 <div class="subject-topics-header">
+                   歷史學習主題
+                 </div>
+                 <div class="topic-list">
+                   <!-- JS populated -->
+                 </div>
+               </div>
+               <!-- Geography Topics -->
+               <div class="subject-topics" data-subject="地理">
+                 <div class="subject-topics-header">
+                   地理學習主題
+                 </div>
+                 <div class="topic-list">
+                   <!-- JS populated -->
+                 </div>
+               </div>
+               <!-- Citizens Topics -->
+               <div class="subject-topics" data-subject="公民">
+                 <div class="subject-topics-header">
+                   公民學習主題
+                 </div>
+                 <div class="topic-list">
+                   <!-- JS populated -->
+                 </div>
+               </div>
+            </div>
+          </div>
+
+          <!-- Timer Mode -->
+          <div class="form-group">
+            <label class="form-label">作答時間限制</label>
+            <div class="timer-options">
+              <label class="radio-card" for="timer-off">
+                <input type="radio" name="timer-mode" id="timer-off" checked>
+                <span class="radio-custom"></span>
+                <div class="radio-text">
+                  <span class="main-txt">不限時間</span>
+                  <span class="sub-txt">輕鬆練習，無作答壓力</span>
+                </div>
+              </label>
+              <label class="radio-card" for="timer-on">
+                <input type="radio" name="timer-mode" id="timer-on">
+                <span class="radio-custom"></span>
+                <div class="radio-text">
+                  <span class="main-txt">限時挑戰</span>
+                  <span class="sub-txt">每題限時 90 秒作答</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Start Button -->
+          <button id="start-btn" class="btn btn-primary btn-block">開始測驗 🚀</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== STAGE 2: TESTING ==================== -->
+  <div id="testing-stage" class="stage">
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="brand-title">會考社會科隨機測驗</h1>
+        <div id="test-timer" class="timer-badge" hidden>⏳ <span id="timer-sec">90</span>秒</div>
+      </div>
+      <div class="topbar-right">
+        <button id="submit-quiz-btn" class="btn btn-accent">交卷 Finish</button>
+      </div>
+    </header>
+
+    <div class="progress-bar-container">
+      <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+    </div>
+
+    <nav class="qnav" id="qnav">
+      <!-- Question index buttons populated by JS -->
+    </nav>
+
+    <main class="quiz" id="quiz">
+      <!-- Question content populated by JS -->
+    </main>
+
+    <footer class="controls">
+      <button id="prev-btn" class="btn btn-outline">← 上一題</button>
+      <span id="q-counter" class="q-counter">0 / 25</span>
+      <button id="next-btn" class="btn btn-outline">下一題 →</button>
+    </footer>
+  </div>
+
+  <!-- ==================== STAGE 3: REVIEW ==================== -->
+  <div id="review-stage" class="stage">
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="brand-title">測驗結果與分析</h1>
+      </div>
+      <div class="topbar-right">
+        <button id="restart-btn" class="btn btn-primary">重新測驗 🔄</button>
+      </div>
+    </header>
+
+    <div class="review-layout">
+      <!-- Left sidebar: Stats Summary -->
+      <aside class="review-sidebar">
+        <div class="stats-card">
+          <div class="score-circle-wrapper">
+            <svg class="score-ring" width="160" height="160">
+              <circle class="score-ring-bg" cx="80" cy="80" r="70" stroke-width="12"></circle>
+              <circle id="score-ring-fill" class="score-ring-fill" cx="80" cy="80" r="70" stroke-width="12" stroke-dasharray="440" stroke-dashoffset="440"></circle>
+            </svg>
+            <div class="score-display">
+              <span id="score-value">0</span>
+              <span class="score-total">/ 100 分</span>
+            </div>
+          </div>
+          <div class="stats-grid">
+            <div class="stats-item">
+              <span class="stats-label">答對題數</span>
+              <span id="correct-count" class="stats-val">0 / 25</span>
+            </div>
+            <div class="stats-item">
+              <span class="stats-label">整體答對率</span>
+              <span id="correct-percent" class="stats-val">0%</span>
+            </div>
+          </div>
+          <div class="subject-stats">
+            <h4>科目分析</h4>
+            <div class="sub-stat-bar">
+              <div class="bar-info">
+                <span>歷史</span>
+                <span id="sub-val-history">0/0</span>
+              </div>
+              <div class="bar-bg"><div id="sub-fill-history" class="bar-fill history" style="width: 0%;"></div></div>
+            </div>
+            <div class="sub-stat-bar">
+              <div class="bar-info">
+                <span>地理</span>
+                <span id="sub-val-geography">0/0</span>
+              </div>
+              <div class="bar-bg"><div id="sub-fill-geography" class="bar-fill geography" style="width: 0%;"></div></div>
+            </div>
+            <div class="sub-stat-bar">
+              <div class="bar-info">
+                <span>公民</span>
+                <span id="sub-val-citizenship">0/0</span>
+              </div>
+              <div class="bar-bg"><div id="sub-fill-citizenship" class="bar-fill citizenship" style="width: 0%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Content: Wrong questions list and complete review -->
+      <main class="review-main">
+        <div class="review-filter-bar">
+          <h3>題目檢討清單</h3>
+          <div class="filter-toggles">
+            <button id="filter-all-questions" class="btn btn-sm btn-active">全部題目</button>
+            <button id="filter-wrong-questions" class="btn btn-sm">只看錯題 ❌</button>
+          </div>
+        </div>
+
+        <div id="review-list" class="review-list">
+          <!-- Populated by JS -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal for zooming figures -->
+  <div id="lightbox" class="lightbox" hidden>
+    <span class="lightbox-close" id="lightbox-close">×</span>
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <!-- Dialog for Confirming Quit/Submit -->
+  <div id="confirm-modal" class="modal-overlay" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="confirm-title">確定要交卷嗎？</h3>
+      </div>
+      <div class="modal-body">
+        <p id="confirm-text">您還有未作答的題目！</p>
+      </div>
+      <div class="modal-footer">
+        <button id="confirm-cancel-btn" class="btn btn-outline">繼續作答</button>
+        <button id="confirm-ok-btn" class="btn btn-accent">確定交卷</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/bank.js"></script>
+  <script src="js/sampler.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/review.js"></script>
+</body>
+</html>
