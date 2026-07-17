@@ -486,14 +486,27 @@ body {
 
 .qnav {
   background: #ffffff;
-  padding: 0.75rem 2rem;
   border-bottom: 1px solid var(--border);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
   position: sticky;
   top: 61px;
   z-index: 90;
+}
+
+.qnav-header {
+  display: none;
+}
+
+.qnav-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+}
+
+.qnav-toggle-btn {
+  display: none;
+  align-items: center;
+  gap: 6px;
 }
 
 .qnav-btn {
@@ -1479,3 +1492,142 @@ body {
   justify-content: flex-end;
   gap: 0.75rem;
 }
+
+/* ==========================================================================
+   Responsive / Mobile UI Enhancements (JHexam Quiz Mobile Upgrade V1)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* 1. Topbar Responsive adjustments */
+  .topbar {
+    padding: 0.6rem 1rem;
+  }
+  .brand-title {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .topbar-right {
+    gap: 6px;
+  }
+  .qnav-toggle-btn {
+    display: inline-flex;
+  }
+
+  /* 2. QNav Side Drawer Layout */
+  .qnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+    z-index: 1100;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+  }
+  .qnav.open {
+    transform: translateX(0);
+  }
+
+  .qnav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    background: #fafbfc;
+  }
+  .qnav-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e1b4b;
+    margin: 0;
+  }
+  .qnav-close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--text-sub);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+  }
+  .qnav-close-btn:hover {
+    color: var(--error);
+  }
+
+  .qnav-grid {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    align-content: start;
+  }
+  .qnav-btn {
+    min-width: 0;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  /* Backdrop overlay */
+  .qnav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15,23,42,0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1050;
+  }
+
+  /* 3. Header Toolbar Controls Simplification & Sticky Header */
+  .q-header {
+    position: sticky;
+    top: 51px; /* topbar height is ~51px on mobile */
+    background: white;
+    z-index: 80;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .quiz {
+    margin: 1rem auto 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+  }
+  
+  .progress-bar-container {
+    top: 51px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* 4. Split header into two rows to prevent overflow on mobile screen */
+  .q-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .q-header-left {
+    justify-content: flex-start;
+  }
+
+  .q-header-toolbar {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+

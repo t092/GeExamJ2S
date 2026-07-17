@@ -36,6 +36,9 @@ window.QuizEngine = {
     // 2. Setup stage listeners & UI
     this.setupUI();
     this.bindSetupEvents();
+
+    // 3. Bind mobile drawer events
+    this.bindMobileDrawer();
   },
 
   setupUI() {
@@ -107,6 +110,30 @@ window.QuizEngine = {
 
     // Start Button
     document.getElementById('start-btn').addEventListener('click', () => this.startQuiz());
+  },
+
+  bindMobileDrawer() {
+    const toggleBtn = document.getElementById('qnav-toggle-btn');
+    const qnav = document.getElementById('qnav');
+    const backdrop = document.getElementById('qnav-backdrop');
+    const closeBtn = document.getElementById('qnav-close-btn');
+
+    if (toggleBtn && qnav && backdrop) {
+      const openDrawer = () => {
+        qnav.classList.add('open');
+        backdrop.hidden = false;
+      };
+      const closeDrawer = () => {
+        qnav.classList.remove('open');
+        backdrop.hidden = true;
+      };
+
+      toggleBtn.addEventListener('click', openDrawer);
+      backdrop.addEventListener('click', closeDrawer);
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeDrawer);
+      }
+    }
   },
 
   startQuiz() {
@@ -223,7 +250,8 @@ window.QuizEngine = {
   },
 
   renderNav() {
-    const nav = document.getElementById('qnav');
+    const nav = document.getElementById('qnav-grid') || document.getElementById('qnav');
+    if (!nav) return;
     nav.innerHTML = '';
 
     this.questions.forEach((q, idx) => {
@@ -240,6 +268,14 @@ window.QuizEngine = {
         this.currentIdx = idx;
         this.renderQuestion();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Auto-close drawer on mobile
+        const qnav = document.getElementById('qnav');
+        const backdrop = document.getElementById('qnav-backdrop');
+        if (qnav && backdrop && window.innerWidth <= 768) {
+          qnav.classList.remove('open');
+          backdrop.hidden = true;
+        }
       });
 
       nav.appendChild(btn);
