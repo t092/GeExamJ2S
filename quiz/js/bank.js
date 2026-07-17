@@ -10,7 +10,7 @@ window.QuizBank = {
   async init() {
     if (this.isLoaded) return;
 
-    const years = ['112', '113', '114', '115'];
+    const years = ['111', '112', '113', '114', '115'];
     const loadPromises = years.map(async (year) => {
       try {
         const response = await fetch(`../data/${year}.json`);

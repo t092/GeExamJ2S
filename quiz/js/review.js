@@ -193,7 +193,7 @@ window.QuizReview = {
       // Stem text
       const stem = document.createElement('div');
       stem.className = 'q-stem';
-      stem.textContent = q.stem;
+      stem.innerHTML = renderStem(q.stem);
       card.appendChild(stem);
 
       // Options

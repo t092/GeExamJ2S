@@ -69,7 +69,7 @@ def find_figure_pages(pdf_path):
 def main():
     os.makedirs(DATA_DIR, exist_ok=True)
     
-    for year in ['112', '113', '114']:
+    for year in ['111', '112', '113', '114', '115']:
         pdf_path = os.path.join(ROOT_DIR, f'{year}年國中教育會考社會科題本.pdf')
         if not os.path.exists(pdf_path):
             continue

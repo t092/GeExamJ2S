@@ -1,6 +1,11 @@
 // JHexam Quiz App — vanilla JS
 const CN_DIGIT = {'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,'九':9,'\u3127':1};
 
+function renderStem(text) {
+  if (!text || !text.includes('__')) return text;
+  return text.replace(/__(.+?)__/g, '<u class="q-double">$1</u>');
+}
+
 function figNum(figId) {
   // Extract number from 圖(一) → 1, 圖(十) → 10, 表(二) → 2
   const m = figId.match(/[圖表]\((.+)\)/);
@@ -379,7 +384,7 @@ const App = {
 
       const stem = document.createElement('div');
       stem.className = 'q-stem';
-      stem.textContent = q.stem;
+      stem.innerHTML = renderStem(q.stem);
       contentCol.appendChild(stem);
 
       const opts = document.createElement('div');
@@ -410,7 +415,7 @@ const App = {
       // Single column for questions without figures
       const stem = document.createElement('div');
       stem.className = 'q-stem';
-      stem.textContent = q.stem;
+      stem.innerHTML = renderStem(q.stem);
       root.appendChild(stem);
 
       const opts = document.createElement('div');
@@ -543,7 +548,7 @@ const App = {
 
     const stem = document.createElement('div');
     stem.className = 'q-stem';
-    stem.textContent = q.stem;
+    stem.innerHTML = renderStem(q.stem);
     stemDiv.appendChild(stem);
 
     // Options
@@ -624,7 +629,7 @@ const App = {
 
       const stem = document.createElement('div');
       stem.className = 'q-stem';
-      stem.textContent = q.stem;
+      stem.innerHTML = renderStem(q.stem);
       contentCol.appendChild(stem);
 
       const optsDiv = document.createElement('div');
@@ -638,7 +643,7 @@ const App = {
     } else {
       const stem = document.createElement('div');
       stem.className = 'q-stem';
-      stem.textContent = q.stem;
+      stem.innerHTML = renderStem(q.stem);
       root.appendChild(stem);
 
       // Option image

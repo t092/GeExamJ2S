@@ -1397,6 +1397,14 @@ body {
 }
 
 
+/* Double-underline + bold formatting for __marked__ stem text */
+.q-stem u.q-double,
+.q-group-stem .q-stem u.q-double {
+  text-decoration: underline double;
+  font-weight: bold;
+  color: #000;
+}
+
 /* ==========================================================================
    SHARED UI ELEMENTS (MODALS, LIGHTBOX, ETC)
    ========================================================================== */

@@ -15,6 +15,12 @@ function figNum(figId) {
   return CN_DIGIT[cn] || parseInt(cn) || null;
 }
 
+// Convert __markup__ to double-underline + bold
+function renderStem(text) {
+  if (!text || !text.includes('__')) return text;
+  return text.replace(/__(.+?)__/g, '<u class=\"q-double\">$1</u>');
+}
+
 window.QuizEngine = {
   questions: [],
   currentIdx: 0,
@@ -345,7 +351,7 @@ window.QuizEngine = {
 
       const stem = document.createElement('div');
       stem.className = 'q-stem';
-      stem.textContent = q.stem;
+      stem.innerHTML = renderStem(q.stem);
       contentCol.appendChild(stem);
 
       const opts = this.buildStandardOptions(q);
@@ -358,7 +364,7 @@ window.QuizEngine = {
     } else {
       const stem = document.createElement('div');
       stem.className = 'q-stem';
-      stem.textContent = q.stem;
+      stem.innerHTML = renderStem(q.stem);
       container.appendChild(stem);
 
       const opts = this.buildStandardOptions(q);
@@ -378,7 +384,7 @@ window.QuizEngine = {
 
       const stem = document.createElement('div');
       stem.className = 'q-stem';
-      stem.textContent = q.stem;
+      stem.innerHTML = renderStem(q.stem);
       contentCol.appendChild(stem);
 
       const opts = this.buildImageOptions(q);
@@ -391,7 +397,7 @@ window.QuizEngine = {
     } else {
       const stem = document.createElement('div');
       stem.className = 'q-stem';
-      stem.textContent = q.stem;
+      stem.innerHTML = renderStem(q.stem);
       container.appendChild(stem);
 
       const opts = this.buildImageOptions(q);
@@ -488,7 +494,7 @@ window.QuizEngine = {
 
     const stem = document.createElement('div');
     stem.className = 'q-stem';
-    stem.textContent = q.stem;
+    stem.innerHTML = renderStem(q.stem);
     stemDiv.appendChild(stem);
 
     const opts = q.image_options ? this.buildImageOptions(q) : this.buildStandardOptions(q);
