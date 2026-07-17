@@ -77,7 +77,8 @@ const App = {
     const root = document.getElementById('quiz');
     root.innerHTML = `<div style="padding:24px;background:#fdedec;border-radius:8px;color:#c0392b;">
       <strong>⚠ 載入失敗</strong><br><br>${msg}</div>`;
-    document.getElementById('qnav').innerHTML = '';
+    const nav = document.getElementById('qnav-grid') || document.getElementById('qnav');
+    if (nav) nav.innerHTML = '';
     document.getElementById('q-counter').textContent = '0 / 0';
   },
 
@@ -134,6 +135,29 @@ const App = {
           }
         }
       });
+    }
+
+    // Mobile QNav Drawer toggle bindings
+    const toggleBtn = document.getElementById('qnav-toggle-btn');
+    const qnav = document.getElementById('qnav');
+    const backdrop = document.getElementById('qnav-backdrop');
+    const closeBtn = document.getElementById('qnav-close-btn');
+
+    if (toggleBtn && qnav && backdrop) {
+      const openDrawer = () => {
+        qnav.classList.add('open');
+        backdrop.hidden = false;
+      };
+      const closeDrawer = () => {
+        qnav.classList.remove('open');
+        backdrop.hidden = true;
+      };
+
+      toggleBtn.addEventListener('click', openDrawer);
+      backdrop.addEventListener('click', closeDrawer);
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeDrawer);
+      }
     }
   },
 
@@ -326,7 +350,8 @@ const App = {
   },
 
   renderNav() {
-    const nav = document.getElementById('qnav');
+    const nav = document.getElementById('qnav-grid') || document.getElementById('qnav');
+    if (!nav) return;
     nav.innerHTML = '';
     this.filtered.forEach((q, idx) => {
       const btn = document.createElement('button');
@@ -341,6 +366,14 @@ const App = {
         this.currentIdx = idx;
         this.render();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Auto-close drawer on mobile
+        const qnav = document.getElementById('qnav');
+        const backdrop = document.getElementById('qnav-backdrop');
+        if (qnav && backdrop && window.innerWidth <= 768) {
+          qnav.classList.remove('open');
+          backdrop.hidden = true;
+        }
       });
       nav.appendChild(btn);
     });

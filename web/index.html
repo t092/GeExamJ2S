@@ -28,12 +28,21 @@
       <option value="geography">地理</option>
       <option value="citizenship">公民</option>
     </select>
+    <button id="qnav-toggle-btn" class="qnav-toggle-btn">題號 ☰</button>
   </div>
 </header>
 
 <nav class="qnav" id="qnav">
-  <!-- question number grid populated by JS -->
+  <div class="qnav-header">
+    <h3>選擇題號</h3>
+    <button id="qnav-close-btn" class="qnav-close-btn">×</button>
+  </div>
+  <div class="qnav-grid" id="qnav-grid">
+    <!-- question number grid populated by JS -->
+  </div>
 </nav>
+
+<div id="qnav-backdrop" class="qnav-backdrop" hidden></div>
 
 <main class="quiz" id="quiz">
   <!-- question display populated by JS -->
