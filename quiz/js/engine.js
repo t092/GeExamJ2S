@@ -25,8 +25,8 @@ window.QuizEngine = {
   questions: [],
   currentIdx: 0,
   userAnswers: {}, // testNumber -> letter
-  isTimerMode: false,
-  timeLeft: 90,
+  timerDuration: 0, // 0 = unlimited; 300/600/900/1200 = seconds
+  timeLeft: 0,
   timerInterval: null,
 
   async init() {
@@ -108,6 +108,16 @@ window.QuizEngine = {
       });
     });
 
+    // Timer mode toggle: show/hide duration selection
+    const timerOff = document.getElementById('timer-off');
+    const timerOn = document.getElementById('timer-on');
+    const durGroup = document.getElementById('timer-duration-group');
+    const toggleDuration = () => {
+      durGroup.style.display = timerOn.checked ? 'block' : 'none';
+    };
+    timerOff.addEventListener('change', toggleDuration);
+    timerOn.addEventListener('change', toggleDuration);
+
     // Start Button
     document.getElementById('start-btn').addEventListener('click', () => this.startQuiz());
   },
@@ -153,10 +163,21 @@ window.QuizEngine = {
       topics.push(cb.value);
     });
 
-    this.isTimerMode = document.getElementById('timer-on').checked;
+    // Read question count
+    const countRadio = document.querySelector('input[name="quiz-count"]:checked');
+    const targetCount = countRadio ? parseInt(countRadio.value) : 25;
+
+    // Read timer settings
+    const timerOn = document.getElementById('timer-on').checked;
+    if (timerOn) {
+      const durRadio = document.querySelector('input[name="timer-duration"]:checked');
+      this.timerDuration = durRadio ? parseInt(durRadio.value) : 600;
+    } else {
+      this.timerDuration = 0;
+    }
 
     // 2. Draw questions
-    this.questions = window.QuizSampler.sample(window.QuizBank.pool, { subjects, topics });
+    this.questions = window.QuizSampler.sample(window.QuizBank.pool, { subjects, topics, count: targetCount });
 
     // 3. Reset test state
     this.currentIdx = 0;
@@ -286,18 +307,18 @@ window.QuizEngine = {
     clearInterval(this.timerInterval);
     const timerBadge = document.getElementById('test-timer');
 
-    if (!this.isTimerMode) {
+    if (this.timerDuration <= 0) {
       timerBadge.hidden = true;
       return;
     }
 
     timerBadge.hidden = false;
-    this.timeLeft = 90;
-    document.getElementById('timer-sec').textContent = this.timeLeft;
+    this.timeLeft = this.timerDuration;
+    this.updateTimerDisplay();
 
     this.timerInterval = setInterval(() => {
       this.timeLeft--;
-      document.getElementById('timer-sec').textContent = this.timeLeft;
+      this.updateTimerDisplay();
 
       if (this.timeLeft <= 0) {
         clearInterval(this.timerInterval);
@@ -306,20 +327,29 @@ window.QuizEngine = {
     }, 1000);
   },
 
-  handleTimeOut() {
-    // Save blank or current selection, then move next
-    const q = this.questions[this.currentIdx];
-    if (!this.userAnswers[q.testNumber]) {
-      this.userAnswers[q.testNumber] = null; // Marked as skipped
-    }
+  updateTimerDisplay() {
+    const mins = Math.floor(this.timeLeft / 60);
+    const secs = this.timeLeft % 60;
+    const display = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    document.getElementById('timer-sec').textContent = display;
 
-    if (this.currentIdx < this.questions.length - 1) {
-      alert(`第 ${q.testNumber} 題時間到！已自動儲存並前往下一題。`);
-      this.go(1);
+    // Warning style when under 1 minute
+    const badge = document.getElementById('test-timer');
+    if (this.timeLeft <= 60) {
+      badge.style.background = '#fef2f2';
+      badge.style.color = '#dc2626';
+      badge.style.animation = 'pulse 0.8s infinite';
     } else {
-      alert(`最後一題作答時間到！請點擊「交卷」以結束測驗。`);
-      this.renderQuestion(); // Re-render to show timeout state
+      badge.style.background = '';
+      badge.style.color = '';
+      badge.style.animation = '';
     }
+  },
+
+  handleTimeOut() {
+    // Auto-submit when time runs out
+    alert('作答時間已結束！系統將自動交卷。');
+    this.submitQuiz();
   },
 
   buildHeader(q) {
@@ -744,11 +774,11 @@ window.QuizEngine = {
     // Set actions
     document.getElementById('confirm-cancel-btn').onclick = () => {
       modal.hidden = true;
-      if (this.isTimerMode) {
+      if (this.timerDuration > 0) {
         // Resume timer
         this.timerInterval = setInterval(() => {
           this.timeLeft--;
-          document.getElementById('timer-sec').textContent = this.timeLeft;
+          this.updateTimerDisplay();
           if (this.timeLeft <= 0) {
             clearInterval(this.timerInterval);
             this.handleTimeOut();

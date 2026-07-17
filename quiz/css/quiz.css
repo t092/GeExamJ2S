@@ -267,6 +267,33 @@ body {
   cursor: pointer;
 }
 
+/* Count Selection Grid (3 columns) */
+.count-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .count-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Timer Duration Selection (4 columns) */
+.timer-duration-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .timer-duration-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Timer Options Radio Cards */
 .timer-options {
   display: grid;

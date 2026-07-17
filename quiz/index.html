@@ -22,10 +22,35 @@
         </div>
 
         <div class="setup-form">
-          <!-- Item Count (Fixed at 25) -->
+          <!-- Item Count Selection: 10 / 20 / 25 -->
           <div class="form-group">
             <label class="form-label">測驗題數</label>
-            <div class="fixed-badge">25 題 (固定)</div>
+            <div class="count-options">
+              <label class="radio-card" for="count-10">
+                <input type="radio" name="quiz-count" id="count-10" value="10">
+                <span class="radio-custom"></span>
+                <div class="radio-text">
+                  <span class="main-txt">10 題</span>
+                  <span class="sub-txt">快速練習，約 5-10 分鐘</span>
+                </div>
+              </label>
+              <label class="radio-card" for="count-20">
+                <input type="radio" name="quiz-count" id="count-20" value="20">
+                <span class="radio-custom"></span>
+                <div class="radio-text">
+                  <span class="main-txt">20 題</span>
+                  <span class="sub-txt">標準練習，約 10-20 分鐘</span>
+                </div>
+              </label>
+              <label class="radio-card" for="count-25">
+                <input type="radio" name="quiz-count" id="count-25" value="25" checked>
+                <span class="radio-custom"></span>
+                <div class="radio-text">
+                  <span class="main-txt">25 題</span>
+                  <span class="sub-txt">完整挑戰，約 15-25 分鐘</span>
+                </div>
+              </label>
+            </div>
           </div>
 
           <!-- Subject Selection -->
@@ -101,9 +126,47 @@
                 <span class="radio-custom"></span>
                 <div class="radio-text">
                   <span class="main-txt">限時挑戰</span>
-                  <span class="sub-txt">每題限時 90 秒作答</span>
+                  <span class="sub-txt">在時限內完成所有題目</span>
                 </div>
               </label>
+            </div>
+            <!-- Duration selection (visible only when timer-on) -->
+            <div id="timer-duration-group" class="form-group" style="display:none; margin-bottom:0;">
+              <label class="form-label" style="font-size:0.9rem; color:#475569;">選擇時間長度</label>
+              <div class="timer-duration-options">
+                <label class="radio-card" for="dur-5">
+                  <input type="radio" name="timer-duration" id="dur-5" value="300">
+                  <span class="radio-custom"></span>
+                  <div class="radio-text">
+                    <span class="main-txt">5 分鐘</span>
+                    <span class="sub-txt">快速衝刺</span>
+                  </div>
+                </label>
+                <label class="radio-card" for="dur-10">
+                  <input type="radio" name="timer-duration" id="dur-10" value="600" checked>
+                  <span class="radio-custom"></span>
+                  <div class="radio-text">
+                    <span class="main-txt">10 分鐘</span>
+                    <span class="sub-txt">標準限時</span>
+                  </div>
+                </label>
+                <label class="radio-card" for="dur-15">
+                  <input type="radio" name="timer-duration" id="dur-15" value="900">
+                  <span class="radio-custom"></span>
+                  <div class="radio-text">
+                    <span class="main-txt">15 分鐘</span>
+                    <span class="sub-txt">從容作答</span>
+                  </div>
+                </label>
+                <label class="radio-card" for="dur-20">
+                  <input type="radio" name="timer-duration" id="dur-20" value="1200">
+                  <span class="radio-custom"></span>
+                  <div class="radio-text">
+                    <span class="main-txt">20 分鐘</span>
+                    <span class="sub-txt">充分思考</span>
+                  </div>
+                </label>
+              </div>
             </div>
           </div>
 
@@ -119,7 +182,7 @@
     <header class="topbar">
       <div class="topbar-left">
         <h1 class="brand-title">會考社會科隨機測驗</h1>
-        <div id="test-timer" class="timer-badge" hidden>⏳ <span id="timer-sec">90</span>秒</div>
+        <div id="test-timer" class="timer-badge" hidden>⏳ <span id="timer-sec">00:00</span></div>
       </div>
       <div class="topbar-right">
         <button id="qnav-toggle-btn" class="btn btn-outline qnav-toggle-btn" style="margin-right: 8px;">題號 ☰</button>

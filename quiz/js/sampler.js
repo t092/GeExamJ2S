@@ -1,7 +1,7 @@
 // sampler.js - Dynamic question sampling and scoring
 window.QuizSampler = {
   sample(pool, options = {}) {
-    const targetCount = 25;
+    const targetCount = options.count || 25;
     const selectedSubjects = options.subjects || ['歷史', '地理', '公民'];
     const selectedTopics = options.topics || []; // Array of learning focuses
 
