@@ -147,7 +147,7 @@ while True:
 **原因**：parse_questions.py 將非選擇題的整段文字視為單一 `stem`，未分割子題。
 
 **修復**：`split_nonchoice_stem()` 只匹配第一個 `(1)` 和其後第一個 `(2)` 為分割點，
-避免子題文字中的 `(1)` 引用（如 `承(1)`）被誤判。在 LaTeX 轉換前執行分割。
+避免子題文字中的 `(1)` 引用（如 `承(1)`）被誤判。**`(1)`/`(2)` 標記保留在子題文字開頭**，確保渲染時題號可見。在 LaTeX 轉換前執行分割。
 
 ```python
 def split_nonchoice_stem(stem):
@@ -156,16 +156,58 @@ def split_nonchoice_stem(stem):
     stem_text = stem[:m1.start()]
     rest_after_1 = stem[m1.end():]
     m2 = re.search(r'\s*\(2\)\s*', rest_after_1)
-    if not m2: return stem_text, [rest_after_1.strip()]
-    sub_q1 = rest_after_1[:m2.start()].strip()
-    sub_q2 = rest_after_1[m2.end():].strip()
+    if not m2: return stem_text, ['(1) ' + rest_after_1.strip()]
+    sub_q1 = '(1) ' + rest_after_1[:m2.start()].strip()
+    sub_q2 = '(2) ' + rest_after_1[m2.end():].strip()
     return stem_text, [sub_q1, sub_q2]
 ```
 
+**對話修正歷程**：
+1. 初版移除 `(1)`/`(2)` 標記 → 用戶回饋應保留題號
+2. 修正為 prepend `(1) ` / `(2) ` 到子題文字前方
+
 **注意事項**：
 - 分割後的 `stem`（場景描述）可能不包含 `(1)`/`(2)` 等數學運算子，
-  導致 `has_math()` 判定為 False。需以全部前後文判斷是否有數學內容。
+  導致 `has_math()` 判定為 False。需以全部前後文（stem + sub_qs）判斷。
 - 子題在渲染時以 ❓ emoji + 粗體加大字級呈現，與場景描述明顯區隔。
+- `(1)` / `(2)` 在 KaTeX 渲染後為正常括號數字（`$(1)$`）。
+
+#### 問題 E：子題專屬圖表引用
+
+**現象**：非選擇題 Q2 的 `figures` 欄位合併了全部圖表（十三、十四、十五），
+但各子題只引用特定圖表：子題 (1) 引用 圖(十四)，子題 (2) 引用 圖(十五)。
+
+**原因**：`figures` 欄位從全文提取，未區分子題層級。
+
+**修復**：
+1. 從每個子題文字中提取圖表引用 → `extract_sub_q_figures()`
+2. 將各子題的圖表儲存為 `sub_question_figures` 二維陣列
+3. 題幹級 `figures` 排序後（中文數字 → int）顯示在題幹下方
+4. 各子題的專屬圖表顯示在該子題下方
+
+```python
+_FIG_PAT = re.compile(r'[圖表]\(\s*[一二三四五六七八九十\d]+\s*\)')
+
+def extract_sub_q_figures(sub_qs: list) -> list:
+    result = []
+    for sq in sub_qs:
+        figs = _FIG_PAT.findall(sq)
+        figs = [re.sub(r'\s+', '', f) for f in figs]  # normalize 圖( 十四)→圖(十四)
+        result.append(figs if figs else None)
+    return result
+```
+
+**渲染順序**（經對話修正）：
+```
+題幹文字
+├── 全部圖形（左→右，中文數字排序）          # 圖(十三) 圖(十四) 圖(十五)
+├── 子題 (1) + 專屬圖表                     # 圖(十四)
+└── 子題 (2) + 專屬圖表                     # 圖(十五)
+```
+
+**對話修正歷程**：
+1. 初版將 stem 級圖表放在子題之後 → 用戶回饋應放在題幹結尾下方、第一子題上方
+2. 修正為：題幹 → 全部圖表 → 子題（各附專屬圖表）
 
 ---
 
@@ -326,7 +368,30 @@ text = re.sub(r'\b([a-zA-Z])([nr])(?=\s|$|,|;|，|。|\)|\(|\+|\-|\*|/|÷|×|±|
 text = re.sub(r'\b([A-Z])([n])(?=\s|$|,|;|，|。|\)|\(|\+|\-|\*|/|÷|×|±|=)', r'\1_{\2}', text)
 ```
 
-### 4.7 數學段包裹
+### 4.7 數學段包裹與數學偵測
+
+#### `has_math()` — 判斷文字是否包含數學
+
+```python
+MATH_INDICATORS = re.compile(
+    r'[a-zA-Z][a-zA-Z0-9]*\s*[=+\-*/^()\[\]{}<>≤≥±×÷]|'   # 字母+運算子
+    r'\d+\s*[=+\-*/^()×÷]|'                                   # 數字+運算子
+    r'[×÷±√∠°△π≤≥∓≈≠∞≡⊥∥]'                                   # 獨立數學符號
+)
+
+def has_math(text: str) -> bool:
+    if not re.search(r'[a-zA-Z0-9=+\-*/^()×÷±√∠°△π]', text):
+        return False   # 完全沒有數學相關字元
+    return bool(MATH_INDICATORS.search(text))
+```
+
+**對話修正歷程**：
+- 初版 `MATH_INDICATORS` 只偵測「字母+運算子」或「數字+運算子」
+- Passage 文字含 `×`、`≤` 等獨立數學符號（前後皆為中文），`has_math()` 回傳 False
+- 導致 passage 的 `stem_latex` 未生成，bold/emoji 標記也遺失
+- **修復**：增加第三條分支 `[×÷±√∠°△π≤≥∓≈≠∞≡⊥∥]`，捕捉獨立數學符號
+
+#### `wrap_math_segments()` — 數學段 $ 包裹
 
 使用 `_MATH_RUN` 正規表示法（非 CJK 字元連續區段）偵測數學內容，並包裹 `$...$`：
 
@@ -364,6 +429,33 @@ _MATH_RUN = re.compile(r'[^' + _BREAK_CHARS + ']+')
 - 數學科：**向量繪圖**（`doc.get_page_pixmap(clip=bbox)` 直接裁切）
 - 社會科：**嵌入點陣圖**（`page.get_images()` + `doc.extract_image()`）
 
+### 5.4 圖表排序
+
+數學試卷的圖表以中文數字編號（一～十五），程式內按數值排序：
+
+```python
+_CN_DIGITS = {'一':1, '二':2, '三':3, '四':4, '五':5, '六':6, '七':7, '八':8, '九':9, '十':10}
+
+def _chinese_to_int(s: str) -> int:
+    s = s.strip()
+    if s.isdigit(): return int(s)
+    if s in _CN_DIGITS and s != '十': return _CN_DIGITS[s]
+    if '十' in s:
+        parts = s.split('十')
+        tens = _CN_DIGITS.get(parts[0], 1) if parts[0] else 1
+        ones = _CN_DIGITS.get(parts[1], 0) if parts[1] else 0
+        return tens * 10 + ones
+    return 0
+
+def _fig_sort_key(fig: str) -> int:
+    m = re.search(r'[圖表]\(\s*([^)]+)\s*\)', fig)
+    return _chinese_to_int(m.group(1)) if m else 0
+
+# 使用：sorted(figures, key=_fig_sort_key)
+```
+
+**注意**：排序在 `latex_convert.py` 的 `process_year()` 中對非選擇題自動執行。
+
 ---
 
 ## 6. 資料結構（JSON Schema）
@@ -384,7 +476,10 @@ _MATH_RUN = re.compile(r'[^' + _BREAK_CHARS + ']+')
   "figures": ["圖(一)"],
   "tables": ["表(一)"],
   "image_options": "11527i.jpg" | null,
-  "image_options_full": true | false | null
+  "image_options_full": true | false | null,
+  "sub_questions": ["(1) 子題一...", "(2) 子題二..."] | null,
+  "sub_questions_latex": ["$(1)$ 子題一...", "$(2)$ 子題二..."] | null,
+  "sub_question_figures": [["圖(十四)"], ["圖(十五)"]] | null
 }
 ```
 
@@ -398,10 +493,13 @@ _MATH_RUN = re.compile(r'[^' + _BREAK_CHARS + ']+')
 | `options_latex` | LaTeX 轉換後選項（逐字母）；`null` 表示該選項無需轉換 |
 | `passage` | 題組段落文字 |
 | `passage_latex` | 題組段落 LaTeX 版 |
-| `figures` / `tables` | 題幹引用的圖表編號（從題幹文字中 `re.findall` 取得） |
+| `figures` / `tables` | 題幹引用的圖表編號（排序後，左→右） |
 | `passage_figures` | 段落引用的圖表（僅用於題組） |
 | `image_options` | 圖片選項的檔案名稱（如 `"11527i.jpg"`） |
 | `image_options_full` | `true`=全部選項為圖片；`false`=A-C 圖片 D 文字；`null`=非圖片選項 |
+| `sub_questions` | **非選擇題專用**：子題文字陣列，含 `(1)`/`(2)` 前綴 |
+| `sub_questions_latex` | 子題 LaTeX 版；`null` 表示無需轉換 |
+| `sub_question_figures` | **非選擇題專用**：各子題的專屬圖表引用（二維陣列） |
 
 ---
 
@@ -466,9 +564,110 @@ _MATH_RUN = re.compile(r'[^' + _BREAK_CHARS + ']+')
 
 **對策**：在 `MATH_SYMBOLS` 中同時收錄所有已知變體。
 
+### 8.8 數學偵測遺漏（has_math 過窄）
+
+**風險**：`has_math()` 只偵測「字母/數字 + 運算子」的模式，會漏掉獨立數學符號
+（如 passage 中的 `×`、`≤`）。這會導致 `stem_latex`/`passage_latex` 未被生成，
+後續處理（bold/emoji 標記）也一併遺失。
+
+**對策**：在 `MATH_INDICATORS` 增加第三條分支 `[×÷±√∠°△π≤≥∓≈≠∞≡⊥∥]`。
+
+### 8.9 圖表引用空白正規化
+
+**風險**：PDF 文字中圖表引用格式不一致（`圖(十四)` vs `圖( 十四)`），
+比對失敗導致圖片渲染時顯示不出對應檔案。
+
+**對策**：`extract_sub_q_figures()` 使用 `re.sub(r'\s+', '', f)` 移除括號內空白。
+
+---
+## 9. 開發流程模式：反覆還原（Git Checkout）模式
+
+`latex_convert.py` 是多步驟的後處理腳本，當需要調整其邏輯時，
+JSON 資料可能已被前次執行修改（如 stems 已分割、passage_latex 已生成）。
+新邏輯無法作用於已修改的資料。
+
+### 標準做法
+
+每次修改 `latex_convert.py` 的資料處理邏輯後，執行以下步驟：
+
+```bash
+# 1. 從 git 還原原始 JSON 資料
+python -c "
+import subprocess, json
+result = subprocess.run(['git', 'show', '<original_commit>:math/data/<year>.json'],
+                        capture_output=True)
+data = json.loads(result.stdout)
+# ... 重新施加任何手動標記（如 passage 的 **/⭐ 標記）...
+json.dump(data, open('math/data/<year>.json', 'w', encoding='utf-8'),
+          ensure_ascii=False, indent=2)
+"
+
+# 2. 重新執行轉換
+python math/pipeline/latex_convert.py
+
+# 3. 驗證結果
+python math/pipeline/check_quality.py
+```
+
+### 適用情境
+
+- 調整 `split_nonchoice_stem()` 邏輯
+- 修改 `MATH_INDICATORS` 偵測條件
+- 新增或修改 JSON 欄位
+- 任何需要在「原始 PDF 解析結果」上重跑的修改
+
+### 避免的模式
+
+- ❌ 直接編輯 `math/data/<year>.json` 後再跑 `latex_convert.py`（重複處理）
+- ❌ 在已分割的 stems 上測試新分割邏輯（stems 已無標記，邏輯永遠失敗）
+- ✅ 一律從原始 commit 還原 → 施加靜態標記 → 跑轉換
+
 ---
 
-## 9. 前端注意事項
+## 10. 前端注意事項
+
+`latex_convert.py` 是多步驟的後處理腳本，當需要調整其邏輯時，
+JSON 資料可能已被前次執行修改（如 stems 已分割、passage_latex 已生成）。
+新邏輯無法作用於已修改的資料。
+
+### 標準做法
+
+每次修改 `latex_convert.py` 的資料處理邏輯後，執行以下步驟：
+
+```bash
+# 1. 從 git 還原原始 JSON 資料
+python -c "
+import subprocess, json
+result = subprocess.run(['git', 'show', '<original_commit>:math/data/<year>.json'],
+                        capture_output=True)
+data = json.loads(result.stdout)
+# ... 重新施加任何手動標記（如 passage 的 **/⭐ 標記）...
+json.dump(data, open('math/data/<year>.json', 'w', encoding='utf-8'),
+          ensure_ascii=False, indent=2)
+"
+
+# 2. 重新執行轉換
+python math/pipeline/latex_convert.py
+
+# 3. 驗證結果
+python math/pipeline/check_quality.py
+```
+
+### 適用情境
+
+- 調整 `split_nonchoice_stem()` 邏輯
+- 修改 `MATH_INDICATORS` 偵測條件
+- 新增或修改 JSON 欄位
+- 任何需要在「原始 PDF 解析結果」上重跑的修改
+
+### 避免的模式
+
+- ❌ 直接編輯 `math/data/<year>.json` 後再跑 `latex_convert.py`（重複處理）
+- ❌ 在已分割的 stems 上測試新分割邏輯（stems 已無標記，邏輯永遠失敗）
+- ✅ 一律從原始 commit 還原 → 施加靜態標記 → 跑轉換
+
+---
+
 
 ### 9.1 KaTeX 版本
 - 使用 KaTeX 0.16.9（CDN 載入）
@@ -482,3 +681,74 @@ _MATH_RUN = re.compile(r'[^' + _BREAK_CHARS + ']+')
 - `image_options` 非 `null` 時，使用專用圖片選項渲染器
 - 顯示 4 個字母按鈕（A/B/C/D）+ 對應圖片
 - `image_options_full` 控制 D 選項是否也為圖片
+
+### 9.4 粗體與 Emoji 重點標記
+
+支援在 JSON 文字欄位中使用 `**...**` 標記粗體，渲染時自動轉換為 `<strong>`：
+
+```javascript
+markBold(s) {
+    return String(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+},
+```
+
+**使用方式**（passage 欄位）：
+```
+⭐ **實際速率＝輪胎轉速 × 輪胎周長** ⭐
+```
+
+**渲染流程**：
+1. `esc()` 先轉義 `&<>`（保留 `$` 供 KaTeX 使用）
+2. `markBold()` 將 `**...**` 轉為 `<strong>`
+3. 最終插入 DOM 後由 `renderMathInElement` 處理 KaTeX
+
+**注意**：`esc()` 和 `markBold()` 的執行順序不可互換 — 先 escape 再 markBold，
+避免 `<strong>` 被 escape 破壞。
+
+### 9.5 非選擇題渲染結構
+
+非選擇題的 DOM 結構（與選擇題/題組完全分離的渲染分支）：
+
+```
+<div class="q-card">
+  <div class="q-header">非選1 / 非選2</div>
+  <div class="q-stem">場景描述文字...</div>
+  
+  <!-- 題幹級圖表：全部圖形，左→右 -->
+  <div class="q-figures">圖(十三) 圖(十四) 圖(十五)</div>
+  
+  <!-- 子題容器：每題為獨立卡片 -->
+  <div class="q-sub-questions">
+    <div class="q-sub-question">
+      <span class="q-sub-q-marker">❓</span>
+      <span class="q-sub-q-text">(1) 子題文字...</span>
+    </div>
+    <div class="q-figures">圖(十四)</div>      <!-- 子題專屬圖表 -->
+    
+    <div class="q-sub-question">
+      <span class="q-sub-q-marker">❓</span>
+      <span class="q-sub-q-text">(2) 子題文字...</span>
+    </div>
+    <div class="q-figures">圖(十五)</div>      <!-- 子題專屬圖表 -->
+  </div>
+  
+  <div class="answer-placeholder">...</div>
+</div>
+```
+
+**CSS 關鍵樣式**：
+```css
+.q-sub-question {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 14px 18px; background: #f8f9fb;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);  /* 紅色左邊框 */
+    border-radius: 8px;
+}
+.q-sub-q-text { font-size: 1.1rem; font-weight: 700; }
+.q-sub-question + .q-figures { margin-top: -6px; padding-left: 48px; }
+```
+
+**對話修正歷程**：
+1. 初版全部圖表放在子題之後 → 用戶回饋應在題幹下方、第一子題上方
+2. 修正後題幹級圖表移到 `q-stem` 與 `q-sub-questions` 之間
