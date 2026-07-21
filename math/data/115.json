@@ -31,7 +31,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 2,
@@ -67,7 +68,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 3,
@@ -101,7 +103,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 4,
@@ -130,7 +133,8 @@
     "options_latex": null,
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 5,
@@ -164,7 +168,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 6,
@@ -195,7 +200,8 @@
     "options_latex": null,
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 7,
@@ -229,7 +235,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 8,
@@ -265,7 +272,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 9,
@@ -299,7 +307,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 10,
@@ -330,7 +339,8 @@
     "options_latex": null,
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 11,
@@ -366,7 +376,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 12,
@@ -402,7 +413,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 13,
@@ -436,7 +448,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 14,
@@ -465,7 +478,8 @@
     "options_latex": null,
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 15,
@@ -496,7 +510,8 @@
     "options_latex": null,
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 16,
@@ -532,7 +547,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 17,
@@ -566,7 +582,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 18,
@@ -602,7 +619,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 19,
@@ -638,7 +656,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 20,
@@ -667,7 +686,8 @@
     "options_latex": null,
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 21,
@@ -703,7 +723,8 @@
     },
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 22,
@@ -734,7 +755,8 @@
     "options_latex": null,
     "passage_latex": null,
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 23,
@@ -768,7 +790,8 @@
     "options_latex": null,
     "passage_latex": "汽車上會安裝圖(十二)的時速錶，其功能是指示\n汽車當時的速率，但其指示的速率並不一定等於汽車\n的實際速率。已知法規規範車輛出廠時，時速錶的指\n示速率$( V_{\\text{指}} )$必須永不小於車輛的實際速率$( V_{\\text{實}} )$，且 \n$V_{\\text{指}}$ 與 $V_{\\text{實}}$ 應滿足下列關係：\n$V_{\\text{指}} - V_{\\text{實}} \\leq \\frac{V_{\\text{實}}}{10} + 4$\n⭐ **(皆以公里/小時為速率單位)** ⭐\n \n而車輛的實際速率就是單位時間內車輛移動的距離，可以利用輪胎轉速與\n輪胎周長求出。輪胎轉速是指單位時間內輪胎旋轉多少圈，而輪胎周長等於輪\n胎旋轉一圈時車輛移動的距離，所以有下列關係式：\n⭐ **實際速率＝輪胎轉速 $\\times$ 輪胎周長** ⭐\n上式的實際速率若要以公里/小時為單位，則輪胎轉速應以圈/小時為單位，輪\n胎周長應以公里為單位。\n \n所以當車輛上的儀器測出輪胎轉速，配合儀器內設定的輪胎周長，就能得\n到時速錶上的指示速率，關係式如下：\n⭐ **指示速率＝儀器測出的輪胎轉速 $\\times$ 儀器設定的輪胎周長** ⭐\n圈/小時為轉速單位，表示每小時轉多少圈\n圖( 十二)\n\n$10$",
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 24,
@@ -807,7 +830,8 @@
     },
     "passage_latex": "汽車上會安裝圖(十二)的時速錶，其功能是指示\n汽車當時的速率，但其指示的速率並不一定等於汽車\n的實際速率。已知法規規範車輛出廠時，時速錶的指\n示速率$( V_{\\text{指}} )$必須永不小於車輛的實際速率$( V_{\\text{實}} )$，且 \n$V_{\\text{指}}$ 與 $V_{\\text{實}}$ 應滿足下列關係：\n$V_{\\text{指}} - V_{\\text{實}} \\leq \\frac{V_{\\text{實}}}{10} + 4$\n⭐ **(皆以公里/小時為速率單位)** ⭐\n \n而車輛的實際速率就是單位時間內車輛移動的距離，可以利用輪胎轉速與\n輪胎周長求出。輪胎轉速是指單位時間內輪胎旋轉多少圈，而輪胎周長等於輪\n胎旋轉一圈時車輛移動的距離，所以有下列關係式：\n⭐ **實際速率＝輪胎轉速 $\\times$ 輪胎周長** ⭐\n上式的實際速率若要以公里/小時為單位，則輪胎轉速應以圈/小時為單位，輪\n胎周長應以公里為單位。\n \n所以當車輛上的儀器測出輪胎轉速，配合儀器內設定的輪胎周長，就能得\n到時速錶上的指示速率，關係式如下：\n⭐ **指示速率＝儀器測出的輪胎轉速 $\\times$ 儀器設定的輪胎周長** ⭐\n圈/小時為轉速單位，表示每小時轉多少圈\n圖( 十二)\n\n$10$",
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 25,
@@ -846,7 +870,8 @@
     },
     "passage_latex": "汽車上會安裝圖(十二)的時速錶，其功能是指示\n汽車當時的速率，但其指示的速率並不一定等於汽車\n的實際速率。已知法規規範車輛出廠時，時速錶的指\n示速率$( V_{\\text{指}} )$必須永不小於車輛的實際速率$( V_{\\text{實}} )$，且 \n$V_{\\text{指}}$ 與 $V_{\\text{實}}$ 應滿足下列關係：\n$V_{\\text{指}} - V_{\\text{實}} \\leq \\frac{V_{\\text{實}}}{10} + 4$\n⭐ **(皆以公里/小時為速率單位)** ⭐\n \n而車輛的實際速率就是單位時間內車輛移動的距離，可以利用輪胎轉速與\n輪胎周長求出。輪胎轉速是指單位時間內輪胎旋轉多少圈，而輪胎周長等於輪\n胎旋轉一圈時車輛移動的距離，所以有下列關係式：\n⭐ **實際速率＝輪胎轉速 $\\times$ 輪胎周長** ⭐\n上式的實際速率若要以公里/小時為單位，則輪胎轉速應以圈/小時為單位，輪\n胎周長應以公里為單位。\n \n所以當車輛上的儀器測出輪胎轉速，配合儀器內設定的輪胎周長，就能得\n到時速錶上的指示速率，關係式如下：\n⭐ **指示速率＝儀器測出的輪胎轉速 $\\times$ 儀器設定的輪胎周長** ⭐\n圈/小時為轉速單位，表示每小時轉多少圈\n圖( 十二)\n\n$10$",
     "sub_questions": null,
-    "sub_questions_latex": null
+    "sub_questions_latex": null,
+    "sub_question_figures": null
   },
   {
     "number": 1,
@@ -873,6 +898,10 @@
       "(1) 依照訓練計畫，阿川第 2 週的星期四的訓練圈數為幾圈？",
       "(2) 承(1)，最早從第幾週的星期幾開始，當日的訓練距離會超過 15 公里？"
     ],
+    "sub_question_figures": [
+      null,
+      null
+    ],
     "sub_questions_latex": [
       "$(1)$ 依照訓練計畫，阿川第 $2$ 週的星期四的訓練圈數為幾圈？",
       "$(2)$ 承$(1)$，最早從第幾週的星期幾開始，當日的訓練距離會超過 $15$ 公里？"
@@ -891,9 +920,9 @@
     "passage_tables": [],
     "passage_table_pages": {},
     "figures": [
-      "圖(十五)",
       "圖(十三)",
-      "圖(十四)"
+      "圖(十四)",
+      "圖(十五)"
     ],
     "figure_pages": {},
     "tables": [],
@@ -906,6 +935,14 @@
     "sub_questions": [
       "(1) 求圖( 十四) 中 ∠CDE 的度數為何？",
       "(2) 今想訂製一塊正六邊形的地毯，並將Y 字型沙發椅放置在上面，其中正六邊形 地毯的對角線交點與 D 點重合，擺放時 AB 與地毯的一邊平行且至少相距 50 公分，如圖( 十五) 所示，則地毯的邊長至少需要多少公分？( 以根式 呈現)"
+    ],
+    "sub_question_figures": [
+      [
+        "圖(十四)"
+      ],
+      [
+        "圖(十五)"
+      ]
     ],
     "sub_questions_latex": [
       "$(1)$ 求圖( 十四) 中 $\\angle CDE$ 的度數為何？",

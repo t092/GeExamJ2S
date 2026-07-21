@@ -219,6 +219,10 @@ const App = {
           <span class="q-sub-q-marker">❓</span>
           <span class="q-sub-q-text">${this.markBold(this.esc(sq))}</span>
         </div>`;
+        // Sub-question-specific figures
+        if (q.sub_question_figures && q.sub_question_figures[i]) {
+          html += this.buildFiguresHtml(q.sub_question_figures[i]);
+        }
       }
       html += `</div>`;
     }

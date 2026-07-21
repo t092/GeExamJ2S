@@ -378,6 +378,51 @@ def split_nonchoice_stem(stem: str):
     return stem_text.strip(), [sub_q1, sub_q2]
 
 
+# ──  Figure helpers ───────────────────────────────────────────────────
+
+_CN_DIGITS = {'一': 1, '二': 2, '三': 3, '四': 4, '五': 5,
+              '六': 6, '七': 7, '八': 8, '九': 9, '十': 10}
+_CN_NUM_PAT = re.compile(r'[圖表]\(\s*([^)]+)\s*\)')
+
+
+def _chinese_to_int(s: str) -> int:
+    """Convert Chinese numeral string to int. 一→1, 十二→12, 二十三→23."""
+    s = s.strip()
+    if s.isdigit():
+        return int(s)
+    # Single digit
+    if s in _CN_DIGITS and s != '十':
+        return _CN_DIGITS[s]
+    # Tens (十, 二十, 三十...)
+    if '十' in s:
+        parts = s.split('十')
+        tens = _CN_DIGITS.get(parts[0], 1) if parts[0] else 1
+        ones = _CN_DIGITS.get(parts[1], 0) if parts[1] else 0
+        return tens * 10 + ones
+    return 0
+
+
+def _fig_sort_key(fig: str) -> int:
+    """Extract numeric sort key from 圖(N) or 表(N)."""
+    m = _CN_NUM_PAT.search(fig)
+    if m:
+        return _chinese_to_int(m.group(1))
+    return 0
+
+
+_FIG_PAT = re.compile(r'[圖表]\(\s*[一二三四五六七八九十\d]+\s*\)')
+
+
+def extract_sub_q_figures(sub_qs: list) -> list:
+    """Extract figure references from each sub-question text."""
+    result = []
+    for sq in sub_qs:
+        figs = _FIG_PAT.findall(sq)
+        figs = [re.sub(r'\s+', '', f) for f in figs]
+        result.append(figs if figs else None)
+    return result
+
+
 # ──  Main processing ────────────────────────────────────────────────
 
 def process_year(year: str) -> None:
@@ -396,6 +441,15 @@ def process_year(year: str) -> None:
             stem_text, sub_qs = split_nonchoice_stem(q['stem'])
             q['stem'] = stem_text
             q['sub_questions'] = sub_qs
+
+            # Sort all figures by number (left to right)
+            if q.get('figures'):
+                q['figures'] = sorted(q['figures'], key=_fig_sort_key)
+            if q.get('tables'):
+                q['tables'] = sorted(q['tables'], key=_fig_sort_key)
+
+            # Extract per-sub-question figure references
+            q['sub_question_figures'] = extract_sub_q_figures(sub_qs)
 
             # Check math presence on the FULL original text so that
             # numbers in the description (400, 5, 2...) get converted
@@ -423,6 +477,7 @@ def process_year(year: str) -> None:
         else:
             q['sub_questions'] = None
             q['sub_questions_latex'] = None
+            q['sub_question_figures'] = None
 
             # Convert stem
             original_stem = q['stem']

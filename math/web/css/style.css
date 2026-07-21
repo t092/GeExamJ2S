@@ -235,6 +235,13 @@ body {
   word-break: break-word;
 }
 
+/* sub-question figures */
+.q-sub-question + .q-figures {
+  margin-top: -6px;
+  margin-bottom: 14px;
+  padding-left: 48px;
+}
+
 /* figures */
 .q-figures {
   display: flex;
