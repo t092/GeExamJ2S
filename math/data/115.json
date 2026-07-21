@@ -1,0 +1,849 @@
+[
+  {
+    "number": 1,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "解二元一次聯立方程式 x + 2y = 5 2x − 2y = 1 ，得 x 值為何？",
+    "options": {
+      "A": "−4",
+      "B": "−2",
+      "C": "2",
+      "D": "4"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "解二元一次聯立方程式 $x + 2y = 5 2x - 2y = 1$ ，得 $x$ 值為何？",
+    "options_latex": {
+      "A": "$-4$",
+      "B": "$-2$",
+      "C": "$2$",
+      "D": "$4$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 2,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "如圖( 一)，直角柱 ABCDEF 的底面為正三角形，圖中 標示各頂點名稱。判斷此角柱中的 ∠ABC、∠BCF 的度數 分別為何？",
+    "options": {
+      "A": "∠ABC = 90°，∠BCF = 90°",
+      "B": "∠ABC = 60°，∠BCF = 60°",
+      "C": "∠ABC = 90°，∠BCF = 60°",
+      "D": "∠ABC = 60°，∠BCF = 90°"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(一)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": null,
+    "options_latex": {
+      "A": "$\\angle ABC = 90^\\circ$ ，$\\angle BCF = 90^\\circ$",
+      "B": "$\\angle ABC = 60^\\circ$ ，$\\angle BCF = 60^\\circ$",
+      "C": "$\\angle ABC = 90^\\circ$ ，$\\angle BCF = 60^\\circ$",
+      "D": "$\\angle ABC = 60^\\circ$ ，$\\angle BCF = 90^\\circ$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 3,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "若 504 的最簡根式為 a b，則 a + b 之值為何？",
+    "options": {
+      "A": "13",
+      "B": "19",
+      "C": "20",
+      "D": "50"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "若 $504$ 的最簡根式為 $a b$，則 $a + b$ 之值為何？",
+    "options_latex": {
+      "A": "$13$",
+      "B": "$19$",
+      "C": "$20$",
+      "D": "$50$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 4,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "已知甲袋中有三顆球，球上分別標記 2、 3、4 ；乙袋中有三顆球，球上分別標 記 3、 4、 5。阿翰打算從甲、乙兩袋中各抽出一球，若甲袋中每顆球被抽出的 機會相等，乙袋中每顆球被抽出的機會相等，則抽出的兩球上的數字，總和 為多少的機率最大？",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "8",
+      "D": "9"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": null,
+    "options_latex": null,
+    "passage_latex": null
+  },
+  {
+    "number": 5,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "算式 2.45 × 98.7 − ( −0.55 ) × 98.7 之值介於下列哪兩個數之間？",
+    "options": {
+      "A": "150，200",
+      "B": "200，250",
+      "C": "250，300",
+      "D": "300，350"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "算式 $2.45 \\times 98.7 - ( -0.55 ) \\times 98.7$ 之值介於下列哪兩個數之間？",
+    "options_latex": {
+      "A": "$150$，$200$",
+      "B": "$200$，$250$",
+      "C": "$250$，$300$",
+      "D": "$300$，$350$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 6,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "小彭的農園將收成的文旦根據每顆的重量分為小果、中果、大果，再根據每顆 的品質分為良級、優級、特級，分類後各類別的總重量如表( 一) 所示。 因為被分類為良級或大果的文旦不受喜愛，所以小彭僅將其餘的文旦都包裝 成禮盒販售，求包裝成禮盒販售的文旦總共有多少公斤？",
+    "options": {
+      "A": "620",
+      "B": "630",
+      "C": "700",
+      "D": "720"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [
+      "表(一)"
+    ],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": null,
+    "options_latex": null,
+    "passage_latex": null
+  },
+  {
+    "number": 7,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "計算多項式 4x2 − 3x − 5 除以 x + 2 後，所得商式與餘式兩者之和為何？",
+    "options": {
+      "A": "4x + 6",
+      "B": "4x + 10",
+      "C": "−7x − 5",
+      "D": "−11x − 1"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "計算多項式 $4x^{2} - 3x - 5$ 除以 $x + 2$ 後，所得商式與餘式兩者之和為何？",
+    "options_latex": {
+      "A": "$4x + 6$",
+      "B": "$4x + 10$",
+      "C": "$-7x - 5$",
+      "D": "$-11x - 1$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 8,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "有一培養皿上均勻分布細菌，圖( 二) 是培養皿與其俯視圖， 生物學家在培養皿上選定四個圓形區域，區域面積越大所含 細菌數越多。若圖中甲、乙、丙三個區域細菌的數量分別為 4.4 × 105 個、 7.3 × 106 個、 5.4 × 107 個，則下列何者可能是丁區域細菌 的數量？",
+    "options": {
+      "A": "1.7 × 105 個",
+      "B": "1.7 × 106 個",
+      "C": "1.7 × 107 個",
+      "D": "1.7 × 108 個"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(二)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "有一培養皿上均勻分布細菌，圖( 二) 是培養皿與其俯視圖， 生物學家在培養皿上選定四個圓形區域，區域面積越大所含 細菌數越多。若圖中甲、乙、丙三個區域細菌的數量分別為 $4.4 \\times 10^{5}$ 個、 $7.3 \\times 10^{6}$ 個、 $5.4 \\times 10^{7}$ 個，則下列何者可能是丁區域細菌 的數量？",
+    "options_latex": {
+      "A": "$1.7 \\times 10^{5}$ 個",
+      "B": "$1.7 \\times 10^{6}$ 個",
+      "C": "$1.7 \\times 10^{7}$ 個",
+      "D": "$1.7 \\times 10^{8}$ 個"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 9,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "已知一元二次方程式 2x ( x + 7 ) − 10 ( x + 7 ) = 0 的兩根為 a、 b，且 a > b， 求 a + 2b 之值為何？",
+    "options": {
+      "A": "−13",
+      "B": "−9",
+      "C": "−4",
+      "D": "−3"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "已知一元二次方程式 $2x ( x + 7 ) - 10 ( x + 7 ) = 0$ 的兩根為 $a$、 $b$，且 $a > b$， 求 $a + 2b$ 之值為何？",
+    "options_latex": {
+      "A": "$-13$",
+      "B": "$-9$",
+      "C": "$-4$",
+      "D": "$-3$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 10,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "某書店舉辦優惠活動，購買的書原價合計滿 1100 元折扣 200 元，圖( 三) 為兄妹兩人的對話情形。 根據圖中的對話計算，妹妹要買的書原價為多少元？",
+    "options": {
+      "A": "360",
+      "B": "380",
+      "C": "460",
+      "D": "480"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(三)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": null,
+    "options_latex": null,
+    "passage_latex": null
+  },
+  {
+    "number": 11,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "A(a)、B(b)、P(a + b) 三點在數線上的位置如圖( 四) 所示。若要在數線上 標示點 Q(b − a)，則關於 Q 點的位置，下列敘述何者正確？",
+    "options": {
+      "A": "在 B 的右邊",
+      "B": "介於 A、B 之間",
+      "C": "介於 P、A 之間",
+      "D": "在 P 的左邊"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(四)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "$A(a)$、$B(b)$、$P(a + b)$ 三點在數線上的位置如圖( 四) 所示。若要在數線上 標示點 $Q(b - a)$，則關於 $Q$ 點的位置，下列敘述何者正確？",
+    "options_latex": {
+      "A": "在 $B$ 的右邊",
+      "B": "介於 $A$、$B$ 之間",
+      "C": "介於 $P$、$A$ 之間",
+      "D": "在 $P$ 的左邊"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 12,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "∆ABC 的邊上有三點 D、E、F，各點位置如圖( 五) 所示。若 BE = AF， ∠BED =∠AFC，ED = FC，則根據圖中標示的長度，求四邊形 ADEF 周長 為何？",
+    "options": {
+      "A": "20",
+      "B": "22",
+      "C": "24",
+      "D": "25"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(五)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "$\\triangle ABC$ 的邊上有三點 $D$、$E$、$F$，各點位置如圖( 五) 所示。若 $\\overline{BE} = \\overline{AF}$， $\\angle BED =\\angle AFC$，$\\overline{ED} = \\overline{FC}$，則根據圖中標示的長度，求四邊形 $ADEF$ 周長 為何？",
+    "options_latex": {
+      "A": "$20$",
+      "B": "$22$",
+      "C": "$24$",
+      "D": "$25$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 13,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "若坐標平面上有一直線 L 與 x 軸平行，且 L 通過點 ( −3 , −1 )，則 L 的方程式 為何？",
+    "options": {
+      "A": "x = −3",
+      "B": "y = −3",
+      "C": "x = −1",
+      "D": "y = −1"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "若坐標平面上有一直線 $L$ 與 $x$ 軸平行，且 $L$ 通過點 $( -3 , -1 )$，則 $L$ 的方程式 為何？",
+    "options_latex": {
+      "A": "$x = -3$",
+      "B": "$y = -3$",
+      "C": "$x = -1$",
+      "D": "$y = -1$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 14,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "已知坐標平面上有二次函數 y = − ( x + 5 )2 − 20 的圖形，甲、乙兩人提出 以下看法： 【甲】此函數圖形上某個點的 y 坐標為 −15 【乙】此函數圖形上某個點的 y 坐標為 25 對於甲、乙兩人的看法，下列判斷何者正確？",
+    "options": {
+      "A": "甲、乙皆正確",
+      "B": "甲、乙皆錯誤",
+      "C": "甲正確，乙錯誤",
+      "D": "甲錯誤，乙正確"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "已知坐標平面上有二次函數 $y = - ( x + 5 )^{2} - 20$ 的圖形，甲、乙兩人提出 以下看法： 【甲】此函數圖形上某個點的 $y$ 坐標為 $-15$ 【乙】此函數圖形上某個點的 $y$ 坐標為 $25$ 對於甲、乙兩人的看法，下列判斷何者正確？",
+    "options_latex": null,
+    "passage_latex": null
+  },
+  {
+    "number": 15,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "圖( 六) 有一正六邊形 ABCDEF 與一正 n 邊形的部分圖形，其中 G、E、H、 I 為正 n 邊形中連續的四個頂點，F 在 GE 上，C、D、H、I 四點共線。求 n 值 為何？",
+    "options": {
+      "A": "8",
+      "B": "10",
+      "C": "12",
+      "D": "15"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(六)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": null,
+    "options_latex": null,
+    "passage_latex": null
+  },
+  {
+    "number": 16,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "如圖( 七)，∆ABC 中，∠ABC = 90°，D 點為 AC 的 中點，E 點在 BD 上，AE 為 ∠BAC 的角平分線。若 ∠C = 40°，則 ∠AEB 的度數為何？",
+    "options": {
+      "A": "105",
+      "B": "110",
+      "C": "115",
+      "D": "120"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(七)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "如圖( 七)，$\\triangle ABC$ 中，$\\angle ABC = 90^\\circ$ ，$D$ 點為 $\\overline{AC}$ 的 中點，$E$ 點在 $\\overline{BD}$ 上，$\\overline{AE}$ 為 $\\angle BAC$ 的角平分線。若 $\\angle C = 40^\\circ$ ，則 $\\angle AEB$ 的度數為何？",
+    "options_latex": {
+      "A": "$105$",
+      "B": "$110$",
+      "C": "$115$",
+      "D": "$120$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 17,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "某國政府公布 2023 年的全國用電量為 2700 億度，並預估 2024 ～2030 年的 全國用電量逐年增加， 且每年增加的用電量為其前一年的 2.5%。根據預估， 該國 2030 年的全國用電量為多少億度？",
+    "options": {
+      "A": "2700 × (1.025)7",
+      "B": "2700 × (1.025)8",
+      "C": "2700 + 7 × 2700 × 0.025",
+      "D": "2700 + 8 × 2700 × 0.025"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": null,
+    "options_latex": {
+      "A": "$2700 \\times (1.025)^{7}$",
+      "B": "$2700 \\times (1.025)^{8}$",
+      "C": "$2700 + 7 \\times 2700 \\times 0.025$",
+      "D": "$2700 + 8 \\times 2700 \\times 0.025$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 18,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "如圖( 八)， 圓 O 與菱形 ABCD 中， A、 B、 D 在圓上， C 在圓內，O 在 AC 上。若圓 O 的半徑為 13， BD = 24，則 CO 的長度為多少？",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(八)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "如圖( 八)， 圓 $O$ 與菱形 $ABCD$ 中， $A$、 $B$、 $D$ 在圓上， $C$ 在圓內，$O$ 在 $\\overline{AC}$ 上。若圓 $O$ 的半徑為 $13$， $\\overline{BD} = 24$，則 $\\overline{CO}$ 的長度為多少？",
+    "options_latex": {
+      "A": "$2$",
+      "B": "$3$",
+      "C": "$4$",
+      "D": "$5$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 19,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "已知一圓上有 A、B、C、D 四點，其位置如圖( 九) 所示， 其中 AB = 87°， BC = 91°， CD = 88°， AD = 94°。若在 此圓上找兩點 E、 F，使得四邊形 ABEF 為長方形，則 下列關於 E 點、F 點位置的敘述，何者正確？",
+    "options": {
+      "A": "E 在 BC 上，F 在 CD 上",
+      "B": "E 在 BC 上，F 在 AD 上",
+      "C": "E 在 CD 上，F 在 CD 上",
+      "D": "E 在 CD 上，F 在 AD 上"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(九)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "已知一圓上有 $A$、$B$、$C$、$D$ 四點，其位置如圖( 九) 所示， 其中 $\\overset{\\frown}{AB} = 87^\\circ$ ， $\\overset{\\frown}{BC} = 91^\\circ$ ， $\\overset{\\frown}{CD} = 88^\\circ$ ， $\\overset{\\frown}{AD} = 94^\\circ$ 。若在 此圓上找兩點 $E$、 $F$，使得四邊形 $ABEF$ 為長方形，則 下列關於 $E$ 點、$F$ 點位置的敘述，何者正確？",
+    "options_latex": {
+      "A": "$E$ 在 $BC$ 上，$F$ 在 $CD$ 上",
+      "B": "$E$ 在 $BC$ 上，$F$ 在 $AD$ 上",
+      "C": "$E$ 在 $CD$ 上，$F$ 在 $CD$ 上",
+      "D": "$E$ 在 $CD$ 上，$F$ 在 $AD$ 上"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 20,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "已知正整數 M 的因數中，除了 M 之外最大的因數是 22 × 11，正整數 N 的 因數中，除了 N 之外最大的因數是 3 × 13。甲、乙兩人提出以下看法： 【甲】 8 一定是 M 的因數 【乙】 9 一定是 N 的因數 對於甲、乙兩人的看法，下列判斷何者正確？",
+    "options": {
+      "A": "甲、乙皆正確",
+      "B": "甲、乙皆錯誤",
+      "C": "甲正確，乙錯誤",
+      "D": "甲錯誤，乙正確"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "已知正整數 $M$ 的因數中，除了 $M$ 之外最大的因數是 $2^{2} \\times 11$，正整數 $N$ 的 因數中，除了 $N$ 之外最大的因數是 $3 \\times 13$。甲、乙兩人提出以下看法： 【甲】 $8$ 一定是 $M$ 的因數 【乙】 $9$ 一定是 $N$ 的因數 對於甲、乙兩人的看法，下列判斷何者正確？",
+    "options_latex": null,
+    "passage_latex": null
+  },
+  {
+    "number": 21,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "如圖( 十)，∆ABC 與 ∆ADE 中，D 點在 ∆ABC 外， E 點在 AB 上，∠D = ∠DEA = ∠EAC = ∠C = 65°。 若 BC 上有一點 F， AF 與直線 DE 相交於 P 點， 且 BF = 5，FC = 8，BE = 6，則 AP 與 AF 的 長度比為何？",
+    "options": {
+      "A": "4：5",
+      "B": "5：6",
+      "C": "6：7",
+      "D": "7：8"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "如圖( 十)，$\\triangle ABC$ 與 $\\triangle ADE$ 中，$D$ 點在 $\\triangle ABC$ 外， $E$ 點在 $\\overline{AB}$ 上，$\\angle D = \\angle DEA = \\angle EAC = \\angle C = 65^\\circ$ 。 若 $\\overline{BC}$ 上有一點 $F$， $\\overline{AF}$ 與直線 $\\overline{DE}$ 相交於 $P$ 點， 且 $\\overline{BF} = 5$，$\\overline{FC} = 8$，$\\overline{BE} = 6$，則 $\\overline{AP}$ 與 $\\overline{AF}$ 的 長度比為何？",
+    "options_latex": {
+      "A": "$4$：$5$",
+      "B": "$5$：$6$",
+      "C": "$6$：$7$",
+      "D": "$7$：$8$"
+    },
+    "passage_latex": null
+  },
+  {
+    "number": 22,
+    "type": "選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "如圖( 十一)，平行四邊形 ABCD 中，AB = 20， AD = 21。甲、乙兩人想找一點 P，使得 P 到 BC 的距離等於 P 到 AD 的距離，且 P 到 AB 的距離 等於 P 到 CD 的距離，其作法如下： 【甲】連接 AC、BD，兩線段相交於 P 點， 則 P 即為所求 【乙】作 ∠C、∠D 的角平分線，兩直線相交於 P 點，則 P 即為所求 對於甲、乙兩人的作法，下列判斷何者正確？",
+    "options": {
+      "A": "甲、乙皆正確",
+      "B": "甲、乙皆錯誤",
+      "C": "甲正確，乙錯誤",
+      "D": "甲錯誤，乙正確"
+    },
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十一)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "如圖( 十一)，平行四邊形 $ABCD$ 中，$\\overline{AB} = 20$， $\\overline{AD} = 21$。甲、乙兩人想找一點 $P$，使得 $P$ 到 $\\overline{BC}$ 的距離等於 $P$ 到 $\\overline{AD}$ 的距離，且 $P$ 到 $\\overline{AB}$ 的距離 等於 $P$ 到 $\\overline{CD}$ 的距離，其作法如下： 【甲】連接 $\\overline{AC}$、$\\overline{BD}$，兩線段相交於 $P$ 點， 則 $P$ 即為所求 【乙】作 $\\angle C$、$\\angle D$ 的角平分線，兩直線相交於 $P$ 點，則 $P$ 即為所求 對於甲、乙兩人的作法，下列判斷何者正確？",
+    "options_latex": null,
+    "passage_latex": null
+  },
+  {
+    "number": 23,
+    "type": "題組子題",
+    "group_range": [
+      23,
+      25
+    ],
+    "group_id": "23-25",
+    "stem": "根據選文，時速錶符合法規的汽車行駛時，若指示速率為 120 公里/ 小時， 則實際速率的最小值與最大值分別是多少公里/ 小時？( 最小值用無條件進入 法取概數到個位，最大值用無條件捨去法取概數到個位)",
+    "options": {
+      "A": "最小值 105，最大值 120",
+      "B": "最小值 106，最大值 120",
+      "C": "最小值 120，最大值 136",
+      "D": "最小值 120，最大值 137"
+    },
+    "passage": "汽車上會安裝圖(十二)的時速錶，其功能是指示\n汽車當時的速率，但其指示的速率並不一定等於汽車\n的實際速率。已知法規規範車輛出廠時，時速錶的指\n示速率( V指 )必須永不小於車輛的實際速率( V實 )，且 \nV指 與 V實 應滿足下列關係：\nV實\n10\nV指 − V實 ≤       + 4\n(皆以公里/小時為速率單位)\n \n而車輛的實際速率就是單位時間內車輛移動的距離，可以利用輪胎轉速與\n輪胎周長求出。輪胎轉速是指單位時間內輪胎旋轉多少圈，而輪胎周長等於輪\n胎旋轉一圈時車輛移動的距離，所以有下列關係式：\n實際速率＝輪胎轉速 × 輪胎周長\n上式的實際速率若要以公里/小時為單位，則輪胎轉速應以圈/小時為單位，輪\n胎周長應以公里為單位。\n \n所以當車輛上的儀器測出輪胎轉速，配合儀器內設定的輪胎周長，就能得\n到時速錶上的指示速率，關係式如下：\n指示速率＝儀器測出的輪胎轉速 × 儀器設定的輪胎周長\n圈/小時為轉速單位，表示每小時轉多少圈\n圖( 十二)\n\n10",
+    "passage_figures": [
+      "圖(十二)"
+    ],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": null,
+    "options_latex": null,
+    "passage_latex": "汽車上會安裝圖(十二)的時速錶，其功能是指示\n汽車當時的速率，但其指示的速率並不一定等於汽車\n的實際速率。已知法規規範車輛出廠時，時速錶的指\n示速率$( V_{\\text{指}} )$必須永不小於車輛的實際速率$( V_{\\text{實}} )$，且 \n$V_{\\text{指}}$ 與 $V_{\\text{實}}$ 應滿足下列關係：\n$V_{\\text{指}} - V_{\\text{實}} \\leq \\frac{V_{\\text{實}}}{10} + 4$\n(皆以公里/小時為速率單位)\n \n而車輛的實際速率就是單位時間內車輛移動的距離，可以利用輪胎轉速與\n輪胎周長求出。輪胎轉速是指單位時間內輪胎旋轉多少圈，而輪胎周長等於輪\n胎旋轉一圈時車輛移動的距離，所以有下列關係式：\n實際速率＝輪胎轉速 $\\times$ 輪胎周長\n上式的實際速率若要以公里/小時為單位，則輪胎轉速應以圈/小時為單位，輪\n胎周長應以公里為單位。\n \n所以當車輛上的儀器測出輪胎轉速，配合儀器內設定的輪胎周長，就能得\n到時速錶上的指示速率，關係式如下：\n指示速率＝儀器測出的輪胎轉速 $\\times$ 儀器設定的輪胎周長\n圈/小時為轉速單位，表示每小時轉多少圈\n圖( 十二)\n\n$10$"
+  },
+  {
+    "number": 24,
+    "type": "題組子題",
+    "group_range": [
+      23,
+      25
+    ],
+    "group_id": "23-25",
+    "stem": "根據選文，已知有一輛行駛中的汽車，其輪胎轉速為 x 圈/ 分鐘且輪胎周長為 200 公分。若此車的實際速率為 y 公里/ 小時，則 y 與 x 的關係為下列何者？",
+    "options": {
+      "A": "y = 0.002x",
+      "B": "y = 0.12x",
+      "C": "y = 200x",
+      "D": "y = 12000x"
+    },
+    "passage": "汽車上會安裝圖(十二)的時速錶，其功能是指示\n汽車當時的速率，但其指示的速率並不一定等於汽車\n的實際速率。已知法規規範車輛出廠時，時速錶的指\n示速率( V指 )必須永不小於車輛的實際速率( V實 )，且 \nV指 與 V實 應滿足下列關係：\nV實\n10\nV指 − V實 ≤       + 4\n(皆以公里/小時為速率單位)\n \n而車輛的實際速率就是單位時間內車輛移動的距離，可以利用輪胎轉速與\n輪胎周長求出。輪胎轉速是指單位時間內輪胎旋轉多少圈，而輪胎周長等於輪\n胎旋轉一圈時車輛移動的距離，所以有下列關係式：\n實際速率＝輪胎轉速 × 輪胎周長\n上式的實際速率若要以公里/小時為單位，則輪胎轉速應以圈/小時為單位，輪\n胎周長應以公里為單位。\n \n所以當車輛上的儀器測出輪胎轉速，配合儀器內設定的輪胎周長，就能得\n到時速錶上的指示速率，關係式如下：\n指示速率＝儀器測出的輪胎轉速 × 儀器設定的輪胎周長\n圈/小時為轉速單位，表示每小時轉多少圈\n圖( 十二)\n\n10",
+    "passage_figures": [
+      "圖(十二)"
+    ],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": null,
+    "options_latex": {
+      "A": "$y = 0.002x$",
+      "B": "$y = 0.12x$",
+      "C": "$y = 200x$",
+      "D": "$y = 12000x$"
+    },
+    "passage_latex": "汽車上會安裝圖(十二)的時速錶，其功能是指示\n汽車當時的速率，但其指示的速率並不一定等於汽車\n的實際速率。已知法規規範車輛出廠時，時速錶的指\n示速率$( V_{\\text{指}} )$必須永不小於車輛的實際速率$( V_{\\text{實}} )$，且 \n$V_{\\text{指}}$ 與 $V_{\\text{實}}$ 應滿足下列關係：\n$V_{\\text{指}} - V_{\\text{實}} \\leq \\frac{V_{\\text{實}}}{10} + 4$\n(皆以公里/小時為速率單位)\n \n而車輛的實際速率就是單位時間內車輛移動的距離，可以利用輪胎轉速與\n輪胎周長求出。輪胎轉速是指單位時間內輪胎旋轉多少圈，而輪胎周長等於輪\n胎旋轉一圈時車輛移動的距離，所以有下列關係式：\n實際速率＝輪胎轉速 $\\times$ 輪胎周長\n上式的實際速率若要以公里/小時為單位，則輪胎轉速應以圈/小時為單位，輪\n胎周長應以公里為單位。\n \n所以當車輛上的儀器測出輪胎轉速，配合儀器內設定的輪胎周長，就能得\n到時速錶上的指示速率，關係式如下：\n指示速率＝儀器測出的輪胎轉速 $\\times$ 儀器設定的輪胎周長\n圈/小時為轉速單位，表示每小時轉多少圈\n圖( 十二)\n\n$10$"
+  },
+  {
+    "number": 25,
+    "type": "題組子題",
+    "group_range": [
+      23,
+      25
+    ],
+    "group_id": "23-25",
+    "stem": "根據選文，已知原本甲、乙兩輛車上儀器測出的輪胎轉速跟實際的輪胎轉速 相等，兩車儀器設定的輪胎周長也與當時兩車安裝的輪胎周長相等。後來甲 的儀器發生故障，導致儀器測出的輪胎轉速比實際的輪胎轉速更高，而乙更 換輪胎，新輪胎周長比原本的更小，但儀器設定的仍是原本輪胎周長。若甲、 乙此時皆以 60 公里/ 小時的指示速率行駛，且甲、乙的實際速率分別為 p 公里/ 小時、q 公里/ 小時，則下列關係何者正確？",
+    "options": {
+      "A": "p > 60，q > 60",
+      "B": "p > 60，q < 60",
+      "C": "p < 60，q > 60",
+      "D": "p < 60，q < 60"
+    },
+    "passage": "汽車上會安裝圖(十二)的時速錶，其功能是指示\n汽車當時的速率，但其指示的速率並不一定等於汽車\n的實際速率。已知法規規範車輛出廠時，時速錶的指\n示速率( V指 )必須永不小於車輛的實際速率( V實 )，且 \nV指 與 V實 應滿足下列關係：\nV實\n10\nV指 − V實 ≤       + 4\n(皆以公里/小時為速率單位)\n \n而車輛的實際速率就是單位時間內車輛移動的距離，可以利用輪胎轉速與\n輪胎周長求出。輪胎轉速是指單位時間內輪胎旋轉多少圈，而輪胎周長等於輪\n胎旋轉一圈時車輛移動的距離，所以有下列關係式：\n實際速率＝輪胎轉速 × 輪胎周長\n上式的實際速率若要以公里/小時為單位，則輪胎轉速應以圈/小時為單位，輪\n胎周長應以公里為單位。\n \n所以當車輛上的儀器測出輪胎轉速，配合儀器內設定的輪胎周長，就能得\n到時速錶上的指示速率，關係式如下：\n指示速率＝儀器測出的輪胎轉速 × 儀器設定的輪胎周長\n圈/小時為轉速單位，表示每小時轉多少圈\n圖( 十二)\n\n10",
+    "passage_figures": [
+      "圖(十二)"
+    ],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": null,
+    "options_latex": {
+      "A": "$p > 60$，$q > 60$",
+      "B": "$p > 60$，$q < 60$",
+      "C": "$p < 60$，$q > 60$",
+      "D": "$p < 60$，$q < 60$"
+    },
+    "passage_latex": "汽車上會安裝圖(十二)的時速錶，其功能是指示\n汽車當時的速率，但其指示的速率並不一定等於汽車\n的實際速率。已知法規規範車輛出廠時，時速錶的指\n示速率$( V_{\\text{指}} )$必須永不小於車輛的實際速率$( V_{\\text{實}} )$，且 \n$V_{\\text{指}}$ 與 $V_{\\text{實}}$ 應滿足下列關係：\n$V_{\\text{指}} - V_{\\text{實}} \\leq \\frac{V_{\\text{實}}}{10} + 4$\n(皆以公里/小時為速率單位)\n \n而車輛的實際速率就是單位時間內車輛移動的距離，可以利用輪胎轉速與\n輪胎周長求出。輪胎轉速是指單位時間內輪胎旋轉多少圈，而輪胎周長等於輪\n胎旋轉一圈時車輛移動的距離，所以有下列關係式：\n實際速率＝輪胎轉速 $\\times$ 輪胎周長\n上式的實際速率若要以公里/小時為單位，則輪胎轉速應以圈/小時為單位，輪\n胎周長應以公里為單位。\n \n所以當車輛上的儀器測出輪胎轉速，配合儀器內設定的輪胎周長，就能得\n到時速錶上的指示速率，關係式如下：\n指示速率＝儀器測出的輪胎轉速 $\\times$ 儀器設定的輪胎周長\n圈/小時為轉速單位，表示每小時轉多少圈\n圖( 十二)\n\n$10$"
+  },
+  {
+    "number": 1,
+    "type": "非選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "阿川想要挑戰ㄧ場馬拉松賽事，並在賽前訓練自己的體能。他決定利用每圈 400 公尺的跑道訓練，並訂定了訓練計畫如下：每週星期一、四訓練，第一週 的星期一跑 5 圈，每週星期四的訓練圈數比當週星期一多 2 圈，之後每週 星期一的訓練圈數與前一週的星期四相同，直到某日的訓練距離超過 15 公里， 就維持該圈數不再增加。 請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋： (1) 依照訓練計畫，阿川第 2 週的星期四的訓練圈數為幾圈？ (2) 承(1)，最早從第幾週的星期幾開始，當日的訓練距離會超過 15 公里？",
+    "options": null,
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "阿川想要挑戰ㄧ場馬拉松賽事，並在賽前訓練自己的體能。他決定利用每圈 $400$ 公尺的跑道訓練，並訂定了訓練計畫如下：每週星期一、四訓練，第一週 的星期一跑 $5$ 圈，每週星期四的訓練圈數比當週星期一多 $2$ 圈，之後每週 星期一的訓練圈數與前一週的星期四相同，直到某日的訓練距離超過 $15$ 公里， 就維持該圈數不再增加。 請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋： $(1)$ 依照訓練計畫，阿川第 $2$ 週的星期四的訓練圈數為幾圈？ $(2)$ 承$(1)$，最早從第幾週的星期幾開始，當日的訓練距離會超過 $15$ 公里？",
+    "options_latex": null,
+    "passage_latex": null
+  },
+  {
+    "number": 2,
+    "type": "非選擇題",
+    "group_range": null,
+    "group_id": null,
+    "stem": "某場館有一組由三個相同的五邊形沙發緊密拼成的Y 字型沙發椅， 如圖( 十三) 所示，其俯視圖如圖( 十四) 所示，其中 AB 為 90 公分，BC、 AE 皆為 130 公分， CD = DE，∠A = ∠B = 90°，且 D 為Y 字型沙發椅的 中心點。 請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋。 (1) 求圖( 十四) 中 ∠CDE 的度數為何？ (2) 今想訂製一塊正六邊形的地毯，並將Y 字型沙發椅放置在上面，其中正六邊形 地毯的對角線交點與 D 點重合，擺放時 AB 與地毯的一邊平行且至少相距 50 公分，如圖( 十五) 所示，則地毯的邊長至少需要多少公分？( 以根式 呈現)",
+    "options": null,
+    "passage": null,
+    "passage_figures": [],
+    "passage_figure_pages": {},
+    "passage_tables": [],
+    "passage_table_pages": {},
+    "figures": [
+      "圖(十五)",
+      "圖(十三)",
+      "圖(十四)"
+    ],
+    "figure_pages": {},
+    "tables": [],
+    "table_pages": {},
+    "image_options": null,
+    "image_options_full": null,
+    "stem_latex": "某場館有一組由三個相同的五邊形沙發緊密拼成的$Y$ 字型沙發椅， 如圖( 十三) 所示，其俯視圖如圖( 十四) 所示，其中 $\\overline{AB}$ 為 $90$ 公分，$\\overline{BC}$、 $AE$ 皆為 $130$ 公分， $\\overline{CD} = \\overline{DE}$，$\\angle A = \\angle B = 90^\\circ$ ，且 $D$ 為$Y$ 字型沙發椅的 中心點。 請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋。 $(1)$ 求圖( 十四) 中 $\\angle CDE$ 的度數為何？ $(2)$ 今想訂製一塊正六邊形的地毯，並將$Y$ 字型沙發椅放置在上面，其中正六邊形 地毯的對角線交點與 $D$ 點重合，擺放時 $\\overline{AB}$ 與地毯的一邊平行且至少相距 $50$ 公分，如圖( 十五) 所示，則地毯的邊長至少需要多少公分？( 以根式 呈現)",
+    "options_latex": null,
+    "passage_latex": null
+  }
+]

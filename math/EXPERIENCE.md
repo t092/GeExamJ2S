@@ -1,0 +1,457 @@
+# 國中教育會考數學科題庫 Pipeline 經驗彙整
+
+> 適用範圍：國中教育會考數學科題本（115 年起）。  
+> 目的：記錄從 PDF 到結構化 JSON + LaTeX 的完整流程、已知問題與修復方式，作為未來製作自動化 skill 的基底。
+
+---
+
+## 1. 總體架構
+
+```
+math/
+├── <year>年國中教育會考數學科題本.pdf  # 原始題本 PDF
+├── pipeline/
+│   ├── extract_all.py      # PyMuPDF 文字擷取
+│   ├── extract_images.py   # 頁面渲染（200dpi PNG）
+│   ├── parse_questions.py  # 正規表示法解析 → data/<year>.json
+│   ├── latex_convert.py    # 加入 LaTeX 欄位（stem_latex / options_latex）
+│   ├── crop_figures.py     # 向量圖裁切 → pic/
+│   └── check_quality.py    # 驗證腳本
+├── data/                   # 結構化題庫 JSON
+├── assets/<year>/pages/    # 頁面渲染圖
+├── pic/                    # 裁切圖表（item/ 子目錄放圖片選項）
+└── web/                    # 前端閱讀器
+```
+
+### 執行順序
+
+```bash
+cd math
+python pipeline/extract_all.py         # 1. 文字擷取
+python pipeline/extract_images.py       # 2. 頁面渲染
+python pipeline/parse_questions.py      # 3. 解析題目 → data/115.json
+python pipeline/latex_convert.py        # 4. LaTeX 轉換
+python pipeline/crop_figures.py         # 5. 圖表裁切
+python pipeline/check_quality.py        # 6. 驗證
+```
+
+---
+
+## 2. PDF 文字擷取（extract_all.py）
+
+### 工具選擇
+- **使用 PyMuPDF（fitz）**，不可用 pdfplumber。
+- pdfplumber 在 CID-encoded CJK 字型上會輸出亂碼。
+- PyMuPDF `page.get_text()` 可正確回傳中文。
+
+### 實務要點
+- 數學科 PDF 有 14 頁，27 題（25 選擇題 + 2 非選擇題）。
+- 第 1 頁為作答說明，需跳過（從「第一部分：選擇題」開始）。
+- 第 14 頁為參考公式，需從非選擇題的題幹中切除（`re.sub(r'\n參考公式.*$', '', stem)`）。
+
+---
+
+## 3. 題目解析（parse_questions.py）
+
+### 3.1 題型分類
+
+| 題型 | 數量 | 識別方式 |
+|------|------|----------|
+| 選擇題 | 22 題（Q1-Q22） | 數字後接 `(A)` 選項 |
+| 題組子題 | 3 題（Q23-Q25） | 出現在「請閱讀下列選文後，回答23～25題」區塊內 |
+| 非選擇題 | 2 題 | 出現在「第二部分：非選擇題」區塊 |
+
+### 3.2 正規表示法切割
+
+#### 題號分割
+```python
+pattern = re.compile(
+    r'(?:^|\n)(\d{1,2})\.(?:\s*\n|\s+)(.*?)(?=\n\d{1,2}\.\s|\Z)',
+    re.DOTALL
+)
+```
+- 使用 `\n\d{1,2}\.\s` 作為下一個題目的邊界。
+- 題號範圍：Q1-Q22 為單題，Q23-Q25 為題組。
+
+#### 選項解析（parse_choices）
+
+```python
+for letter in ['A', 'B', 'C', 'D']:
+    if letter == 'D':
+        pat = rf'\(D\)\s*(.*?)(?=\n\d{{1,2}}\.\s|\Z)'
+    else:
+        next_letter = chr(ord(letter) + 1)
+        pat = rf'\(letter\)\s*(.*?)(?=\(next_letter\))'
+    m = re.search(pat, options_raw, re.DOTALL)
+```
+
+### 3.3 已知問題與修復
+
+#### 問題 A：D 選項擷取到圖表標籤與頁碼
+
+**現象**：D 選項內容包含 `圖(一) 2`、`表(一) 3`、`圖(四) 圖(三) 圖(五) 5` 等不該出現的結尾。
+
+**原因**：D 選項的正規表示法以 `\n\d{1,2}\.\s` 為邊界，但 `(D)` 與下一個題號之間會有圖表標籤（`圖(一)`、`表(一)`）、頁碼（`=== PAGE N ===`）、換頁提示（`請翻頁繼續作答`）、以及頁碼數字。
+
+**修復**：`clean_option_tail()` 函數依序清除：
+1. 從第一個 `圖(某)`/`表(某)` 到字串結尾（`\s*[圖表]\(\s*...\)\s*.*$` with DOTALL）
+2. 從 `\uf026`/`\uFFFD` 替代字元到結尾
+3. 頁碼標記（`=== PAGE \d+ ===`）
+4. 換頁提示（`請翻頁繼續作答`）
+5. 控制字元
+
+```python
+def clean_option_tail(opt_text: str) -> str:
+    opt_text = re.sub(r'\s*[圖表]\(\s*[一二三四五六七八九十\u3127\d]+\s*\)\s*.*$', '', opt_text, flags=re.DOTALL)
+    opt_text = re.sub(r'[\uf026\uFFFD].*$', '', opt_text, flags=re.DOTALL)
+    opt_text = re.sub(r'\s*=== PAGE \d+ ===\s*.*$', '', opt_text, flags=re.DOTALL)
+    opt_text = re.sub(r'\s*請翻頁繼續作答\s*.*$', '', opt_text, flags=re.DOTALL)
+    opt_text = re.sub(r'[\x00-\x1f]+', '', opt_text)
+    return opt_text.strip()
+```
+
+**影響題號**：Q3, Q6, Q9, Q12, Q15, Q18, Q20, Q22, Q25（D 選項）+ 非選 Q2（題幹）。
+
+#### 問題 B：非選題題幹尾部殘留圖表標籤
+
+**現象**：非選 Q2 題幹結尾出現 `圖(十三) 圖(十四) 13`。
+
+**原因**：現有 `\n\d{1,2}\s*\n` 正規表示法無法匹配結尾無換行的頁碼數字，且圖表標籤與頁碼交錯出現。
+
+**修復**：使用 while 迴圈重複清除直到無變化：
+
+```python
+while True:
+    old = stem
+    stem = re.sub(r'\s*[圖表]\(\s*...\)\s*$', '', stem)
+    stem = re.sub(r'\s*=== PAGE \d+ ===\s*$', '', stem)
+    stem = re.sub(r'\s*試題結束\s*$', '', stem)
+    stem = re.sub(r'\s+\d{1,2}\s*$', '', stem)
+    if stem == old:
+        break
+```
+
+#### 問題 C：題組段落切割
+
+數學科 Q23-Q25 為題組，段落文字可能出現在：
+- 第一個子題的 `(D)` 之後（最常見）
+- 最後一個子題的 `(D)` 之後（備用方案）
+- 第一個子題之前（備用方案）
+
+`split_passage_and_questions()` 依序嘗試三種模式。
+
+---
+
+## 4. LaTeX 轉換（latex_convert.py）
+
+### 4.1 轉換流程
+
+```python
+def wrap_math(text):
+    text = convert_geometry(text)        # 幾何符號
+    text = convert_superscripts(text)     # 上標
+    text = convert_factor_exponents(text) # 因數分解上標修復
+    text = convert_subscripts(text)       # 下標
+    text = convert_sqrt(text)            # 根號
+    text = MATH_SYMBOLS 取代              # 數學符號
+    text = wrap_math_segments(text)       # 包裹 $...$
+    return text
+```
+
+### 4.2 數學符號對照表
+
+| 原始 | LaTeX | 備註 |
+|------|-------|------|
+| `×` | `\times` | 乘號 |
+| `÷` | `\div` | 除號 |
+| `±` | `\pm` | 正負號 |
+| `−` | `-` | 減號（Unicode 減號轉 ASCII） |
+| `∠` | `\angle` | 角 |
+| `°` | `^\circ` | 度 |
+| `△` | `\triangle` | 三角形（U+25B3） |
+| `∆` | `\triangle` | 三角形（U+2206，increment 符號，PDF 常用） |
+| `π` | `\pi` | 圓周率 |
+| `√` | `\sqrt{}` | 根號（需後續處理內容） |
+| `⊥` | `\perp` | 垂直 |
+| `∥` | `\parallel` | 平行 |
+
+### 4.3 上標處理
+
+#### 標準模式
+```python
+# (expr)2 → (expr)^{2}
+text = re.sub(r'\)([23])(?=\s|$|,|;|，|。|\)|\(|\+|\-|\*|/|÷|×|±|=|<|>|≤|≥)', r')^{\1}', text)
+
+# x2 → x^{2}
+text = re.sub(r'([a-zA-Z])([23])(?=\s|$|,|;|，|。|\)|\(|\+|\-|\*|/|÷|×|±|=|<|>|≤|≥)', r'\1^{\2}', text)
+
+# 4.4 × 105 → 4.4 × 10^{5}（科學記號）
+text = re.sub(r'(\d+)\s*×\s*10(\d)(?=\s|$|,|;|，|。|\)|\(|\+|\-|\*|/|÷|±|=|<|>|≤|≥)', r'\1 \\times 10^{\2}', text)
+```
+
+#### 因數分解上標修復（PDF 擷取遺失）
+
+**現象**：`22 × 11` 實際應為 `2² × 11`，PDF 文字擷取時上標字元 ² 遺失。
+
+**觸發條件**：文字包含 `因數`、`倍數`、`質因數` 關鍵字。
+
+**修復**：
+```python
+def convert_factor_exponents(text: str) -> str:
+    if not any(kw in text for kw in ['因數', '倍數', '質因數']):
+        return text
+    text = re.sub(r'([23])\1\s*×\s*(\d+)', r'\1^{\1} \\times \2', text)
+    return text
+```
+
+### 4.4 幾何符號轉換
+
+#### 線段符號（`\overline{AB}`）
+
+**觸發條件**：文字包含 `△`、`∠`、`⊥`、`∥`、`菱形`、`平行四邊形`、`正三角形`、`正六邊形`、`正n邊形`、`角柱`、`角平分線`、`半徑`、`直徑`、`線段`、`圓心` 等關鍵字。
+
+**規則**：兩個連續大寫字母，前接空白/逗號/頓號/句號，後接 `=`、`的`、`上`、`為`、`、`、`中`、`與`、`和`、`相交`、`兩線段`、`⊥`、`∥` 等。
+
+```python
+text = re.sub(
+    r'(?<=[\s,，、。】])([A-Z])([A-Z])(?=\s*(?:[=]|的|上|為|、|中|與|和|相交|兩線段|。|，|⊥|∥|\)))',
+    r'\\overline{\1\2}',
+    text
+)
+```
+
+**注意事項**：
+- 三角形名稱（`△ABC`）中的 `AB` 不會被轉換，因為後面接 `C` 而非關鍵字。
+- 角名稱（`∠ABC`）中的 `AB` 不會被轉換，同理。
+- 四邊形名稱（`ABCD`）中的 `AB` 不會被轉換，因為後面接 `C`。
+
+#### 弧符號（`\overset{\frown}{AB}`）
+
+**觸發條件**：文字（或結合題幹文字）包含 `圓` 關鍵字。
+
+**規則**：兩個連續大寫字母後接 `= N°`。
+
+```python
+text = re.sub(
+    r'([A-Z])([A-Z])(?=\s*=\s*\d+\s*°)',
+    r'\\overset{\\frown}{\1\2}',
+    text
+)
+```
+
+**注意事項**：
+- 使用 `\overset{\frown}{AB}` 而非 `\overarc{AB}`，因為 KaTeX 0.16.9 不支援 `\overarc`。
+- 傳入 `stem_context` 參數以在選項轉換中繼承題幹的圓形上下文。
+
+### 4.5 中文字下標與多行分數
+
+#### 中文字下標
+
+**現象**：PDF 擷取的文字中，`V指`、`V實` 等帶中文字下標的變數被當成一般文字，無法正確渲染為 LaTeX 下標。
+
+**修復**：`convert_chinese_subscripts()` 將 `V指` 轉為 `V_{\text{指}}`，並將行內分數 `V_{\text{實}}/10` 轉為 `\frac{V_{\text{實}}}{10}`。
+
+```python
+def convert_chinese_subscripts(text: str) -> str:
+    # V + 中文字 → V_{\text{中文字}}
+    text = re.sub(r'([A-Z])([一-鿿])', r'\1_{\\text{\2}}', text)
+    # 行內分數：V_{\text{實}}/10 → \frac{V_{\text{實}}}{10}
+    text = re.sub(r'(V_\{\\text\{[一-鿿]+\}\})/(\d+)', r'\\frac{\1}{\2}', text)
+    return text
+```
+
+#### 多行分數修復
+
+**現象**：PDF 中的分數以多行呈現（分子、分母、公式行分開），導致公式被截斷。
+
+```
+V實
+10
+V指 − V實 ≤       + 4
+```
+
+**修復**：`fix_multiline_fraction()` 將分子/分母重新組合到公式行中。
+
+```python
+def fix_multiline_fraction(text: str) -> str:
+    def _join_frac(m):
+        num, den, formula = m.group(1), m.group(2), m.group(3)
+        formula = re.sub(r'(≤)\s+(\+)', rf'\1 {num}/{den} \2', formula)
+        return formula
+    text = re.sub(r'(\S+)\n(\d+)\n(.+?)(?=\n|$)', _join_frac, text, flags=re.DOTALL)
+    return text
+```
+
+**注意事項**：
+- 此函數必須在所有其他轉換之前執行，因為它依賴原始的換行結構。
+- `\text{...}` 區塊中的中文字會被 `_MATH_RUN` 視為中斷點，需在 `wrap_math_segments()` 中使用佔位符保護。
+
+### 4.6 下標處理
+
+```python
+# a1 → a_{1}（數列項）
+text = re.sub(r'\b([a-zA-Z])(\d)\b', r'\1_{\2}', text)
+
+# an → a_{n}（一般項）
+text = re.sub(r'\b([a-zA-Z])([nr])(?=\s|$|,|;|，|。|\)|\(|\+|\-|\*|/|÷|×|±|=)', r'\1_{\2}', text)
+
+# Sn → S_{n}（總和）
+text = re.sub(r'\b([A-Z])([n])(?=\s|$|,|;|，|。|\)|\(|\+|\-|\*|/|÷|×|±|=)', r'\1_{\2}', text)
+```
+
+### 4.7 數學段包裹
+
+使用 `_MATH_RUN` 正規表示法（非 CJK 字元連續區段）偵測數學內容，並包裹 `$...$`：
+
+```python
+_BREAK_CHARS = '\u4e00-\u9fff\u3000-\u303f\uff00-\uff65「」『』（）《》〈〉﹒～\n'
+_MATH_RUN = re.compile(r'[^' + _BREAK_CHARS + ']+')
+```
+
+僅包裹包含字母、數字或反斜線的區段（純空白/標點不包裹）。
+
+**注意事項**：
+- `\n` 已加入 `_BREAK_CHARS`，確保換行符會中斷數學段，避免跨行公式被錯誤包裹。
+- `\text{...}` 區塊中的中文字會被視為中斷點，需使用佔位符（`\x00TEXT{}`）保護後再恢復。
+
+---
+
+## 5. 圖表裁切（crop_figures.py）
+
+### 5.1 類型與方法
+
+| 類型 | 方法 | 說明 |
+|------|------|------|
+| 圖（Figure） | 向量繪圖聚合 | 文字標籤偵測 → 鄰近向量繪圖 bbox 合併 |
+| 表（Table） | 同上 + 線條偵測 | 額外偵測水平/垂直線條防止截斷 |
+| 並排圖 | x 權重匹配 | 圖(十三)+(十四) 分離 |
+
+### 5.2 命名規則
+
+- `{year}p{NN:02d}.jpg` — 圖（如 `115p01.jpg`）
+- `{year}t{NN:02d}.jpg` — 表（如 `115t01.jpg`）
+- `{year}p{NN:02d}i.jpg` — 圖片選項（如 `11527i.jpg`）
+
+### 5.3 向量圖 vs 點陣圖
+
+- 數學科：**向量繪圖**（`doc.get_page_pixmap(clip=bbox)` 直接裁切）
+- 社會科：**嵌入點陣圖**（`page.get_images()` + `doc.extract_image()`）
+
+---
+
+## 6. 資料結構（JSON Schema）
+
+```json
+{
+  "number": 1,
+  "type": "選擇題" | "題組子題" | "非選擇題",
+  "group_range": [23, 25] | null,
+  "group_id": "23-25" | null,
+  "stem": "解二元一次聯立方程式 x + 2y = 5 ...",
+  "stem_latex": "解二元一次聯立方程式 $x + 2y = 5 ...$",
+  "options": {"A": "−4", "B": "−2", "C": "2", "D": "4"},
+  "options_latex": {"A": "$-4$", "B": "$-2$", "C": "$2$", "D": "$4$"},
+  "passage": "閱讀選文..." | null,
+  "passage_latex": "閱讀選文..." | null,
+  "passage_figures": ["圖(十二)"],
+  "figures": ["圖(一)"],
+  "tables": ["表(一)"],
+  "image_options": "11527i.jpg" | null,
+  "image_options_full": true | false | null
+}
+```
+
+### 欄位說明
+
+| 欄位 | 說明 |
+|------|------|
+| `stem` | 原始題幹文字（保留 PDF 擷取原始內容） |
+| `stem_latex` | LaTeX 轉換後題幹（KaTeX 可渲染）；`null` 表示無需轉換 |
+| `options` | 原始選項文字 |
+| `options_latex` | LaTeX 轉換後選項（逐字母）；`null` 表示該選項無需轉換 |
+| `passage` | 題組段落文字 |
+| `passage_latex` | 題組段落 LaTeX 版 |
+| `figures` / `tables` | 題幹引用的圖表編號（從題幹文字中 `re.findall` 取得） |
+| `passage_figures` | 段落引用的圖表（僅用於題組） |
+| `image_options` | 圖片選項的檔案名稱（如 `"11527i.jpg"`） |
+| `image_options_full` | `true`=全部選項為圖片；`false`=A-C 圖片 D 文字；`null`=非圖片選項 |
+
+---
+
+## 7. 驗證（check_quality.py）
+
+### 檢查項目
+- 題數總計（27 題：25 選擇 + 2 非選）
+- 題號連續性（無遺漏題號）
+- 每題是否都有選項（非選題除外）
+- 圖表引用是否都在 assets 中有對應檔案
+- 題組結構是否正確（Q23-Q25 的 `group_id` 一致）
+
+---
+
+## 8. 已知脆弱點與應對策略
+
+### 8.1 D 選項邊界
+
+**風險**：D 選項使用 `\n\d{1,2}\.\s` 為邊界，但圖表標籤和頁碼夾在 D 選項與下一個題號之間。
+
+**對策**：`clean_option_tail()` 積極清除所有非內容的結尾資料。
+
+### 8.2 PDF 上標遺失
+
+**風險**：上標字元（², ³）在 PDF 文字擷取中可能遺失或變成普通數字。
+
+**對策**：`convert_factor_exponents()` 在因數分解上下文中將 `22 × 11` 轉為 `2^{2} \times 11`。
+
+### 8.3 幾何符號偵測
+
+**風險**：線段符號（`AB` 應為 `\overline{AB}`）和弧符號（`AB` 應為 `\overset{\frown}{AB}`）在純文字中無法區分。
+
+**對策**：
+- 依賴上下文關鍵字（`△`、`∠`、`圓` 等）決定啟用哪種轉換。
+- 使用 `stem_context` 參數將題幹的幾何上下文傳遞給選項轉換。
+
+### 8.4 非選題結尾
+
+**風險**：非選題題幹的結尾可能包含圖表標籤、頁碼、試題結束標記等。
+
+**對策**：使用 `while True` 迴圈重複清除，直到無變化。
+
+### 8.5 LaTeX 相容性
+
+**風險**：部分 LaTeX 指令（如 `\overarc`）在 KaTeX 中不支援。
+
+**對策**：使用 KaTeX 相容的替代方案（`\overset{\frown}{AB}` 代替 `\overarc{AB}`）。
+
+### 8.6 中文字下標與多行分數
+
+**風險**：PDF 中的中文字下標（如 `V指`、`V實`）和多行分數（分子/分母/公式分行）無法正確轉換為 LaTeX。
+
+**對策**：
+- `fix_multiline_fraction()` 在所有轉換之前執行，將分行分數重新組合。
+- `convert_chinese_subscripts()` 將 `V指` 轉為 `V_{\text{指}}`，並處理行內分數。
+- `wrap_math_segments()` 使用佔位符保護 `\text{...}` 區塊，避免中文字中斷數學段。
+- `_BREAK_CHARS` 包含 `\n`，確保換行符會中斷數學段。
+
+### 8.7 Unicode 變體
+
+**風險**：PDF 中可能使用不同的 Unicode 字元表示同一符號（如 `△` U+25B3 vs `∆` U+2206）。
+
+**對策**：在 `MATH_SYMBOLS` 中同時收錄所有已知變體。
+
+---
+
+## 9. 前端注意事項
+
+### 9.1 KaTeX 版本
+- 使用 KaTeX 0.16.9（CDN 載入）
+- 需同時載入 `katex.min.css`、`katex.min.js`、`auto-render.min.js`
+
+### 9.2 渲染順序
+- 優先使用 `stem_latex` / `options_latex`（含 `$...$` 的完整 LaTeX 字串）
+- 無 `..._latex` 欄位時使用 `stem` / `options`（純文字）
+
+### 9.3 圖片選項
+- `image_options` 非 `null` 時，使用專用圖片選項渲染器
+- 顯示 4 個字母按鈕（A/B/C/D）+ 對應圖片
+- `image_options_full` 控制 D 選項是否也為圖片

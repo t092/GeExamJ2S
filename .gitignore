@@ -13,3 +13,12 @@ assets/**/crops_v2/
 *.bak2
 *.bak3
 *.pdf
+
+# generated / cache
+graphify-out/
+
+# math/ generated files
+math/pipeline/output/
+math/assets/**/pages/
+math/assets/**/figures/
+math/assets/**/crops/

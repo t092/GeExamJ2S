@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>國中教育會考 數學科題庫</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══ Viewer: question display ═══ -->
+<div id="viewer" class="viewer">
+  <header class="topbar">
+    <div class="topbar-left">
+      <h1>數學科題庫</h1>
+      <select id="year-select" class="year-select" title="切換年份" aria-label="切換年份"></select>
+    </div>
+    <div class="topbar-right">
+      <select id="filter-select">
+        <option value="all">全部題目</option>
+        <option value="choice">選擇題</option>
+        <option value="group">題組</option>
+        <option value="noncalc">非選擇題</option>
+      </select>
+      <button id="qnav-toggle-btn" class="qnav-toggle-btn">題號 ☰</button>
+    </div>
+  </header>
+
+  <nav class="qnav" id="qnav">
+    <div class="qnav-header">
+      <h3>選擇題號</h3>
+      <button id="qnav-close-btn" class="qnav-close-btn">×</button>
+    </div>
+    <div class="qnav-grid" id="qnav-grid"></div>
+  </nav>
+  <div id="qnav-backdrop" class="qnav-backdrop" hidden></div>
+
+  <main class="quiz" id="quiz"></main>
+
+  <footer class="controls">
+    <button id="prev-btn">← 上一題</button>
+    <span id="q-counter"></span>
+    <button id="next-btn">下一題 →</button>
+  </footer>
+</div>
+
+<div id="lightbox" class="lightbox" hidden>
+  <span class="lightbox-close" id="lightbox-close">×</span>
+  <img id="lightbox-img" alt="">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

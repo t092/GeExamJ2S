@@ -102,10 +102,10 @@ Crops are stored in `web/pic/item/{year}{q:02d}i.jpg`.  The cropping script
 embedded images, frame rectangles, and drawing clusters.  Frontend checks
 `q.image_options` and routes to a dedicated renderer with letter buttons.
 
-## Plugin-driven image analysis
-- `opencode-parser` (npm): Parses PDF/DOCX/XLSX/PPTX/images in opencode
-- `opencode-see-image` (npm): Routes images to MiniMax M3 vision model for text-only models
-- Use `opencode plugin opencode-see-image --global` to install globally
+## Image analysis
+- If the current model has built-in vision, use native model vision directly for image understanding.
+- Do not use image-analysis plugins when built-in vision is available.
+- Use external/plugin vision tools only as a fallback when the model cannot read images natively, or when explicitly requested.
 
 ## Figure cropping skill
 - **jhexam-figure-crop** skill: `~/.config/opencode/ext-skills/jhexam-figure-crop/`
@@ -138,6 +138,101 @@ python pipeline/check_groups.py
 
 # Crop image-option question areas → web/pic/item/
 python pipeline/crop_image_options.py
+```
+
+## Math (數學科)
+
+數學科所有工作檔案與資料獨立放在 `math/` 目錄下，與社會科完全分離。
+
+```
+JHexam/math/
+├── 115年國中教育會考數學科題本.pdf   # 數學科 PDF 題本
+├── pipeline/     # PDF 提取、解析、裁圖等 Python 腳本
+│   ├── extract_all.py       # PyMuPDF text extraction
+│   ├── parse_questions.py   # Question parser → data/115.json
+│   ├── extract_images.py    # Page renders → assets/115/pages/
+│   ├── crop_figures.py      # Crop figures → pic/
+│   ├── latex_convert.py     # Add LaTeX fields to JSON
+│   └── check_quality.py     # Validation
+├── data/         # 題庫 JSON 資料 (115.json)
+├── assets/       # 頁面渲染
+│   └── 115/pages/
+├── pic/          # 裁切後圖表
+│   └── item/
+└── web/          # Static math viewer（直接進入題目頁，左上角年份下拉切換）
+```
+
+### 數學科 vs 社會科差異
+
+| 項目 | 社會科 | 數學科 |
+|------|--------|--------|
+| 題數 | 54題 (42單+12組) | 27題 (25選+2非選) |
+| 題型 | 單題/題組子題 | 選擇題/題組子題/非選擇題 |
+| 圖片類型 | 嵌入點陣圖 | 向量繪圖 (get_pixmap裁切) |
+| 圖片選項 | 有 (7題) | 無 |
+| 數學式 | 無 | LaTeX 轉換 |
+| 題組 | 4組 (43-54) | 1組 (23-25) |
+| 參考公式 | 無 | 頁14 |
+
+### 數學科 JSON Schema
+
+```json
+{
+  "number": 1,
+  "type": "選擇題" | "題組子題" | "非選擇題",
+  "group_range": [23, 25] | null,
+  "group_id": "23-25" | null,
+  "stem": "解二元一次聯立方程式 x + 2y = 5 ...",
+  "stem_latex": "解二元一次聯立方程式 x + 2y = 5 ...",
+  "options": {"A": "−4", "B": "−2", "C": "2", "D": "4"},
+  "options_latex": {"A": "-4", "B": "-2", "C": "2", "D": "4"},
+  "passage": "汽車上會安裝圖(十二)的時速錶..." | null,
+  "passage_figures": ["圖(十二)"],
+  "figures": ["圖(一)"],
+  "tables": ["表(一)"]
+}
+```
+
+### LaTeX 轉換規則
+
+- `×` → `\times`, `÷` → `\div`, `±` → `\pm`
+- `∠` → `\angle`, `°` → `^\circ`, `△` → `\triangle`, `π` → `\pi`
+- `√N` → `\sqrt{N}`, `√(expr)` → `\sqrt{expr}`
+- `4x2` → `4x^{2}`, `(1.025)7` → `(1.025)^{7}`
+- `4.4 × 105` → `4.4 \times 10^{5}` (科學記號)
+- `a1`, `an`, `Sn` → `a_{1}`, `a_{n}`, `S_{n}` (數列下標)
+- `stem_latex` / `options_latex`: `null` 表示無需 LaTeX 轉換
+
+### 數學科裁圖
+
+- 命名：`{year}p{NN:02d}.jpg` (圖), `{year}t{NN:02d}.jpg` (表), in `math/pic/`
+- 方法：text block 搜尋 → 獨立標籤偵測 → 鄰近向量繪圖聚合 → bbox 裁切
+- 圖(十三)+(十四) 合併裁切 (並排圖)
+- 16 張圖表 (15 圖 + 1 表)
+
+### 數學科命令
+
+```bash
+# 全部在 math/ 目錄下執行
+cd math
+
+# 1. Extract text
+python pipeline/extract_all.py
+
+# 2. Render pages
+python pipeline/extract_images.py
+
+# 3. Parse questions → data/115.json
+python pipeline/parse_questions.py
+
+# 4. Convert math expressions → LaTeX
+python pipeline/latex_convert.py
+
+# 5. Crop figures → pic/
+python pipeline/crop_figures.py
+
+# 6. Validate
+python pipeline/check_quality.py
 ```
 
 ## Conventions
