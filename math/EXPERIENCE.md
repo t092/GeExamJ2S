@@ -626,63 +626,20 @@ python math/pipeline/check_quality.py
 
 ## 10. 前端注意事項
 
-`latex_convert.py` 是多步驟的後處理腳本，當需要調整其邏輯時，
-JSON 資料可能已被前次執行修改（如 stems 已分割、passage_latex 已生成）。
-新邏輯無法作用於已修改的資料。
-
-### 標準做法
-
-每次修改 `latex_convert.py` 的資料處理邏輯後，執行以下步驟：
-
-```bash
-# 1. 從 git 還原原始 JSON 資料
-python -c "
-import subprocess, json
-result = subprocess.run(['git', 'show', '<original_commit>:math/data/<year>.json'],
-                        capture_output=True)
-data = json.loads(result.stdout)
-# ... 重新施加任何手動標記（如 passage 的 **/⭐ 標記）...
-json.dump(data, open('math/data/<year>.json', 'w', encoding='utf-8'),
-          ensure_ascii=False, indent=2)
-"
-
-# 2. 重新執行轉換
-python math/pipeline/latex_convert.py
-
-# 3. 驗證結果
-python math/pipeline/check_quality.py
-```
-
-### 適用情境
-
-- 調整 `split_nonchoice_stem()` 邏輯
-- 修改 `MATH_INDICATORS` 偵測條件
-- 新增或修改 JSON 欄位
-- 任何需要在「原始 PDF 解析結果」上重跑的修改
-
-### 避免的模式
-
-- ❌ 直接編輯 `math/data/<year>.json` 後再跑 `latex_convert.py`（重複處理）
-- ❌ 在已分割的 stems 上測試新分割邏輯（stems 已無標記，邏輯永遠失敗）
-- ✅ 一律從原始 commit 還原 → 施加靜態標記 → 跑轉換
-
----
-
-
-### 9.1 KaTeX 版本
+### 10.1 KaTeX 版本
 - 使用 KaTeX 0.16.9（CDN 載入）
 - 需同時載入 `katex.min.css`、`katex.min.js`、`auto-render.min.js`
 
-### 9.2 渲染順序
+### 10.2 渲染順序
 - 優先使用 `stem_latex` / `options_latex`（含 `$...$` 的完整 LaTeX 字串）
 - 無 `..._latex` 欄位時使用 `stem` / `options`（純文字）
 
-### 9.3 圖片選項
+### 10.3 圖片選項
 - `image_options` 非 `null` 時，使用專用圖片選項渲染器
 - 顯示 4 個字母按鈕（A/B/C/D）+ 對應圖片
 - `image_options_full` 控制 D 選項是否也為圖片
 
-### 9.4 粗體與 Emoji 重點標記
+### 10.4 粗體與 Emoji 重點標記
 
 支援在 JSON 文字欄位中使用 `**...**` 標記粗體，渲染時自動轉換為 `<strong>`：
 
@@ -705,7 +662,7 @@ markBold(s) {
 **注意**：`esc()` 和 `markBold()` 的執行順序不可互換 — 先 escape 再 markBold，
 避免 `<strong>` 被 escape 破壞。
 
-### 9.5 非選擇題渲染結構
+### 10.5 非選擇題渲染結構
 
 非選擇題的 DOM 結構（與選擇題/題組完全分離的渲染分支）：
 
@@ -749,6 +706,34 @@ markBold(s) {
 .q-sub-question + .q-figures { margin-top: -6px; padding-left: 48px; }
 ```
 
-**對話修正歷程**：
-1. 初版全部圖表放在子題之後 → 用戶回饋應在題幹下方、第一子題上方
-2. 修正後題幹級圖表移到 `q-stem` 與 `q-sub-questions` 之間
+### 10.6 題組渲染表格 Bug
+- **現象**：當題組選文引用表格（如 `passage_tables` 中的 `表(一)`）時，原本的 `buildQuestionHtml` 僅處理了 `passage_figures`，導致表格圖片完全無法顯示。
+- **對策**：在 `buildQuestionHtml` 中渲染題組選文時，補上 `this.buildFiguresHtml(q.passage_tables || [])`，以完整顯示題組引用的所有圖與表。
+
+---
+
+## 11. 114 年數學試卷特別處理實務
+
+### 11.1 動態題組區間解析
+- **問題**：會考各年份的題組題號區間不同（115 年為 Q23–25，而 114 年為 Q24–25）。若程式寫死起始題號，將會導致讀取錯誤或題目遺漏。
+- **方案**：`parse_questions.py` 中利用正規表示法 `請閱讀下列選文後\s*，\s*回答\s*(\d+)` 動態比對引言中的起始題號，以取得真實的題組起點，確保各年卷相容性。
+
+### 11.2 幾何線段與撇號正則擴展
+- **問題**：部分題目（如 114 年 Q15, Q16, Q22 等）因缺乏標準幾何符號（如 `△`），或因連續字母后接非預期字元（如 `:` 冒號、`>` 比較運算子、`//` 平行斜線、`不平行` 的 `不` 字、甚至撇號 `′` 如 $AC'$ 等），導致線段符號 `\overline{...}` 漏判。
+- **方案**：
+  1. 擴充幾何特徵字（如 `∆` (U+2206)、`數線`、`原點`、`五邊形`、`重心`）。
+  2. 擴充 `convert_geometry` 的 lookahead 匹配清單，補上 `[:：]`、`[<>≤≥/]`、以及 `皆`、`不`、`交`。
+  3. 將兩字母正則比對擴展為 `([A-Z])([A-Z][′']?)`，同時在 Python 中改用雙引號定義原始字串 `r"..."`，防止單引號撇號造成編譯時 Python SyntaxError。
+
+### 11.3 中文分行公式處理
+- **問題**：114 年 Q24/25 的齒輪比中文公式在 PDF 中是上下分行排版，擷取時會變為普通中文文字，被 KaTeX 忽略。
+- **方案**：在 `apply_114_fixes` 中針對 Q24/25 的 `passage_latex` 進行字串精準替換，重組成 KaTeX 置中分數公式：`$$\text{齒輪比} = \frac{\text{前齒輪齒數}}{\text{後齒輪齒數}}$$`。
+
+### 11.4 轉義換行符字元問題
+- **問題**：手動覆寫 JSON 資料時，在 Python 的雙引號字串中寫入轉義的 `\\n`，會使 `json.dump` 輸出字面上的 `\n` 文字，導致 HTML 渲染時顯示為 `\n` 字元而非換行。
+- **方案**：在 Python 覆寫中必須使用單反斜線 `\n`，輸出時即為實體 JSON 換行字元，渲染即會正常換行。
+
+### 11.5 超過十五的中文數字裁圖檔名覆寫
+- **問題**：`crop_figures.py` 中原本寫死了 `十五` 以下的中文數字對照，遇到 `圖(十六)` ~ `圖(十八)` 時判定為 `0`，皆輸出為 `114p00.jpg` 並相互覆寫。
+- **方案**：引入動態中文數字解析函式 `_chinese_to_int` 至 `crop_figures.py` 中，使其能夠支援任意數值的中文數字對照。
+- **效果**：正確輸出 `114p16.jpg` ~ `114p18.jpg`，解決了多張大題號圖片被 `114p00.jpg` 覆蓋的問題。
