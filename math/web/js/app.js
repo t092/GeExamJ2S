@@ -199,7 +199,7 @@ const App = {
       const passageText = q.passage_latex || q.passage;
       html += `<div class="passage-box">
         <div class="passage-label">閱讀選文（第 ${q.group_range[0]}～${q.group_range[1]} 題共用）</div>
-        <div class="passage-text">${this.esc(passageText)}</div>`;
+        <div class="passage-text">${this.markBold(this.esc(passageText))}</div>`;
       html += this.buildFiguresHtml(q.passage_figures || []);
       html += `</div>`;
     }
@@ -207,6 +207,21 @@ const App = {
     // stem
     const stemText = q.stem_latex || q.stem;
     html += `<div class="q-stem">${this.esc(stemText)}</div>`;
+
+    // sub-questions (非選擇題 only)
+    if (q.sub_questions && q.sub_questions.length > 0) {
+      html += `<div class="q-sub-questions">`;
+      const subTexts = q.sub_questions_latex || q.sub_questions;
+      for (let i = 0; i < subTexts.length; i++) {
+        const sq = subTexts[i];
+        if (!sq) continue;
+        html += `<div class="q-sub-question">
+          <span class="q-sub-q-marker">❓</span>
+          <span class="q-sub-q-text">${this.markBold(this.esc(sq))}</span>
+        </div>`;
+      }
+      html += `</div>`;
+    }
 
     // question figures
     html += this.buildFiguresHtml(q.figures || []);
@@ -282,6 +297,12 @@ const App = {
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;');
+  },
+
+  markBold(s) {
+    // Convert **text** to <strong>text</strong> for bold rendering
+    if (s === null || s === undefined) return '';
+    return String(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   },
 };
 

@@ -202,6 +202,39 @@ body {
   word-break: break-word;
 }
 
+/* sub-questions (非選擇題) */
+.q-sub-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.q-sub-question {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 18px;
+  background: #f8f9fb;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+}
+
+.q-sub-q-marker {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.q-sub-q-text {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
 /* figures */
 .q-figures {
   display: flex;

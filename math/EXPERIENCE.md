@@ -140,6 +140,33 @@ while True:
 
 `split_passage_and_questions()` 依序嘗試三種模式。
 
+#### 問題 D：非選擇題題幹分割
+
+**現象**：非選擇題的題幹包含場景描述 + 子題 (1) + 子題 (2)，全部擠在 `stem` 欄位中，無法分開渲染。
+
+**原因**：parse_questions.py 將非選擇題的整段文字視為單一 `stem`，未分割子題。
+
+**修復**：`split_nonchoice_stem()` 只匹配第一個 `(1)` 和其後第一個 `(2)` 為分割點，
+避免子題文字中的 `(1)` 引用（如 `承(1)`）被誤判。在 LaTeX 轉換前執行分割。
+
+```python
+def split_nonchoice_stem(stem):
+    m1 = re.search(r'\s*\(1\)\s*', stem)
+    if not m1: return stem, []
+    stem_text = stem[:m1.start()]
+    rest_after_1 = stem[m1.end():]
+    m2 = re.search(r'\s*\(2\)\s*', rest_after_1)
+    if not m2: return stem_text, [rest_after_1.strip()]
+    sub_q1 = rest_after_1[:m2.start()].strip()
+    sub_q2 = rest_after_1[m2.end():].strip()
+    return stem_text, [sub_q1, sub_q2]
+```
+
+**注意事項**：
+- 分割後的 `stem`（場景描述）可能不包含 `(1)`/`(2)` 等數學運算子，
+  導致 `has_math()` 判定為 False。需以全部前後文判斷是否有數學內容。
+- 子題在渲染時以 ❓ emoji + 粗體加大字級呈現，與場景描述明顯區隔。
+
 ---
 
 ## 4. LaTeX 轉換（latex_convert.py）

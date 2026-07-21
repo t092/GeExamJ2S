@@ -40,7 +40,9 @@ MATH_SYMBOLS = {
 
 # Patterns that indicate math content (not CJK text)
 MATH_INDICATORS = re.compile(
-    r'[a-zA-Z][a-zA-Z0-9]*\s*[=+\-*/^()\[\]{}<>≤≥±×÷]|\d+\s*[=+\-*/^()×÷]'
+    r'[a-zA-Z][a-zA-Z0-9]*\s*[=+\-*/^()\[\]{}<>≤≥±×÷]|'
+    r'\d+\s*[=+\-*/^()×÷]|'
+    r'[×÷±√∠°△π≤≥∓≈≠∞≡⊥∥]'
 )
 
 
@@ -349,6 +351,34 @@ def latexify_option(opt: str, stem: str = '') -> str:
     return wrap_math(opt, stem)
 
 
+def split_nonchoice_stem(stem: str):
+    """Split non-choice question stem into description and sub-questions.
+
+    Non-choice questions have form:
+        description... (1) sub-question 1... (2) sub-question 2...
+
+    Only the FIRST (1) and the FIRST (2) after (1) are treated as markers.
+    Any later (1)/(2) inside sub-question text (e.g. "承 (1)") are preserved.
+    Returns (stem_text, [sub_q1, sub_q2, ...])
+    """
+    # Find first (1) marker
+    m1 = re.search(r'\s*\(1\)\s*', stem)
+    if not m1:
+        return stem, []
+
+    stem_text = stem[:m1.start()]
+    rest_after_1 = stem[m1.end():]
+
+    # Find first (2) marker AFTER (1)
+    m2 = re.search(r'\s*\(2\)\s*', rest_after_1)
+    if not m2:
+        return stem_text, [rest_after_1.strip()]
+
+    sub_q1 = rest_after_1[:m2.start()].strip()
+    sub_q2 = rest_after_1[m2.end():].strip()
+    return stem_text.strip(), [sub_q1, sub_q2]
+
+
 # ──  Main processing ────────────────────────────────────────────────
 
 def process_year(year: str) -> None:
@@ -362,14 +392,47 @@ def process_year(year: str) -> None:
 
     modified = 0
     for q in questions:
-        # Convert stem
-        original_stem = q['stem']
-        latex_stem = latexify_stem(original_stem)
-        if latex_stem != original_stem:
-            q['stem_latex'] = latex_stem
+        # ──  Non-choice: split stem before LaTeX conversion ──────────
+        if q['type'] == '非選擇題':
+            stem_text, sub_qs = split_nonchoice_stem(q['stem'])
+            q['stem'] = stem_text
+            q['sub_questions'] = sub_qs
+
+            # Check math presence on the FULL original text so that
+            # numbers in the description (400, 5, 2...) get converted
+            full_original = q['stem'] + ' ' + ' '.join(sub_qs) if sub_qs else q['stem']
+            has_math_ctx = has_math(stem_text) or has_math(full_original)
+
+            if has_math_ctx:
+                latex_stem = wrap_math(stem_text)
+                q['stem_latex'] = latex_stem if latex_stem != stem_text else None
+
+                sub_qs_latex = []
+                for sq in sub_qs:
+                    sq_latex = wrap_math(sq)
+                    sub_qs_latex.append(sq_latex if sq_latex != sq else sq)
+                q['sub_questions_latex'] = (
+                    sub_qs_latex
+                    if any(a != b for a, b in zip(sub_qs_latex, sub_qs))
+                    else None
+                )
+            else:
+                q['stem_latex'] = None
+                q['sub_questions_latex'] = None
             modified += 1
+
         else:
-            q['stem_latex'] = None
+            q['sub_questions'] = None
+            q['sub_questions_latex'] = None
+
+            # Convert stem
+            original_stem = q['stem']
+            latex_stem = latexify_stem(original_stem)
+            if latex_stem != original_stem:
+                q['stem_latex'] = latex_stem
+                modified += 1
+            else:
+                q['stem_latex'] = None
 
         # Convert options
         if q.get('options'):
