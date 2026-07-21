@@ -146,7 +146,8 @@ python pipeline/crop_image_options.py
 
 ```
 JHexam/math/
-├── 115年國中教育會考數學科題本.pdf   # 數學科 PDF 題本
+├── 114年國中教育會考數學科題本.pdf   # 數學科 PDF 題本 (114年)
+├── 115年國中教育會考數學科題本.pdf   # 數學科 PDF 題本 (115年)
 ├── pipeline/     # PDF 提取、解析、裁圖等 Python 腳本
 │   ├── extract_all.py       # PyMuPDF text extraction
 │   ├── parse_questions.py   # Question parser → data/115.json
@@ -154,8 +155,9 @@ JHexam/math/
 │   ├── crop_figures.py      # Crop figures → pic/
 │   ├── latex_convert.py     # Add LaTeX fields to JSON
 │   └── check_quality.py     # Validation
-├── data/         # 題庫 JSON 資料 (115.json)
+├── data/         # 題庫 JSON 資料 (114.json, 115.json)
 ├── assets/       # 頁面渲染
+│   ├── 114/pages/
 │   └── 115/pages/
 ├── pic/          # 裁切後圖表
 │   └── item/
@@ -222,7 +224,7 @@ python pipeline/extract_all.py
 # 2. Render pages
 python pipeline/extract_images.py
 
-# 3. Parse questions → data/115.json
+# 3. Parse questions → data/{year}.json
 python pipeline/parse_questions.py
 
 # 4. Convert math expressions → LaTeX
@@ -239,4 +241,5 @@ python pipeline/check_quality.py
 - Chinese filenames are fine; use PowerShell Get-ChildItem to resolve paths for Python
 - Always store files as UTF-8
 - Year identifiers: `112` (2023), `113` (2024), `114` (2025), `115` (2026)
-- Each year has 54 questions (Q1-42 single, Q43-54 in groups)
+- Math: 27 questions (25 choices + 2 non-choice), 1 group (Q23-25)
+- Social studies: 54 questions (42 single + 12 in groups)
