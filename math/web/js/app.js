@@ -30,7 +30,7 @@ const App = {
   currentIdx: 0,
   year: '115',
   // 日後新增年份時，加入此陣列並放入 data/<year>.json
-  availableYears: ['115'],
+  availableYears: ['114', '115'],
 
   // ── boot ──────────────────────────────────────
   async init() {
@@ -201,6 +201,7 @@ const App = {
         <div class="passage-label">閱讀選文（第 ${q.group_range[0]}～${q.group_range[1]} 題共用）</div>
         <div class="passage-text">${this.markBold(this.esc(passageText))}</div>`;
       html += this.buildFiguresHtml(q.passage_figures || []);
+      html += this.buildFiguresHtml(q.passage_tables || []);
       html += `</div>`;
     }
 

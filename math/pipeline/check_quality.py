@@ -7,6 +7,9 @@ import json
 import os
 import sys
 
+# Force stdout to be utf-8 on Windows
+sys.stdout.reconfigure(encoding='utf-8')
+
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def check_year(year: str):
@@ -36,7 +39,7 @@ def check_year(year: str):
     if missing:
         print(f'  WARNING: Missing 選擇題: {missing}')
     else:
-        print(f'  All 25 選擇題 present ✓ (22 單題 + 3 題組子題)')
+        print(f'  All 25 選擇題 present ✓ ({len(mc)} 單題 + {len(groups)} 題組子題)')
 
     # Check group passage
     if groups:

@@ -9,6 +9,9 @@ import json
 import sys
 import os
 
+# Force stdout to be utf-8 on Windows
+sys.stdout.reconfigure(encoding='utf-8')
+
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = os.path.join(ROOT_DIR, 'data')
 
@@ -391,19 +394,19 @@ def parse_questions(filepath: str) -> list[dict]:
         noncalc_text = ''
 
     # Parse 選擇題 (Q1-Q25)
-    # Q23-25 form a group with shared passage about speedometers
-    # First, find where the group section starts
-    group_marker = '請閱讀下列選文後，回答23'
-    group_idx = choice_text.find(group_marker)
-
-    if group_idx > 0:
+    # Find where the group section starts (e.g. Q23-25 or Q24-25)
+    group_match = re.search(r'請閱讀下列選文後\s*，\s*回答\s*(\d+)', choice_text)
+    if group_match:
+        group_idx = group_match.start()
+        q_start = int(group_match.group(1))
         single_text = choice_text[:group_idx]
         group_text = choice_text[group_idx:]
     else:
+        q_start = 23  # default fallback
         single_text = choice_text
         group_text = ''
 
-    # Parse single questions (Q1-Q22)
+    # Parse single questions
     pattern = re.compile(
         r'(?:^|\n)(\d{1,2})\.(?:\s*\n|\s+)(.*?)(?=\n\d{1,2}\.\s|\Z)',
         re.DOTALL
@@ -412,7 +415,7 @@ def parse_questions(filepath: str) -> list[dict]:
 
     for num_str, body in matches:
         qnum = int(num_str)
-        if qnum > 22:
+        if qnum >= q_start:
             break  # group questions handled separately
         result = parse_choices(body)
         if result and len(result['options']) >= 3:

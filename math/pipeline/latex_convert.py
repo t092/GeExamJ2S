@@ -35,6 +35,7 @@ MATH_SYMBOLS = {
     '≡': r'\equiv ',
     '⊥': r'\perp ',
     '∥': r'\parallel ',
+    '//': r'\parallel ',
     '−': '-',  # Unicode minus to ASCII
 }
 
@@ -230,19 +231,20 @@ def convert_geometry(text: str, stem_context: str = '') -> str:
 
     # Line segment notation: two uppercase letters in geometry context
     if any(kw in combined for kw in [
-        '△', '∠', '⊥', '∥', '菱形', '平行四邊形', '正三角形', '正六邊形',
-        '正n邊形', '角柱', '角平分線', '半徑', '直徑', '線段', '圓心'
+        '△', '∆', '∠', '⊥', '∥', '菱形', '平行四邊形', '正三角形', '正六邊形',
+        '正n邊形', '角柱', '角平分線', '半徑', '直徑', '線段', '圓心', '數線', '原點',
+        '五邊形', '四邊形', '多邊形', '邊形', '中點', '重疊', '頂點', '重心'
     ]):
-        # Two uppercase letters preceded by space/start/comma/punctuation
-        # and followed by =, 的, 上, 為, 、, 中, 與, 和, 相交, 兩線段, etc.
+        # Two uppercase letters (with optional prime symbol ′) preceded by space/start/comma/punctuation
+        # and followed by =, 的, 上, 為, 皆, 、, 中, 與, 和, 相交, 交, 不, 平行, 兩線段, colons, comparisons, slash, punctuation, etc.
         text = re.sub(
-            r'(?<=[\s,，、。】])([A-Z])([A-Z])(?=\s*(?:[=]|的|上|為|、|中|與|和|相交|兩線段|。|，|⊥|∥|\)))',
+            r"(?<=[\s,，、。】])([A-Z])([A-Z][′']?)(?=\s*(?:[=]|的|上|為|皆|、|中|與|和|相交|交|不|平行|兩線段|[:：]|[<>≤≥/]|。|，|⊥|∥|\)))",
             r'\\overline{\1\2}',
             text
         )
         # Also handle line segments at start of text
         text = re.sub(
-            r'^([A-Z])([A-Z])(?=\s*(?:[=]|的|上|為|、|中|與|和|相交|兩線段))',
+            r"^([A-Z])([A-Z][′']?)(?=\s*(?:[=]|的|上|為|皆|、|中|與|和|相交|交|不|平行|兩線段|[:：]|[<>≤≥/]))",
             r'\\overline{\1\2}',
             text
         )
@@ -423,6 +425,95 @@ def extract_sub_q_figures(sub_qs: list) -> list:
     return result
 
 
+def apply_114_fixes(questions):
+    for q in questions:
+        num = q['number']
+        t = q['type']
+        
+        # Convert passage gear ratio to formula in Q24/Q25
+        if q.get('passage_latex'):
+            q['passage_latex'] = q['passage_latex'].replace(
+                "已知，齒輪比 = 前齒輪齒數\n後齒輪齒數",
+                "已知，$$\\text{齒輪比} = \\frac{\\text{前齒輪齒數}}{\\text{後齒輪齒數}}$$"
+            ).replace(
+                "已知，齒輪比 = 前齒輪齒數 後齒輪齒數",
+                "已知，$$\\text{齒輪比} = \\frac{\\text{前齒輪齒數}}{\\text{後齒輪齒數}}$$"
+            )
+        
+        if t in ['選擇題', '題組子題']:
+            if num == 1:
+                q['stem_latex'] = "算式 $7^{10} \\times 7^{2} \\div 7^{4}$ 之值可用下列何者表示？"
+                q['options_latex'] = {
+                    "A": "$7^{3}$",
+                    "B": "$7^{5}$",
+                    "C": "$7^{8}$",
+                    "D": "$7^{16}$"
+                }
+            elif num == 3:
+                q['options']["A"] = "1 和 2"
+                q['options']["B"] = "1 和 3"
+                q['options_latex'] = None
+            elif num == 8:
+                q['stem_latex'] = "計算 $( 2\\sqrt{3} + \\sqrt{6} ) \\times \\sqrt{2}$ 的結果，與下列何者相同？"
+                q['options_latex'] = {
+                    "A": "$4\\sqrt{3}$",
+                    "B": "$6\\sqrt{3}$",
+                    "C": "$2\\sqrt{3} + 2\\sqrt{6}$",
+                    "D": "$4\\sqrt{3} + 2\\sqrt{6}$"
+                }
+            elif num == 10:
+                q['options_latex'] = {
+                    "A": "$( 106^{2} - 4^{2} ) \\times ( 108^{2} - 2^{2} )$",
+                    "B": "$( 107^{2} - 3^{2} ) \\times ( 107^{2} - 1^{2} )$",
+                    "C": "$( 108^{2} - 2^{2} ) \\times ( 106^{2} - 2^{2} )$",
+                    "D": "$( 109^{2} - 1^{2} ) \\times ( 105^{2} - 1^{2} )$"
+                }
+            elif num == 11:
+                q['options_latex'] = {
+                    "A": "$\\frac{1}{3}$",
+                    "B": "$\\frac{2}{3}$",
+                    "C": "$\\frac{1}{9}$",
+                    "D": "$\\frac{2}{9}$"
+                }
+            elif num == 17:
+                q['options_latex'] = {
+                    "A": "$\\frac{5}{8}$",
+                    "B": "$\\frac{5}{16}$",
+                    "C": "$\\frac{5\\sqrt{3}}{8}$",
+                    "D": "$\\frac{5\\sqrt{3}}{16}$"
+                }
+            elif num == 22:
+                q['options_latex'] = {
+                    "A": "$\\frac{5}{12}$",
+                    "B": "$\\frac{5}{14}$",
+                    "C": "$\\frac{5}{15}$",
+                    "D": "$\\frac{5}{21}$"
+                }
+            elif num == 25:
+                q['options_latex'] = {
+                    "A": "$\\frac{11}{6}$",
+                    "B": "$\\frac{11}{7}$",
+                    "C": "$\\frac{11}{8}$",
+                    "D": "$\\frac{11}{9}$"
+                }
+        elif t == '非選擇題':
+            if num == 1:
+                q['stem_latex'] = (
+                    "某民調公司訪問 $A$ 市的成年民眾對於某項政策的態度，並依年齡分成 $3$ 組。因 "
+                    "受訪者的年齡分布與全體成年人口的年齡分布有落差，於是利用「調整倍率」 "
+                    "讓調整後的結果更接近全體的民意，如表( 二) 所示。\n其中，\n"
+                    "$$\\text{人口占比} = \\frac{\\text{該組人口總數}}{\\text{全體成年人口總數}} \\times 100\\%$$"
+                    "$$\\text{調查比率} = \\frac{\\text{該組受訪者數}}{\\text{所有受訪者數}} \\times 100\\%$$"
+                    "$$\\text{調整倍率} = \\frac{\\text{該組人口占比}}{\\text{該組調查比率}}$$\n"
+                    "$$\\text{調整前贊成(反對)的比率} = \\frac{\\text{該組受訪者中贊成(反對)人數}}{\\text{所有受訪者數}} \\times 100\\%$$"
+                    "$$\\text{調整後贊成(反對)的比率} = \\text{該組調整前贊成(反對)的比率} \\times \\text{調整倍率}$$\n"
+                    "表( 二) 中， 全體成年人口有 $40\\%$ 為 $18$ ～$39$ 歲組， 但受訪者中只有 $20\\%$ 為 "
+                    "$18$ ～$39$ 歲組，算出調整倍率為 $2$。因此，分別將贊成與反對的比率 $8\\%$、 $12\\%$ "
+                    "乘以 $2$，變成$16\\%$、 $24\\%$。整體結果調整前為贊成大於反對， 調整後卻變成反對 "
+                    "大於贊成。 請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋："
+                )
+
+
 # ──  Main processing ────────────────────────────────────────────────
 
 def process_year(year: str) -> None:
@@ -436,17 +527,17 @@ def process_year(year: str) -> None:
 
     modified = 0
     for q in questions:
+        # Sort all figures/tables by number (left to right) for all questions
+        if q.get('figures'):
+            q['figures'] = sorted(q['figures'], key=_fig_sort_key)
+        if q.get('tables'):
+            q['tables'] = sorted(q['tables'], key=_fig_sort_key)
+
         # ──  Non-choice: split stem before LaTeX conversion ──────────
         if q['type'] == '非選擇題':
             stem_text, sub_qs = split_nonchoice_stem(q['stem'])
             q['stem'] = stem_text
             q['sub_questions'] = sub_qs
-
-            # Sort all figures by number (left to right)
-            if q.get('figures'):
-                q['figures'] = sorted(q['figures'], key=_fig_sort_key)
-            if q.get('tables'):
-                q['tables'] = sorted(q['tables'], key=_fig_sort_key)
 
             # Extract per-sub-question figure references
             q['sub_question_figures'] = extract_sub_q_figures(sub_qs)
@@ -516,6 +607,10 @@ def process_year(year: str) -> None:
                 q['passage_latex'] = None
         else:
             q['passage_latex'] = None
+
+    # Apply 114 specific fixes if processing 114
+    if year == '114':
+        apply_114_fixes(questions)
 
     # Save back
     with open(json_path, 'w', encoding='utf-8') as f:

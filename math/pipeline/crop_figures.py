@@ -16,6 +16,22 @@ PIC_DIR = os.path.join(ROOT_DIR, 'pic')
 
 DPI = 200  # matches extract_images.py
 
+_CN_DIGITS = {'一': 1, '二': 2, '三': 3, '四': 4, '五': 5,
+              '六': 6, '七': 7, '八': 8, '九': 9, '十': 10, 'ㄧ': 1}
+
+def _chinese_to_int(s: str) -> int:
+    s = s.strip()
+    if s.isdigit():
+        return int(s)
+    if s in _CN_DIGITS and s != '十':
+        return _CN_DIGITS[s]
+    if '十' in s:
+        parts = s.split('十')
+        tens = _CN_DIGITS.get(parts[0], 1) if parts[0] else 1
+        ones = _CN_DIGITS.get(parts[1], 0) if parts[1] else 0
+        return tens * 10 + ones
+    return 0
+
 def find_figure_regions(page, label: str) -> list[fitz.Rect]:
     """Find bounding boxes for a figure label on a page.
 
@@ -167,20 +183,8 @@ def crop_figures(pdf_path: str, year: str):
                 label_type = label[0]  # 圖 or 表
                 num_str = re.search(r'\(([一二三四五六七八九十\u3127\d]+)\)', label)
                 if num_str:
-                    num_map = {
-                        '一': 1, '二': 2, '三': 3, '四': 4, '五': 5,
-                        '六': 6, '七': 7, '八': 8, '九': 9, '十': 10,
-                        '十一': 11, '十二': 12, '十三': 13, '十四': 14,
-                        '十五': 15, 'ㄧ': 1,
-                    }
                     num_text = num_str.group(1)
-                    num = num_map.get(num_text)
-                    if num is None:
-                        try:
-                            num = int(num_text)
-                        except ValueError:
-                            num = 0
-
+                    num = _chinese_to_int(num_text)
                     suffix = 'p' if label_type == '圖' else 't'
                     fname = f'{year}{suffix}{num:02d}.jpg'
                 else:
