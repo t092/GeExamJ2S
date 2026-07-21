@@ -208,6 +208,10 @@ const App = {
     const stemText = q.stem_latex || q.stem;
     html += `<div class="q-stem">${this.esc(stemText)}</div>`;
 
+    // question figures (stem level — shown before sub-questions)
+    html += this.buildFiguresHtml(q.figures || []);
+    html += this.buildFiguresHtml(q.tables || []);
+
     // sub-questions (非選擇題 only)
     if (q.sub_questions && q.sub_questions.length > 0) {
       html += `<div class="q-sub-questions">`;
@@ -226,10 +230,6 @@ const App = {
       }
       html += `</div>`;
     }
-
-    // question figures
-    html += this.buildFiguresHtml(q.figures || []);
-    html += this.buildFiguresHtml(q.tables || []);
 
     // options (choice questions only)
     if (q.options) {
