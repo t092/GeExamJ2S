@@ -359,9 +359,9 @@ def split_nonchoice_stem(stem: str):
 
     Only the FIRST (1) and the FIRST (2) after (1) are treated as markers.
     Any later (1)/(2) inside sub-question text (e.g. "承 (1)") are preserved.
+    The markers (1)/(2) are included in the sub-question text for rendering.
     Returns (stem_text, [sub_q1, sub_q2, ...])
     """
-    # Find first (1) marker
     m1 = re.search(r'\s*\(1\)\s*', stem)
     if not m1:
         return stem, []
@@ -369,13 +369,12 @@ def split_nonchoice_stem(stem: str):
     stem_text = stem[:m1.start()]
     rest_after_1 = stem[m1.end():]
 
-    # Find first (2) marker AFTER (1)
     m2 = re.search(r'\s*\(2\)\s*', rest_after_1)
     if not m2:
-        return stem_text, [rest_after_1.strip()]
+        return stem_text, ['(1) ' + rest_after_1.strip()]
 
-    sub_q1 = rest_after_1[:m2.start()].strip()
-    sub_q2 = rest_after_1[m2.end():].strip()
+    sub_q1 = '(1) ' + rest_after_1[:m2.start()].strip()
+    sub_q2 = '(2) ' + rest_after_1[m2.end():].strip()
     return stem_text.strip(), [sub_q1, sub_q2]
 
 
